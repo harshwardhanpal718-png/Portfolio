@@ -1,85 +1,79 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
-  <defs>
-    <linearGradient id="barBlue" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#3B82F6" />
-      <stop offset="100%" stop-color="#1D4ED8" />
-    </linearGradient>
-  </defs>
-
-  <rect width="800" height="500" rx="16" fill="#0A0D14" />
-  <rect x="1" y="1" width="798" height="498" rx="15" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="2" />
+  <rect width="800" height="500" rx="16" fill="#F4F4F5" />
+  <rect x="1" y="1" width="798" height="498" rx="15" fill="none" stroke="#E4E4E7" stroke-width="2" />
 
   <!-- Header Bar -->
-  <rect x="0" y="0" width="800" height="44" rx="16" fill="#0F131D" />
-  <circle cx="28" cy="22" r="5" fill="#EF4444" opacity="0.8" />
-  <circle cx="44" cy="22" r="5" fill="#F59E0B" opacity="0.8" />
-  <circle cx="60" cy="22" r="5" fill="#10B981" opacity="0.8" />
-  <text x="400" y="27" font-family="'Inter', sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">Sales_Performance_Diagnostic.pbix — Power BI &amp; SQL</text>
+  <rect x="0" y="0" width="800" height="44" rx="16" fill="#FFFFFF" />
+  <line x1="0" y1="44" x2="800" y2="44" stroke="#E4E4E7" />
+  <circle cx="28" cy="22" r="5" fill="#D4D4D8" />
+  <circle cx="44" cy="22" r="5" fill="#D4D4D8" />
+  <circle cx="60" cy="22" r="5" fill="#D4D4D8" />
+  <text x="400" y="27" font-family="'Inter', sans-serif" font-size="12" fill="#52525B" text-anchor="middle">Sales_Performance_Diagnostic.pbix — Power BI &amp; SQL</text>
 
   <!-- KPI row -->
-  <rect x="30" y="64" width="168" height="76" rx="10" fill="#121724" stroke="rgba(255, 255, 255, 0.06)" />
-  <text x="45" y="88" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Total Gross Revenue</text>
-  <text x="45" y="118" font-family="'Sora', sans-serif" font-size="22" fill="#F8FAFC" font-weight="700">$2.45M</text>
+  <rect x="30" y="64" width="168" height="76" rx="10" fill="#FFFFFF" stroke="#E4E4E7" />
+  <text x="45" y="88" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Total Gross Revenue</text>
+  <text x="45" y="118" font-family="'Sora', sans-serif" font-size="22" fill="#09090B" font-weight="700">$2.45M</text>
 
-  <rect x="218" y="64" width="168" height="76" rx="10" fill="#121724" stroke="rgba(255, 255, 255, 0.06)" />
-  <text x="233" y="88" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">YoY Growth</text>
-  <text x="233" y="118" font-family="'Sora', sans-serif" font-size="22" fill="#3B82F6" font-weight="700">+14.2%</text>
+  <rect x="218" y="64" width="168" height="76" rx="10" fill="#FFFFFF" stroke="#E4E4E7" />
+  <text x="233" y="88" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">YoY Growth</text>
+  <text x="233" y="118" font-family="'Sora', sans-serif" font-size="22" fill="#18181B" font-weight="700">+14.2%</text>
 
-  <rect x="406" y="64" width="168" height="76" rx="10" fill="#121724" stroke="rgba(255, 255, 255, 0.06)" />
-  <text x="421" y="88" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Gross Margin %</text>
-  <text x="421" y="118" font-family="'Sora', sans-serif" font-size="22" fill="#F8FAFC" font-weight="700">28.4%</text>
+  <rect x="406" y="64" width="168" height="76" rx="10" fill="#FFFFFF" stroke="#E4E4E7" />
+  <text x="421" y="88" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Gross Margin %</text>
+  <text x="421" y="118" font-family="'Sora', sans-serif" font-size="22" fill="#09090B" font-weight="700">28.4%</text>
 
-  <rect x="594" y="64" width="176" height="76" rx="10" fill="#121724" stroke="rgba(255, 255, 255, 0.06)" />
-  <text x="609" y="88" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Avg Order Value</text>
-  <text x="609" y="118" font-family="'Sora', sans-serif" font-size="22" fill="#60A5FA" font-weight="700">$184.20</text>
+  <rect x="594" y="64" width="176" height="76" rx="10" fill="#FFFFFF" stroke="#E4E4E7" />
+  <text x="609" y="88" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Avg Order Value</text>
+  <text x="609" y="118" font-family="'Sora', sans-serif" font-size="22" fill="#09090B" font-weight="700">$184.20</text>
 
   <!-- Main Chart: Monthly Sales Volume -->
-  <rect x="30" y="156" width="460" height="310" rx="12" fill="#121724" stroke="rgba(255, 255, 255, 0.06)" />
-  <text x="50" y="188" font-family="'Sora', sans-serif" font-size="14" fill="#F8FAFC" font-weight="600">Monthly Revenue &amp; Target Horizon</text>
-  <text x="50" y="206" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">24-month trend with seasonal peak analysis</text>
+  <rect x="30" y="156" width="460" height="310" rx="12" fill="#FFFFFF" stroke="#E4E4E7" />
+  <text x="50" y="188" font-family="'Sora', sans-serif" font-size="14" fill="#09090B" font-weight="600">Monthly Revenue &amp; Target Horizon</text>
+  <text x="50" y="206" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">24-month trend with seasonal peak analysis</text>
 
   <!-- Grid lines -->
-  <line x1="50" y1="240" x2="470" y2="240" stroke="rgba(255, 255, 255, 0.04)" />
-  <line x1="50" y1="300" x2="470" y2="300" stroke="rgba(255, 255, 255, 0.04)" />
-  <line x1="50" y1="360" x2="470" y2="360" stroke="rgba(255, 255, 255, 0.04)" />
-  <line x1="50" y1="420" x2="470" y2="420" stroke="rgba(255, 255, 255, 0.08)" />
+  <line x1="50" y1="240" x2="470" y2="240" stroke="#F4F4F5" />
+  <line x1="50" y1="300" x2="470" y2="300" stroke="#F4F4F5" />
+  <line x1="50" y1="360" x2="470" y2="360" stroke="#F4F4F5" />
+  <line x1="50" y1="420" x2="470" y2="420" stroke="#E4E4E7" />
 
-  <!-- Bar Charts -->
-  <rect x="70" y="340" width="22" height="80" rx="3" fill="url(#barBlue)" />
-  <rect x="105" y="320" width="22" height="100" rx="3" fill="url(#barBlue)" />
-  <rect x="140" y="300" width="22" height="120" rx="3" fill="url(#barBlue)" />
-  <rect x="175" y="270" width="22" height="150" rx="3" fill="url(#barBlue)" />
-  <rect x="210" y="290" width="22" height="130" rx="3" fill="url(#barBlue)" />
-  <rect x="245" y="250" width="22" height="170" rx="3" fill="url(#barBlue)" />
-  <rect x="280" y="230" width="22" height="190" rx="3" fill="url(#barBlue)" />
-  <rect x="315" y="260" width="22" height="160" rx="3" fill="url(#barBlue)" />
-  <rect x="350" y="220" width="22" height="200" rx="3" fill="url(#barBlue)" />
-  <rect x="385" y="190" width="22" height="230" rx="3" fill="#60A5FA" />
-  <rect x="420" y="240" width="22" height="180" rx="3" fill="url(#barBlue)" />
+  <!-- Bar Charts in Obsidian/Grey gradient -->
+  <rect x="70" y="340" width="22" height="80" rx="3" fill="#A1A1AA" />
+  <rect x="105" y="320" width="22" height="100" rx="3" fill="#71717A" />
+  <rect x="140" y="300" width="22" height="120" rx="3" fill="#71717A" />
+  <rect x="175" y="270" width="22" height="150" rx="3" fill="#52525B" />
+  <rect x="210" y="290" width="22" height="130" rx="3" fill="#71717A" />
+  <rect x="245" y="250" width="22" height="170" rx="3" fill="#3F3F46" />
+  <rect x="280" y="230" width="22" height="190" rx="3" fill="#27272A" />
+  <rect x="315" y="260" width="22" height="160" rx="3" fill="#52525B" />
+  <rect x="350" y="220" width="22" height="200" rx="3" fill="#27272A" />
+  <rect x="385" y="190" width="22" height="230" rx="3" fill="#09090B" />
+  <rect x="420" y="240" width="22" height="180" rx="3" fill="#3F3F46" />
 
-  <!-- Trendline -->
-  <path d="M 80 330 Q 180 260 280 230 T 430 220" fill="none" stroke="#60A5FA" stroke-width="2.5" />
+  <!-- Trendline in dark slate -->
+  <path d="M 80 330 Q 180 260 280 230 T 430 220" fill="none" stroke="#18181B" stroke-width="2.5" />
 
   <!-- Right Chart: Category Breakdown -->
-  <rect x="510" y="156" width="260" height="310" rx="12" fill="#121724" stroke="rgba(255, 255, 255, 0.06)" />
-  <text x="530" y="188" font-family="'Sora', sans-serif" font-size="14" fill="#F8FAFC" font-weight="600">Category Mix</text>
-  <text x="530" y="206" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Revenue contribution</text>
+  <rect x="510" y="156" width="260" height="310" rx="12" fill="#FFFFFF" stroke="#E4E4E7" />
+  <text x="530" y="188" font-family="'Sora', sans-serif" font-size="14" fill="#09090B" font-weight="600">Category Mix</text>
+  <text x="530" y="206" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Revenue contribution</text>
 
   <!-- Category 1: Tech -->
-  <text x="530" y="248" font-family="'Inter', sans-serif" font-size="12" fill="#F8FAFC">Technology (48%)</text>
-  <rect x="530" y="258" width="220" height="10" rx="5" fill="#1E293B" />
-  <rect x="530" y="258" width="105" height="10" rx="5" fill="#3B82F6" />
+  <text x="530" y="248" font-family="'Inter', sans-serif" font-size="12" fill="#09090B">Technology (48%)</text>
+  <rect x="530" y="258" width="220" height="10" rx="5" fill="#F4F4F5" />
+  <rect x="530" y="258" width="105" height="10" rx="5" fill="#09090B" />
 
   <!-- Category 2: Office Supplies -->
-  <text x="530" y="308" font-family="'Inter', sans-serif" font-size="12" fill="#F8FAFC">Office Supplies (31%)</text>
-  <rect x="530" y="318" width="220" height="10" rx="5" fill="#1E293B" />
-  <rect x="530" y="318" width="68" height="10" rx="5" fill="#60A5FA" />
+  <text x="530" y="308" font-family="'Inter', sans-serif" font-size="12" fill="#09090B">Office Supplies (31%)</text>
+  <rect x="530" y="318" width="220" height="10" rx="5" fill="#F4F4F5" />
+  <rect x="530" y="318" width="68" height="10" rx="5" fill="#52525B" />
 
   <!-- Category 3: Furniture -->
-  <text x="530" y="368" font-family="'Inter', sans-serif" font-size="12" fill="#F8FAFC">Furniture (21%)</text>
-  <rect x="530" y="378" width="220" height="10" rx="5" fill="#1E293B" />
-  <rect x="530" y="378" width="46" height="10" rx="5" fill="#94A3B8" />
+  <text x="530" y="368" font-family="'Inter', sans-serif" font-size="12" fill="#09090B">Furniture (21%)</text>
+  <rect x="530" y="378" width="220" height="10" rx="5" fill="#F4F4F5" />
+  <rect x="530" y="378" width="46" height="10" rx="5" fill="#A1A1AA" />
 
   <!-- Footer note -->
-  <text x="530" y="435" font-family="'Inter', sans-serif" font-size="11" fill="#3B82F6" font-weight="500">Key: Tech driving 62% of margin</text>
+  <text x="530" y="435" font-family="'Inter', sans-serif" font-size="11" fill="#09090B" font-weight="600">Key: Tech driving 62% of margin</text>
 </svg>

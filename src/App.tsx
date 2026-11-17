@@ -14,7 +14,7 @@ export function App() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] text-[#0F172A] font-sans selection:bg-[#2563EB]/15 selection:text-[#1D4ED8]">
+    <div className="min-h-screen bg-[#FAFAF9] text-[#09090B] font-sans selection:bg-[#09090B] selection:text-white">
       {/* Sticky Navigation Bar */}
       <Navbar onOpenResume={() => setIsResumeModalOpen(true)} />
 

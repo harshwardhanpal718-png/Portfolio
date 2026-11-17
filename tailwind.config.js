@@ -8,23 +8,21 @@ export default {
     extend: {
       colors: {
         bg: {
-          DEFAULT: '#F8FAFC', // Ultra-clean light slate canvas
-          surface: '#FFFFFF', // Pure white card
-          subtle: '#F1F5F9', // Subtle contrast surface
-          muted: '#E2E8F0', // Light border
+          DEFAULT: '#FAFAF9', // Ultra-premium warm alabaster / off-white
+          surface: '#FFFFFF', // Pure crisp white card
+          subtle: '#F4F4F5',  // Subtle zinc contrast
+          muted: '#E4E4E7',   // Whisper-thin border
         },
-        accent: {
-          DEFAULT: '#2563EB', // Premium royal blue
-          hover: '#1D4ED8',
-          light: '#3B82F6',
-          subtle: '#EFF6FF',
-          border: '#BFDBFE',
+        onyx: {
+          DEFAULT: '#09090B', // Deep Obsidian Black
+          hover: '#27272A',
+          muted: '#3F3F46',
         },
         content: {
-          heading: '#0F172A', // Sharp dark slate
-          body: '#334155', // Balanced readable text
-          muted: '#64748B', // Soft grey
-          subtle: '#94A3B8',
+          heading: '#09090B', // Pitch black headings
+          body: '#3F3F46',    // High readability dark neutral
+          muted: '#71717A',   // Refined secondary text
+          subtle: '#A1A1AA',
         },
       },
       fontFamily: {
@@ -33,11 +31,11 @@ export default {
         mono: ['JetBrains Mono', 'monospace'],
       },
       boxShadow: {
+        'premium-xs': '0 1px 2px rgba(0, 0, 0, 0.04)',
         'premium-sm': '0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03)',
-        'premium-md': '0 4px 14px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.03)',
-        'premium-lg': '0 12px 30px -6px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.03)',
-        'accent-sm': '0 2px 10px rgba(37, 99, 235, 0.2)',
-        'accent-md': '0 6px 20px rgba(37, 99, 235, 0.25)',
+        'premium-md': '0 4px 14px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.02)',
+        'premium-lg': '0 12px 30px -6px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.02)',
+        'onyx-sm': '0 2px 10px rgba(9, 9, 11, 0.15)',
       }
     },
   },

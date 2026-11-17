@@ -1,17 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="100%" stop-color="#F1F5F9" />
-    </linearGradient>
-    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2563EB" />
-      <stop offset="100%" stop-color="#1D4ED8" />
-    </linearGradient>
-  </defs>
-  <rect width="100" height="100" rx="24" fill="url(#bgGrad)" stroke="#2563EB" stroke-width="3" />
+  <rect width="100" height="100" rx="24" fill="#FFFFFF" stroke="#09090B" stroke-width="2.5" />
   <!-- Monogram HP -->
-  <text x="50" y="62" font-family="'Sora', sans-serif" font-size="44" font-weight="800" fill="url(#blueGrad)" text-anchor="middle">HP</text>
-  <!-- Data Node -->
-  <circle cx="76" cy="30" r="4.5" fill="#2563EB" />
+  <text x="50" y="62" font-family="'Sora', sans-serif" font-size="44" font-weight="800" fill="#09090B" text-anchor="middle">HP</text>
+  <!-- Minimal Data Node -->
+  <circle cx="76" cy="30" r="4" fill="#09090B" />
 </svg>

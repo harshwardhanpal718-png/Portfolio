@@ -70,18 +70,18 @@ export const Skills: React.FC = () => {
   ];
 
   return (
-    <section id="skills" className="py-16 md:py-20 border-t border-slate-200 bg-[#F8FAFC] relative">
+    <section id="skills" className="py-16 md:py-20 border-t border-zinc-200 bg-[#FAFAF9] relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="mb-10">
-          <span className="text-xs font-mono text-blue-600 uppercase tracking-wider block mb-1">
+          <span className="text-xs font-mono text-zinc-600 uppercase tracking-wider block mb-1">
             Capabilities
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold font-heading text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-bold font-heading text-zinc-900 tracking-tight">
             Technical Skills
           </h2>
-          <div className="w-12 h-1 bg-[#2563EB] mt-2 rounded-full" />
+          <div className="w-12 h-1 bg-[#09090B] mt-2 rounded-full" />
         </div>
 
         {/* Clean Skills Categories Grid */}
@@ -91,14 +91,14 @@ export const Skills: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:border-blue-300 transition-all duration-300 flex flex-col justify-between"
+                className="bg-white border border-zinc-200 rounded-2xl p-5 shadow-xs hover:border-zinc-300 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-slate-100">
-                    <div className="w-7 h-7 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600">
+                  <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-zinc-100">
+                    <div className="w-7 h-7 rounded-lg bg-zinc-100 border border-zinc-200 flex items-center justify-center text-zinc-900">
                       <CatIcon className="w-3.5 h-3.5" />
                     </div>
-                    <h3 className="text-sm font-semibold text-slate-900">
+                    <h3 className="text-sm font-semibold text-zinc-900">
                       {cat.title}
                     </h3>
                   </div>
@@ -109,17 +109,17 @@ export const Skills: React.FC = () => {
                       return (
                         <div
                           key={sIdx}
-                          className="p-3 rounded-xl bg-slate-50 border border-slate-200/70 hover:border-blue-300 hover:bg-blue-50/30 transition-all duration-200 group flex items-center justify-between"
+                          className="p-3 rounded-xl bg-zinc-50 border border-zinc-200/80 hover:border-zinc-400 hover:bg-zinc-100/60 transition-all duration-200 group flex items-center justify-between"
                         >
                           <div className="flex items-center gap-2.5 min-w-0">
-                            <div className="w-6 h-6 rounded-md bg-white border border-slate-200 text-blue-600 group-hover:border-blue-400 flex items-center justify-center transition-colors shrink-0 shadow-2xs">
+                            <div className="w-6 h-6 rounded-md bg-white border border-zinc-200 text-zinc-800 group-hover:border-zinc-400 flex items-center justify-center transition-colors shrink-0 shadow-2xs">
                               <SkillIcon className="w-3 h-3" />
                             </div>
-                            <span className="text-xs font-medium text-slate-800 group-hover:text-blue-700 truncate">
+                            <span className="text-xs font-medium text-zinc-800 group-hover:text-zinc-950 truncate">
                               {skill.name}
                             </span>
                           </div>
-                          <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white border border-slate-200 text-slate-600 group-hover:text-blue-700 group-hover:border-blue-200 shrink-0 ml-2 transition-colors">
+                          <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white border border-zinc-200 text-zinc-600 group-hover:text-zinc-900 group-hover:border-zinc-300 shrink-0 ml-2 transition-colors">
                             {skill.tag}
                           </span>
                         </div>
