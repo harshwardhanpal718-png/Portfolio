@@ -1,67 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
-  <defs>
-    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#14070A" />
-      <stop offset="100%" stop-color="#090507" />
-    </linearGradient>
-  </defs>
-
-  <rect width="800" height="500" rx="16" fill="url(#bg4)" />
-  <rect x="1" y="1" width="798" height="498" rx="15" fill="none" stroke="#2D1219" stroke-width="2" />
+  <rect width="800" height="500" rx="16" fill="#051F20" />
+  <rect x="1" y="1" width="798" height="498" rx="15" fill="none" stroke="#235347" stroke-width="2" />
 
   <!-- Window Header -->
-  <rect x="0" y="0" width="800" height="44" rx="16" fill="#1C0A10" />
-  <circle cx="28" cy="22" r="5" fill="#EF4444" />
-  <circle cx="44" cy="22" r="5" fill="#F59E0B" />
-  <circle cx="60" cy="22" r="5" fill="#10B981" />
-  <text x="400" y="27" font-family="'JetBrains Mono', monospace" font-size="12" fill="#E50914" text-anchor="middle" font-weight="600">netflix_titles_eda.py — Python, Matplotlib, Seaborn</text>
+  <rect x="0" y="0" width="800" height="44" rx="16" fill="#0B2B26" />
+  <circle cx="28" cy="22" r="5" fill="#235347" />
+  <circle cx="44" cy="22" r="5" fill="#235347" />
+  <circle cx="60" cy="22" r="5" fill="#8EB69B" />
+  <text x="400" y="27" font-family="'JetBrains Mono', monospace" font-size="12" fill="#8EB69B" text-anchor="middle" font-weight="600">netflix_titles_eda.py — Python, Matplotlib, Seaborn</text>
 
   <!-- Left Stats & Distribution -->
-  <rect x="30" y="64" width="350" height="400" rx="12" fill="#170A0F" stroke="#2D1219" />
-  <text x="50" y="96" font-family="'Sora', sans-serif" font-size="14" fill="#F8FAFC" font-weight="600">Catalog Content Split</text>
-  <text x="50" y="116" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">8,807 Titles Analyzed (Movies vs TV Shows)</text>
+  <rect x="30" y="64" width="350" height="400" rx="12" fill="#163832" stroke="#235347" />
+  <text x="50" y="96" font-family="'Sora', sans-serif" font-size="14" fill="#DAF1DE" font-weight="600">Catalog Content Split</text>
+  <text x="50" y="116" font-family="'Inter', sans-serif" font-size="11" fill="#8EB69B">8,807 Titles Analyzed (Movies vs TV Shows)</text>
 
   <!-- Donut Chart representation -->
-  <circle cx="140" cy="210" r="65" fill="none" stroke="#2D1219" stroke-width="28" />
-  <circle cx="140" cy="210" r="65" fill="none" stroke="#E50914" stroke-width="28" stroke-dasharray="280 400" stroke-dashoffset="0" />
-  <circle cx="140" cy="210" r="65" fill="none" stroke="#3B82F6" stroke-width="28" stroke-dasharray="130 400" stroke-dashoffset="-280" />
-  <text x="140" y="206" font-family="'Sora', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle" font-weight="700">8.8k</text>
-  <text x="140" y="222" font-family="'Inter', sans-serif" font-size="10" fill="#94A3B8" text-anchor="middle">Titles</text>
+  <circle cx="140" cy="210" r="65" fill="none" stroke="#0B2B26" stroke-width="28" />
+  <circle cx="140" cy="210" r="65" fill="none" stroke="#8EB69B" stroke-width="28" stroke-dasharray="280 400" stroke-dashoffset="0" />
+  <circle cx="140" cy="210" r="65" fill="none" stroke="#235347" stroke-width="28" stroke-dasharray="130 400" stroke-dashoffset="-280" />
+  <text x="140" y="206" font-family="'Sora', sans-serif" font-size="16" fill="#DAF1DE" text-anchor="middle" font-weight="700">8.8k</text>
+  <text x="140" y="222" font-family="'Inter', sans-serif" font-size="10" fill="#8EB69B" text-anchor="middle">Titles</text>
 
   <!-- Legend -->
-  <rect x="235" y="175" width="12" height="12" rx="3" fill="#E50914" />
-  <text x="255" y="186" font-family="'Inter', sans-serif" font-size="12" fill="#F8FAFC">Movies: 69.6%</text>
+  <rect x="235" y="175" width="12" height="12" rx="3" fill="#8EB69B" />
+  <text x="255" y="186" font-family="'Inter', sans-serif" font-size="12" fill="#DAF1DE">Movies: 69.6%</text>
 
-  <rect x="235" y="210" width="12" height="12" rx="3" fill="#3B82F6" />
-  <text x="255" y="221" font-family="'Inter', sans-serif" font-size="12" fill="#F8FAFC">TV Shows: 30.4%</text>
+  <rect x="235" y="210" width="12" height="12" rx="3" fill="#235347" />
+  <text x="255" y="221" font-family="'Inter', sans-serif" font-size="12" fill="#DAF1DE">TV Shows: 30.4%</text>
 
   <!-- Trend badge -->
-  <rect x="50" y="300" width="310" height="145" rx="8" fill="#200D15" stroke="#381520" />
-  <text x="66" y="328" font-family="'Sora', sans-serif" font-size="12" fill="#E50914" font-weight="600">Top Content Producing Countries</text>
-  <text x="66" y="356" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">1. United States (3,689 titles)</text>
-  <text x="66" y="380" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">2. India (1,046 titles) — +310% surge</text>
-  <text x="66" y="404" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">3. United Kingdom (804 titles)</text>
-  <text x="66" y="428" font-family="'Inter', sans-serif" font-size="11" fill="#E2E8F0">4. South Korea, Japan &amp; Spain (Accelerating)</text>
+  <rect x="50" y="300" width="310" height="145" rx="8" fill="#0B2B26" stroke="#235347" />
+  <text x="66" y="328" font-family="'Sora', sans-serif" font-size="12" fill="#8EB69B" font-weight="600">Top Content Producing Countries</text>
+  <text x="66" y="356" font-family="'Inter', sans-serif" font-size="11" fill="#DAF1DE">1. United States (3,689 titles)</text>
+  <text x="66" y="380" font-family="'Inter', sans-serif" font-size="11" fill="#DAF1DE">2. India (1,046 titles) — +310% surge</text>
+  <text x="66" y="404" font-family="'Inter', sans-serif" font-size="11" fill="#DAF1DE">3. United Kingdom (804 titles)</text>
+  <text x="66" y="428" font-family="'Inter', sans-serif" font-size="11" fill="#8EB69B">4. South Korea, Japan &amp; Spain</text>
 
-  <!-- Right Chart: Yearly Addition Growth -->
-  <rect x="400" y="64" width="370" height="400" rx="12" fill="#170A0F" stroke="#2D1219" />
-  <text x="420" y="96" font-family="'Sora', sans-serif" font-size="14" fill="#F8FAFC" font-weight="600">Historical Content Release Velocity</text>
-  <text x="420" y="116" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Release year distribution curve (2000 - 2021)</text>
+  <!-- Right Chart -->
+  <rect x="400" y="64" width="370" height="400" rx="12" fill="#163832" stroke="#235347" />
+  <text x="420" y="96" font-family="'Sora', sans-serif" font-size="14" fill="#DAF1DE" font-weight="600">Historical Content Release Velocity</text>
+  <text x="420" y="116" font-family="'Inter', sans-serif" font-size="11" fill="#8EB69B">Release year distribution curve (2000 - 2021)</text>
 
-  <!-- Chart lines -->
-  <line x1="430" y1="360" x2="740" y2="360" stroke="#381520" />
+  <line x1="430" y1="360" x2="740" y2="360" stroke="#235347" />
   
-  <!-- Movie additions curve (Red) -->
-  <path d="M 440 355 Q 500 345 560 320 T 630 220 T 680 160 T 730 200" fill="none" stroke="#E50914" stroke-width="3" />
-  <!-- TV Show additions curve (Blue) -->
-  <path d="M 440 358 Q 500 355 560 340 T 630 280 T 680 210 T 730 230" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-dasharray="4 3" />
+  <path d="M 440 355 Q 500 345 560 320 T 630 220 T 680 160 T 730 200" fill="none" stroke="#DAF1DE" stroke-width="3" />
+  <path d="M 440 358 Q 500 355 560 340 T 630 280 T 680 210 T 730 230" fill="none" stroke="#8EB69B" stroke-width="2.5" stroke-dasharray="4 3" />
 
-  <!-- Annotations -->
-  <circle cx="680" cy="160" r="5" fill="#E50914" stroke="#FFFFFF" stroke-width="2" />
-  <text x="680" y="145" font-family="'Inter', sans-serif" font-size="11" fill="#E50914" text-anchor="middle" font-weight="600">Peak Catalog Inflow (2018-2019)</text>
+  <circle cx="680" cy="160" r="5" fill="#DAF1DE" stroke="#051F20" stroke-width="2" />
+  <text x="680" y="145" font-family="'Inter', sans-serif" font-size="11" fill="#8EB69B" text-anchor="middle" font-weight="600">Peak Catalog Inflow (2018-2019)</text>
 
-  <!-- Bottom stat box -->
-  <rect x="420" y="380" width="330" height="65" rx="8" fill="#200D15" stroke="#381520" />
-  <text x="436" y="405" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Average Feature Duration:</text>
-  <text x="436" y="428" font-family="'Sora', sans-serif" font-size="14" fill="#F8FAFC" font-weight="600">Decreased from 108 min → 99 min</text>
+  <rect x="420" y="380" width="330" height="65" rx="8" fill="#0B2B26" stroke="#235347" />
+  <text x="436" y="405" font-family="'Inter', sans-serif" font-size="11" fill="#8EB69B">Average Feature Duration:</text>
+  <text x="436" y="428" font-family="'Sora', sans-serif" font-size="14" fill="#DAF1DE" font-weight="600">Decreased from 108 min → 99 min</text>
 </svg>

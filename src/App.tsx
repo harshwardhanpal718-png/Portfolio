@@ -14,7 +14,7 @@ export function App() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5] text-[#1C1612] font-sans selection:bg-[#EADBCE] selection:text-[#3B2212]">
+    <div className="min-h-screen bg-[#051F20] text-[#DAF1DE] font-sans selection:bg-[#235347] selection:text-[#DAF1DE]">
       {/* Sticky Navigation Bar */}
       <Navbar onOpenResume={() => setIsResumeModalOpen(true)} />
 
@@ -28,7 +28,7 @@ export function App() {
         <Contact onOpenResume={() => setIsResumeModalOpen(true)} />
       </main>
 
-      {/* Minimalist Footer */}
+      {/* Minimalist Dark Emerald Footer */}
       <Footer />
 
       {/* Back to top */}

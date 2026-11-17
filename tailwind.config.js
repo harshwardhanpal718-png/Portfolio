@@ -7,31 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        theme: {
-          bg: '#FAF8F5',          // Soft warm ivory / cream
-          secondary: '#F3EFEA',   // Secondary warm linen
-          card: '#FFFFFF',        // Pure crisp white cards
-          cardHover: '#FCFAF7',
-          border: '#E8DFD5',      // Soft warm brown-sand border
-          borderHover: '#C4A88E',
-        },
-        coffee: {
-          50: '#FAF6F2',
-          100: '#F3EAE0',
-          200: '#E4D3C0',
-          300: '#D2B79B',
-          400: '#B89370',
-          500: '#9B714B',
-          600: '#7E5331',         // Primary warm rich brown
-          700: '#643F23',
-          800: '#462A16',         // Dark espresso brown
-          900: '#2A170B',         // Deepest roast
-          950: '#1A0E06',
-        },
-        ink: {
-          primary: '#1C1612',     // Primary rich dark text
-          muted: '#63564C',       // Muted warm text
-          subtle: '#8C7C70',      // Lighter tertiary text
+        forest: {
+          bg: '#051F20',         // Primary Background
+          secondary: '#0B2B26',  // Secondary Background
+          card: '#163832',       // Card Background
+          accent: '#235347',     // Primary Accent
+          sage: '#8EB69B',       // Secondary Accent
+          mint: '#DAF1DE',       // Primary Text
         }
       },
       fontFamily: {
@@ -40,9 +22,10 @@ export default {
         mono: ['JetBrains Mono', 'monospace'],
       },
       boxShadow: {
-        'warm-sm': '0 1px 3px rgba(42, 23, 11, 0.05), 0 1px 2px rgba(42, 23, 11, 0.03)',
-        'warm-md': '0 4px 16px -2px rgba(69, 45, 27, 0.08), 0 2px 6px -1px rgba(69, 45, 27, 0.04)',
-        'warm-lg': '0 12px 30px -4px rgba(69, 45, 27, 0.12), 0 4px 12px -2px rgba(69, 45, 27, 0.06)',
+        'forest-sm': '0 2px 8px rgba(5, 31, 32, 0.4)',
+        'forest-md': '0 4px 20px rgba(5, 31, 32, 0.6), 0 0 1px rgba(142, 182, 155, 0.2)',
+        'forest-lg': '0 12px 32px rgba(5, 31, 32, 0.75), 0 0 20px rgba(142, 182, 155, 0.08)',
+        'sage-glow': '0 0 20px rgba(142, 182, 155, 0.15)',
       }
     },
   },
