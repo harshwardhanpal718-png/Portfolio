@@ -7,28 +7,27 @@ export default {
   theme: {
     extend: {
       colors: {
-        void: {
-          DEFAULT: '#0E0B16',
-          surface: '#151022',
-          card: '#181228',
-          hover: '#1F1735',
-          border: 'rgba(71, 23, 246, 0.25)',
-          borderHover: 'rgba(162, 57, 202, 0.5)',
+        bg: {
+          DEFAULT: '#0A0D14', // Deep charcoal / near black
+          secondary: '#0F131D',
+          card: '#121724',
+          cardHover: '#161D2E',
+          surface: '#182032',
         },
-        fuschia: {
-          DEFAULT: '#A239CA',
-          light: '#B755DB',
-          dark: '#8624AC',
+        accent: {
+          DEFAULT: '#3B82F6', // Blue accent
+          hover: '#2563EB',
+          light: '#60A5FA',
+          muted: 'rgba(59, 130, 246, 0.15)',
         },
-        jewel: {
-          DEFAULT: '#4717F6',
-          light: '#6134F8',
-          dark: '#350EC5',
+        text: {
+          primary: '#F8FAFC', // White
+          secondary: '#94A3B8', // Soft grey
+          muted: '#64748B',
         },
-        stark: {
-          DEFAULT: '#E7DFDD',
-          muted: '#A99F9D',
-          subtle: '#786F6E',
+        border: {
+          subtle: 'rgba(255, 255, 255, 0.08)',
+          hover: 'rgba(59, 130, 246, 0.35)',
         }
       },
       fontFamily: {
@@ -37,10 +36,9 @@ export default {
         mono: ['JetBrains Mono', 'monospace'],
       },
       boxShadow: {
-        'jewel-sm': '0 2px 10px rgba(71, 23, 246, 0.2)',
-        'jewel-md': '0 6px 20px rgba(71, 23, 246, 0.3)',
-        'fuschia-glow': '0 0 25px rgba(162, 57, 202, 0.25)',
-        'purple-glow': '0 0 30px rgba(71, 23, 246, 0.18)',
+        'accent-sm': '0 2px 10px rgba(59, 130, 246, 0.2)',
+        'accent-md': '0 6px 20px rgba(59, 130, 246, 0.25)',
+        'card': '0 4px 20px rgba(0, 0, 0, 0.35)',
       }
     },
   },

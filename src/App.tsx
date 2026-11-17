@@ -4,7 +4,7 @@ import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
-import { Certifications } from './components/Certifications';
+import { ExperienceEducation } from './components/ExperienceEducation';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -14,21 +14,32 @@ export function App() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#0E0B16] text-[#E7DFDD] font-sans selection:bg-[#4717F6]/40 selection:text-[#E7DFDD]">
+    <div className="min-h-screen bg-[#0A0D14] text-[#F8FAFC] font-sans selection:bg-[#3B82F6]/30 selection:text-white">
       {/* Sticky Navigation Bar */}
       <Navbar onOpenResume={() => setIsResumeModalOpen(true)} />
 
-      {/* Main Sections */}
+      {/* ONLY The Six Defined Sections */}
       <main>
+        {/* Section 1: Hero */}
         <Hero onOpenResume={() => setIsResumeModalOpen(true)} />
+
+        {/* Section 2: About Me */}
         <About />
+
+        {/* Section 3: Technical Skills */}
         <Skills />
+
+        {/* Section 4: Featured Projects */}
         <Projects />
-        <Certifications />
+
+        {/* Section 5: Experience & Education */}
+        <ExperienceEducation />
+
+        {/* Section 6: Contact */}
         <Contact onOpenResume={() => setIsResumeModalOpen(true)} />
       </main>
 
-      {/* Minimalist Futuristic Purple Footer */}
+      {/* Minimal Footer */}
       <Footer />
 
       {/* Back to top */}

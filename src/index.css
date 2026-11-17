@@ -9,59 +9,47 @@
   }
 
   body {
-    background-color: #0E0B16;
-    color: #E7DFDD;
+    background-color: #0A0D14;
+    color: #F8FAFC;
     overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
   }
 
-  /* Custom Futuristic Purple Scrollbar */
+  /* Custom Clean Blue-Accented Scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #0E0B16;
+    background: #0A0D14;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #4717F6;
+    background: #1E293B;
     border-radius: 9999px;
-    border: 2px solid #0E0B16;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #A239CA;
+    background: #3B82F6;
   }
 }
 
 @layer utilities {
-  .void-card {
-    background-color: #151022;
-    border: 1px solid rgba(71, 23, 246, 0.25);
+  .card-dark {
+    background-color: #121724;
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  .void-card-hover {
+  .card-dark-hover {
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .void-card-hover:hover {
-    border-color: rgba(162, 57, 202, 0.6);
-    background-color: #191329;
+  .card-dark-hover:hover {
+    border-color: rgba(59, 130, 246, 0.35);
+    background-color: #161D2E;
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px -10px rgba(71, 23, 246, 0.3), 0 0 15px rgba(162, 57, 202, 0.15);
-  }
-
-  .text-gradient-purple {
-    background: linear-gradient(135deg, #E7DFDD 0%, #A239CA 50%, #4717F6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .text-gradient-stark {
-    background: linear-gradient(135deg, #FFFFFF 0%, #E7DFDD 60%, #A239CA 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 0 15px rgba(59, 130, 246, 0.1);
   }
 }
 

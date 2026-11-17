@@ -1,88 +1,88 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
-  <rect width="800" height="500" rx="16" fill="#0E0B16" />
-  <rect x="1" y="1" width="798" height="498" rx="15" fill="none" stroke="rgba(71, 23, 246, 0.4)" stroke-width="2" />
+  <rect width="800" height="500" rx="16" fill="#0A0D14" />
+  <rect x="1" y="1" width="798" height="498" rx="15" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="2" />
 
   <!-- Header -->
-  <rect x="0" y="0" width="800" height="44" rx="16" fill="#151022" />
-  <circle cx="28" cy="22" r="5" fill="#4717F6" />
-  <circle cx="44" cy="22" r="5" fill="#A239CA" />
-  <circle cx="60" cy="22" r="5" fill="#E7DFDD" opacity="0.6" />
-  <text x="400" y="27" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD" text-anchor="middle">HR_Attrition_Workforce_Analytics — Power BI</text>
+  <rect x="0" y="0" width="800" height="44" rx="16" fill="#0F131D" />
+  <circle cx="28" cy="22" r="5" fill="#EF4444" opacity="0.8" />
+  <circle cx="44" cy="22" r="5" fill="#F59E0B" opacity="0.8" />
+  <circle cx="60" cy="22" r="5" fill="#10B981" opacity="0.8" />
+  <text x="400" y="27" font-family="'Inter', sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">HR_Attrition_Workforce_Analytics — Power BI</text>
 
   <!-- KPI Row -->
-  <rect x="30" y="64" width="168" height="80" rx="10" fill="#151022" stroke="rgba(71, 23, 246, 0.3)" />
-  <text x="45" y="90" font-family="'Inter', sans-serif" font-size="11" fill="#A99F9D">Total Workforce</text>
-  <text x="45" y="122" font-family="'Sora', sans-serif" font-size="22" fill="#E7DFDD" font-weight="700">1,470</text>
+  <rect x="30" y="64" width="168" height="80" rx="10" fill="#121724" stroke="rgba(255, 255, 255, 0.06)" />
+  <text x="45" y="90" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Total Workforce</text>
+  <text x="45" y="122" font-family="'Sora', sans-serif" font-size="22" fill="#F8FAFC" font-weight="700">1,470</text>
 
-  <rect x="218" y="64" width="168" height="80" rx="10" fill="#151022" stroke="rgba(71, 23, 246, 0.3)" />
-  <text x="233" y="90" font-family="'Inter', sans-serif" font-size="11" fill="#A99F9D">Overall Attrition Rate</text>
-  <text x="233" y="122" font-family="'Sora', sans-serif" font-size="22" fill="#A239CA" font-weight="700">16.1%</text>
+  <rect x="218" y="64" width="168" height="80" rx="10" fill="#121724" stroke="rgba(255, 255, 255, 0.06)" />
+  <text x="233" y="90" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Overall Attrition Rate</text>
+  <text x="233" y="122" font-family="'Sora', sans-serif" font-size="22" fill="#3B82F6" font-weight="700">16.1%</text>
 
-  <rect x="406" y="64" width="168" height="80" rx="10" fill="#151022" stroke="rgba(71, 23, 246, 0.3)" />
-  <text x="421" y="90" font-family="'Inter', sans-serif" font-size="11" fill="#A99F9D">Overtime Attrition</text>
-  <text x="421" y="122" font-family="'Sora', sans-serif" font-size="22" fill="#4717F6" font-weight="700">30.5%</text>
+  <rect x="406" y="64" width="168" height="80" rx="10" fill="#121724" stroke="rgba(255, 255, 255, 0.06)" />
+  <text x="421" y="90" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Overtime Attrition</text>
+  <text x="421" y="122" font-family="'Sora', sans-serif" font-size="22" fill="#EF4444" font-weight="700">30.5%</text>
 
-  <rect x="594" y="64" width="176" height="80" rx="10" fill="#151022" stroke="rgba(71, 23, 246, 0.3)" />
-  <text x="609" y="90" font-family="'Inter', sans-serif" font-size="11" fill="#A99F9D">Avg Satisfaction</text>
-  <text x="609" y="122" font-family="'Sora', sans-serif" font-size="22" fill="#E7DFDD" font-weight="700">3.2 / 5.0</text>
+  <rect x="594" y="64" width="176" height="80" rx="10" fill="#121724" stroke="rgba(255, 255, 255, 0.06)" />
+  <text x="609" y="90" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Avg Satisfaction</text>
+  <text x="609" y="122" font-family="'Sora', sans-serif" font-size="22" fill="#60A5FA" font-weight="700">3.2 / 5.0</text>
 
   <!-- Chart 1: Department Attrition Rate -->
-  <rect x="30" y="160" width="365" height="305" rx="12" fill="#151022" stroke="rgba(71, 23, 246, 0.3)" />
-  <text x="50" y="192" font-family="'Sora', sans-serif" font-size="14" fill="#E7DFDD" font-weight="600">Attrition by Department</text>
-  <text x="50" y="210" font-family="'Inter', sans-serif" font-size="11" fill="#A99F9D">Voluntary departures over past 12 months</text>
+  <rect x="30" y="160" width="365" height="305" rx="12" fill="#121724" stroke="rgba(255, 255, 255, 0.06)" />
+  <text x="50" y="192" font-family="'Sora', sans-serif" font-size="14" fill="#F8FAFC" font-weight="600">Attrition by Department</text>
+  <text x="50" y="210" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Voluntary departures over past 12 months</text>
 
   <!-- Sales -->
-  <text x="50" y="248" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD">Sales (446)</text>
-  <rect x="170" y="235" width="200" height="18" rx="4" fill="#0E0B16" />
-  <rect x="170" y="235" width="138" height="18" rx="4" fill="#A239CA" />
-  <text x="315" y="249" font-family="'Inter', sans-serif" font-size="11" fill="#E7DFDD" font-weight="600">20.6%</text>
+  <text x="50" y="248" font-family="'Inter', sans-serif" font-size="12" fill="#F8FAFC">Sales (446)</text>
+  <rect x="170" y="235" width="200" height="18" rx="4" fill="#182032" />
+  <rect x="170" y="235" width="138" height="18" rx="4" fill="#3B82F6" />
+  <text x="315" y="249" font-family="'Inter', sans-serif" font-size="11" fill="#F8FAFC" font-weight="600">20.6%</text>
 
   <!-- R&D -->
-  <text x="50" y="298" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD">R&amp;D (961)</text>
-  <rect x="170" y="285" width="200" height="18" rx="4" fill="#0E0B16" />
-  <rect x="170" y="285" width="94" height="18" rx="4" fill="#4717F6" />
-  <text x="270" y="299" font-family="'Inter', sans-serif" font-size="11" fill="#E7DFDD" font-weight="600">13.8%</text>
+  <text x="50" y="298" font-family="'Inter', sans-serif" font-size="12" fill="#F8FAFC">R&amp;D (961)</text>
+  <rect x="170" y="285" width="200" height="18" rx="4" fill="#182032" />
+  <rect x="170" y="285" width="94" height="18" rx="4" fill="#60A5FA" />
+  <text x="270" y="299" font-family="'Inter', sans-serif" font-size="11" fill="#F8FAFC" font-weight="600">13.8%</text>
 
   <!-- HR -->
-  <text x="50" y="348" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD">Human Resources (63)</text>
-  <rect x="170" y="335" width="200" height="18" rx="4" fill="#0E0B16" />
-  <rect x="170" y="335" width="126" height="18" rx="4" fill="#A239CA" opacity="0.8" />
-  <text x="302" y="349" font-family="'Inter', sans-serif" font-size="11" fill="#E7DFDD" font-weight="600">19.0%</text>
+  <text x="50" y="348" font-family="'Inter', sans-serif" font-size="12" fill="#F8FAFC">Human Resources (63)</text>
+  <rect x="170" y="335" width="200" height="18" rx="4" fill="#182032" />
+  <rect x="170" y="335" width="126" height="18" rx="4" fill="#94A3B8" />
+  <text x="302" y="349" font-family="'Inter', sans-serif" font-size="11" fill="#F8FAFC" font-weight="600">19.0%</text>
 
   <!-- Summary note -->
-  <rect x="50" y="380" width="325" height="65" rx="8" fill="#181228" stroke="rgba(71, 23, 246, 0.25)" />
-  <text x="64" y="404" font-family="'Inter', sans-serif" font-size="11" fill="#E7DFDD" font-weight="600">Key Finding: Overtime Burden</text>
-  <text x="64" y="424" font-family="'Inter', sans-serif" font-size="10" fill="#A99F9D">Employees working overtime are 2.8x more likely to leave.</text>
+  <rect x="50" y="380" width="325" height="65" rx="8" fill="#182032" stroke="rgba(255, 255, 255, 0.06)" />
+  <text x="64" y="404" font-family="'Inter', sans-serif" font-size="11" fill="#F8FAFC" font-weight="600">Key Finding: Overtime Burden</text>
+  <text x="64" y="424" font-family="'Inter', sans-serif" font-size="10" fill="#94A3B8">Employees working overtime are 2.8x more likely to leave.</text>
 
   <!-- Chart 2: Experience vs Attrition -->
-  <rect x="415" y="160" width="355" height="305" rx="12" fill="#151022" stroke="rgba(71, 23, 246, 0.3)" />
-  <text x="435" y="192" font-family="'Sora', sans-serif" font-size="14" fill="#E7DFDD" font-weight="600">Years at Company vs Resignations</text>
-  <text x="435" y="210" font-family="'Inter', sans-serif" font-size="11" fill="#A99F9D">Early tenure represents peak departure vulnerability</text>
+  <rect x="415" y="160" width="355" height="305" rx="12" fill="#121724" stroke="rgba(255, 255, 255, 0.06)" />
+  <text x="435" y="192" font-family="'Sora', sans-serif" font-size="14" fill="#F8FAFC" font-weight="600">Years at Company vs Resignations</text>
+  <text x="435" y="210" font-family="'Inter', sans-serif" font-size="11" fill="#94A3B8">Early tenure represents peak departure vulnerability</text>
 
   <!-- Tenure Bars -->
   <!-- 0-2 yrs -->
-  <text x="435" y="248" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD">0–2 Years</text>
-  <rect x="535" y="235" width="215" height="18" rx="4" fill="#0E0B16" />
-  <rect x="535" y="235" width="175" height="18" rx="4" fill="#A239CA" />
-  <text x="718" y="249" font-family="'Inter', sans-serif" font-size="11" fill="#E7DFDD" font-weight="600">34.8%</text>
+  <text x="435" y="248" font-family="'Inter', sans-serif" font-size="12" fill="#F8FAFC">0–2 Years</text>
+  <rect x="535" y="235" width="215" height="18" rx="4" fill="#182032" />
+  <rect x="535" y="235" width="175" height="18" rx="4" fill="#3B82F6" />
+  <text x="718" y="249" font-family="'Inter', sans-serif" font-size="11" fill="#F8FAFC" font-weight="600">34.8%</text>
 
   <!-- 3-5 yrs -->
-  <text x="435" y="298" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD">3–5 Years</text>
-  <rect x="535" y="285" width="215" height="18" rx="4" fill="#0E0B16" />
-  <rect x="535" y="285" width="98" height="18" rx="4" fill="#4717F6" />
-  <text x="640" y="299" font-family="'Inter', sans-serif" font-size="11" fill="#E7DFDD" font-weight="600">15.2%</text>
+  <text x="435" y="298" font-family="'Inter', sans-serif" font-size="12" fill="#F8FAFC">3–5 Years</text>
+  <rect x="535" y="285" width="215" height="18" rx="4" fill="#182032" />
+  <rect x="535" y="285" width="98" height="18" rx="4" fill="#60A5FA" />
+  <text x="640" y="299" font-family="'Inter', sans-serif" font-size="11" fill="#F8FAFC" font-weight="600">15.2%</text>
 
   <!-- 6-10 yrs -->
-  <text x="435" y="348" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD">6–10 Years</text>
-  <rect x="535" y="335" width="215" height="18" rx="4" fill="#0E0B16" />
-  <rect x="535" y="335" width="62" height="18" rx="4" fill="#4717F6" opacity="0.75" />
-  <text x="605" y="349" font-family="'Inter', sans-serif" font-size="11" fill="#E7DFDD" font-weight="600">9.4%</text>
+  <text x="435" y="348" font-family="'Inter', sans-serif" font-size="12" fill="#F8FAFC">6–10 Years</text>
+  <rect x="535" y="335" width="215" height="18" rx="4" fill="#182032" />
+  <rect x="535" y="335" width="62" height="18" rx="4" fill="#94A3B8" />
+  <text x="605" y="349" font-family="'Inter', sans-serif" font-size="11" fill="#F8FAFC" font-weight="600">9.4%</text>
 
   <!-- 10+ yrs -->
-  <text x="435" y="398" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD">10+ Years</text>
-  <rect x="535" y="385" width="215" height="18" rx="4" fill="#0E0B16" />
-  <rect x="535" y="385" width="40" height="18" rx="4" fill="#4717F6" opacity="0.5" />
-  <text x="583" y="399" font-family="'Inter', sans-serif" font-size="11" fill="#E7DFDD" font-weight="600">5.8%</text>
+  <text x="435" y="398" font-family="'Inter', sans-serif" font-size="12" fill="#F8FAFC">10+ Years</text>
+  <rect x="535" y="385" width="215" height="18" rx="4" fill="#182032" />
+  <rect x="535" y="385" width="40" height="18" rx="4" fill="#64748B" />
+  <text x="583" y="399" font-family="'Inter', sans-serif" font-size="11" fill="#F8FAFC" font-weight="600">5.8%</text>
 
-  <text x="600" y="440" font-family="'Inter', sans-serif" font-size="11" fill="#A239CA" text-anchor="middle" font-weight="500">Action: Restructure 90-day onboarding checkpoints</text>
+  <text x="600" y="440" font-family="'Inter', sans-serif" font-size="11" fill="#3B82F6" text-anchor="middle" font-weight="500">Action: Restructure 90-day onboarding checkpoints</text>
 </svg>
