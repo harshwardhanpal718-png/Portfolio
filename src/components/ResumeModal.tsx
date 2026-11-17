@@ -10,29 +10,25 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm animate-fadeIn">
       <div 
-        className="relative w-full max-w-2xl bg-dark-card border border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl overflow-hidden"
+        className="relative w-full max-w-xl bg-white border border-[#E8DFD5] rounded-2xl p-6 sm:p-7 shadow-warm-lg overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Glow ambient background */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
-
         {/* Header */}
-        <div className="flex items-center justify-between pb-5 border-b border-white/10 relative z-10">
+        <div className="flex items-center justify-between pb-4 border-b border-[#F0E8DF]">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-xl bg-blue-500/15 border border-blue-500/30 flex items-center justify-center text-blue-400">
+            <div className="w-10 h-10 rounded-xl bg-[#FAF6F2] border border-[#EADBCE] flex items-center justify-center text-[#7E5331]">
               <FileText className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-xl font-bold font-heading text-white">Harshwardhan Pal — Resume</h3>
-              <p className="text-xs text-slate-muted">Aspiring Data Analyst • B.Tech CSE (2027)</p>
+              <h3 className="text-lg font-bold font-heading text-[#1C1612]">Harshwardhan Pal — Resume</h3>
+              <p className="text-xs text-[#63564C]">Aspiring Data Analyst • B.Tech CSE (2027)</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-lg text-slate-muted hover:text-white hover:bg-white/5 transition-colors"
+            className="p-1.5 rounded-lg text-[#8C7C70] hover:text-[#1C1612] hover:bg-[#FAF6F2] transition-colors"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -40,65 +36,53 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
         </div>
 
         {/* Content Body */}
-        <div className="py-6 space-y-5 text-sm text-slate-300 relative z-10">
-          <div className="p-4 rounded-xl bg-blue-950/20 border border-blue-500/20 text-xs text-blue-200 flex items-start gap-3">
-            <CheckCircle2 className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
+        <div className="py-5 space-y-4 text-xs text-[#46382E]">
+          <div className="p-3.5 rounded-xl bg-[#FAF6F2] border border-[#EADBCE] text-xs text-[#643F23] flex items-start gap-2.5">
+            <CheckCircle2 className="w-4 h-4 text-[#7E5331] shrink-0 mt-0.5" />
             <div>
-              <span className="font-semibold text-white">Resume Document Ready:</span>
-              <p className="mt-0.5 text-blue-300/90">
-                You can download the full PDF resume directly to your device or view it in a separate browser tab.
+              <span className="font-semibold text-[#1C1612]">Official Document Ready:</span>
+              <p className="mt-0.5 text-[#63564C]">
+                You can download the verified PDF resume directly or inspect it in a separate browser tab.
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-            <div className="p-3.5 rounded-lg bg-dark-bg/60 border border-white/5">
-              <span className="text-slate-muted block mb-1">Core Expertise</span>
-              <span className="font-semibold text-white">SQL, Python, Power BI, Excel, EDA</span>
+          <div className="grid grid-cols-2 gap-2.5 text-[11px]">
+            <div className="p-3 rounded-lg bg-[#FAF8F5] border border-[#E8DFD5]">
+              <span className="text-[#8C7C70] block mb-0.5">Core Technical Stack</span>
+              <span className="font-semibold text-[#1C1612]">Python, SQL, Power BI, Excel</span>
             </div>
-            <div className="p-3.5 rounded-lg bg-dark-bg/60 border border-white/5">
-              <span className="text-slate-muted block mb-1">Current Academic Program</span>
-              <span className="font-semibold text-white">B.Tech CSE, Jagannath University (2027)</span>
-            </div>
-            <div className="p-3.5 rounded-lg bg-dark-bg/60 border border-white/5">
-              <span className="text-slate-muted block mb-1">Availability</span>
-              <span className="font-semibold text-emerald-400">Open to Internships & Projects</span>
-            </div>
-            <div className="p-3.5 rounded-lg bg-dark-bg/60 border border-white/5">
-              <span className="text-slate-muted block mb-1">Location</span>
-              <span className="font-semibold text-white">Jaipur, Rajasthan, India</span>
+            <div className="p-3 rounded-lg bg-[#FAF8F5] border border-[#E8DFD5]">
+              <span className="text-[#8C7C70] block mb-0.5">Academic Program</span>
+              <span className="font-semibold text-[#1C1612]">B.Tech CSE, Jagannath Univ.</span>
             </div>
           </div>
-
-          <p className="text-xs text-slate-400 leading-relaxed">
-            Need a customized resume format or specific technical assessment references? Feel free to reach out directly via the contact form or email.
-          </p>
         </div>
 
         {/* Footer Actions */}
-        <div className="flex flex-col sm:flex-row items-center justify-end gap-3 pt-5 border-t border-white/10 relative z-10">
+        <div className="flex items-center justify-end gap-2.5 pt-4 border-t border-[#F0E8DF]">
           <button
             onClick={onClose}
-            className="w-full sm:w-auto px-4 py-2.5 rounded-xl border border-white/10 text-slate-300 hover:bg-white/5 text-xs font-medium transition-colors"
+            className="px-3.5 py-2 rounded-lg border border-[#E8DFD5] text-[#63564C] hover:bg-[#FAF6F2] text-xs font-medium transition-colors"
           >
-            Cancel
+            Close
           </button>
           <a
             href="/Harshwardhan_Pal_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-medium flex items-center justify-center gap-2 transition-colors"
+            className="px-3.5 py-2 rounded-lg bg-[#FAF6F2] border border-[#EADBCE] text-[#46382E] text-xs font-medium flex items-center gap-1.5 hover:bg-[#F3EAE0] transition-colors"
           >
-            <ExternalLink className="w-4 h-4 text-slate-300" />
-            Preview in Tab
+            <ExternalLink className="w-3.5 h-3.5 text-[#7E5331]" />
+            <span>Preview</span>
           </a>
           <a
             href="/Harshwardhan_Pal_Resume.pdf"
             download="Harshwardhan_Pal_Resume.pdf"
-            className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-semibold flex items-center justify-center gap-2 shadow-lg shadow-blue-600/25 transition-all"
+            className="px-4 py-2 rounded-lg bg-[#2A170B] hover:bg-[#462A16] text-white text-xs font-semibold flex items-center gap-1.5 transition-all shadow-sm"
           >
-            <Download className="w-4 h-4" />
-            Download PDF
+            <Download className="w-3.5 h-3.5 text-[#E4D3C0]" />
+            <span>Download PDF</span>
           </a>
         </div>
       </div>

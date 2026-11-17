@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <defs>
-    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3B82F6" />
-      <stop offset="100%" stop-color="#8B5CF6" />
+    <linearGradient id="brownGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9B714B" />
+      <stop offset="100%" stop-color="#643F23" />
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="16" fill="#080B12" />
-  <rect x="2" y="2" width="60" height="60" rx="14" stroke="url(#primaryGrad)" stroke-width="2" stroke-opacity="0.4" />
-  <!-- Data Chart Bars -->
-  <rect x="14" y="36" width="6" height="16" rx="3" fill="#3B82F6" fill-opacity="0.7" />
-  <rect x="24" y="28" width="6" height="24" rx="3" fill="#60A5FA" />
-  <rect x="34" y="20" width="6" height="32" rx="3" fill="#8B5CF6" />
-  <rect x="44" y="14" width="6" height="38" rx="3" fill="#A78BFA" />
-  <!-- Trend Line -->
-  <path d="M 17 34 L 27 26 L 37 18 L 47 12" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-  <circle cx="47" cy="12" r="3" fill="#38BDF8" />
+  <rect width="64" height="64" rx="16" fill="#FAF8F5" />
+  <rect x="2" y="2" width="60" height="60" rx="14" stroke="#E4D3C0" stroke-width="2" />
+  <!-- Data Chart Bars in Rich Warm Brown -->
+  <rect x="14" y="36" width="6" height="16" rx="3" fill="#D2B79B" />
+  <rect x="24" y="28" width="6" height="24" rx="3" fill="#B89370" />
+  <rect x="34" y="20" width="6" height="32" rx="3" fill="#9B714B" />
+  <rect x="44" y="14" width="6" height="38" rx="3" fill="#643F23" />
+  <!-- Trend Line in Warm Amber -->
+  <path d="M 17 34 L 27 26 L 37 18 L 47 12" stroke="#7E5331" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="47" cy="12" r="3" fill="#7E5331" />
 </svg>
