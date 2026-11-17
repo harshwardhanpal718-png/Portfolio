@@ -25,7 +25,7 @@ export const ScrollToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-6 right-6 z-40 p-2.5 rounded-xl bg-[#163832] hover:bg-[#235347] border border-[#235347] hover:border-[#8EB69B] text-[#8EB69B] hover:text-[#DAF1DE] shadow-forest-md transition-all duration-200 hover:-translate-y-0.5 group focus:outline-none"
+      className="fixed bottom-6 right-6 z-40 p-2.5 rounded-xl bg-[#151022] hover:bg-[#4717F6] border border-[#4717F6]/40 hover:border-[#A239CA] text-[#A239CA] hover:text-[#E7DFDD] shadow-jewel-md transition-all duration-200 hover:-translate-y-0.5 group focus:outline-none"
       aria-label="Scroll to top"
       title="Back to top"
     >

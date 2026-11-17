@@ -24,58 +24,58 @@ export const Skills: React.FC = () => {
       title: 'Programming & Databases',
       icon: Code2,
       skills: [
-        { name: 'Python', icon: Terminal, level: '92%' },
-        { name: 'SQL', icon: Database, level: '90%' },
-        { name: 'MySQL', icon: Database, level: '86%' },
+        { name: 'Python', icon: Terminal, tag: 'Core Analytics' },
+        { name: 'SQL', icon: Database, tag: 'Queries & CTEs' },
+        { name: 'MySQL', icon: Database, tag: 'Relational DB' },
       ],
     },
     {
       title: 'Data Analytics & Business Intelligence',
       icon: BarChart3,
       skills: [
-        { name: 'Microsoft Excel', icon: FileSpreadsheet, level: '94%' },
-        { name: 'Power BI', icon: BarChart3, level: '88%' },
-        { name: 'Data Cleaning', icon: Filter, level: '92%' },
-        { name: 'Data Visualization', icon: PieChart, level: '90%' },
-        { name: 'Statistics', icon: Calculator, level: '85%' },
-        { name: 'Exploratory Data Analysis (EDA)', icon: Search, level: '89%' },
+        { name: 'Microsoft Excel', icon: FileSpreadsheet, tag: 'VLOOKUP & Pivots' },
+        { name: 'Power BI', icon: BarChart3, tag: 'DAX & Modeling' },
+        { name: 'Data Cleaning', icon: Filter, tag: 'Quality Assurance' },
+        { name: 'Data Visualization', icon: PieChart, tag: 'Storytelling' },
+        { name: 'Statistics', icon: Calculator, tag: 'Hypothesis & Dist' },
+        { name: 'Exploratory Data Analysis', icon: Search, tag: 'EDA Workflows' },
       ],
     },
     {
       title: 'Python Libraries',
       icon: Boxes,
       skills: [
-        { name: 'Pandas', icon: Layers, level: '90%' },
-        { name: 'NumPy', icon: Cpu, level: '88%' },
-        { name: 'Matplotlib', icon: LineChart, level: '86%' },
-        { name: 'Seaborn', icon: PieChart, level: '87%' },
+        { name: 'Pandas', icon: Layers, tag: 'Data Wrangling' },
+        { name: 'NumPy', icon: Cpu, tag: 'Vector Computations' },
+        { name: 'Matplotlib', icon: LineChart, tag: 'Statistical Plots' },
+        { name: 'Seaborn', icon: PieChart, tag: 'Visual Distributions' },
       ],
     },
     {
       title: 'Tools & Workflow',
       icon: Wrench,
       skills: [
-        { name: 'Git', icon: Terminal, level: '85%' },
-        { name: 'GitHub', icon: Github, level: '88%' },
-        { name: 'VS Code', icon: Monitor, level: '92%' },
-        { name: 'Jupyter Notebook', icon: Terminal, level: '90%' },
+        { name: 'Git', icon: Terminal, tag: 'Version Control' },
+        { name: 'GitHub', icon: Github, tag: 'Repositories' },
+        { name: 'VS Code', icon: Monitor, tag: 'IDE Environment' },
+        { name: 'Jupyter Notebook', icon: Terminal, tag: 'Interactive Analysis' },
       ],
     },
   ];
 
   return (
-    <section id="skills" className="py-16 md:py-20 border-t border-[#235347]/60 bg-[#051F20] relative">
+    <section id="skills" className="py-16 md:py-20 border-t border-[#4717F6]/25 bg-[#0E0B16] relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="mb-10">
-          <span className="text-xs font-mono text-[#8EB69B] uppercase tracking-wider block mb-1">
+          <span className="text-xs font-mono text-[#A239CA] uppercase tracking-wider block mb-1">
             Capabilities
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold font-heading text-[#DAF1DE] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-bold font-heading text-[#E7DFDD] tracking-tight">
             Technical Skills
           </h2>
-          <div className="w-12 h-1 bg-[#235347] mt-2 rounded-full" />
+          <div className="w-12 h-1 bg-gradient-to-r from-[#4717F6] to-[#A239CA] mt-2 rounded-full" />
         </div>
 
         {/* Clean Skills Categories Grid */}
@@ -85,40 +85,36 @@ export const Skills: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-[#163832] border border-[#235347] rounded-2xl p-5 sm:p-6 shadow-forest-sm"
+                className="bg-[#151022] border border-[#4717F6]/30 rounded-2xl p-5 sm:p-6 shadow-sm hover:border-[#A239CA]/50 transition-all duration-300"
               >
-                <div className="flex items-center gap-2.5 mb-5 pb-3 border-b border-[#235347]">
-                  <CatIcon className="w-4 h-4 text-[#8EB69B]" />
-                  <h3 className="text-sm font-semibold text-[#DAF1DE]">
+                <div className="flex items-center gap-2.5 mb-5 pb-3 border-b border-[#4717F6]/25">
+                  <div className="w-8 h-8 rounded-lg bg-[#181228] border border-[#4717F6]/40 flex items-center justify-center text-[#A239CA]">
+                    <CatIcon className="w-4 h-4" />
+                  </div>
+                  <h3 className="text-sm font-semibold text-[#E7DFDD]">
                     {cat.title}
                   </h3>
                 </div>
 
-                <div className="space-y-3.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {cat.skills.map((skill, sIdx) => {
                     const SkillIcon = skill.icon;
                     return (
                       <div
                         key={sIdx}
-                        className="p-2.5 rounded-xl bg-[#0B2B26] border border-[#235347] hover:border-[#8EB69B] transition-colors"
+                        className="p-3 rounded-xl bg-[#181228] border border-[#4717F6]/25 hover:border-[#A239CA] hover:bg-[#1d1630] transition-all duration-200 group flex items-center justify-between"
                       >
-                        <div className="flex items-center justify-between mb-2 text-xs">
-                          <span className="flex items-center gap-2 text-[#DAF1DE] font-medium">
-                            <SkillIcon className="w-3.5 h-3.5 text-[#8EB69B]" />
+                        <div className="flex items-center gap-2.5 min-w-0">
+                          <div className="w-7 h-7 rounded-lg bg-[#0E0B16] border border-[#4717F6]/30 text-[#A239CA] group-hover:text-[#E7DFDD] group-hover:border-[#A239CA] flex items-center justify-center transition-colors shrink-0">
+                            <SkillIcon className="w-3.5 h-3.5" />
+                          </div>
+                          <span className="text-xs font-medium text-[#E7DFDD] group-hover:text-white truncate">
                             {skill.name}
                           </span>
-                          <span className="font-mono text-[11px] text-[#8EB69B]">
-                            {skill.level}
-                          </span>
                         </div>
-
-                        {/* Minimal Green Progress Indicator */}
-                        <div className="w-full h-1.5 rounded-full bg-[#051F20] overflow-hidden">
-                          <div
-                            className="h-full rounded-full bg-[#8EB69B] transition-all duration-500"
-                            style={{ width: skill.level }}
-                          />
-                        </div>
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#0E0B16] border border-[#4717F6]/40 text-[#A99F9D] group-hover:text-[#A239CA] group-hover:border-[#A239CA]/60 shrink-0 ml-2 transition-colors">
+                          {skill.tag}
+                        </span>
                       </div>
                     );
                   })}

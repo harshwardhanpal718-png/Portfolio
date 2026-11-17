@@ -13,45 +13,45 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#031516] border-t border-[#235347]/60 py-10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8EB69B] font-sans">
+    <footer className="bg-[#09070F] border-t border-[#4717F6]/25 py-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#A99F9D] font-sans">
         
         {/* Brand */}
         <div className="flex items-center space-x-2">
-          <span className="font-heading font-bold text-[#DAF1DE] text-sm">
+          <span className="font-heading font-bold text-[#E7DFDD] text-sm">
             Harshwardhan Pal
           </span>
-          <span className="text-[#235347]">•</span>
-          <span className="text-[#8EB69B] font-medium">Data Analyst</span>
+          <span className="text-[#4717F6]">•</span>
+          <span className="text-[#A239CA] font-medium">Data Analyst</span>
         </div>
 
         {/* Quick Links */}
         <div className="flex items-center space-x-4 text-xs font-medium">
-          <a href="#about" onClick={(e) => handleNavClick(e, '#about')} className="text-[#8EB69B] hover:text-[#DAF1DE] transition-colors">
+          <a href="#about" onClick={(e) => handleNavClick(e, '#about')} className="text-[#A99F9D] hover:text-[#E7DFDD] transition-colors">
             About
           </a>
-          <a href="#skills" onClick={(e) => handleNavClick(e, '#skills')} className="text-[#8EB69B] hover:text-[#DAF1DE] transition-colors">
+          <a href="#skills" onClick={(e) => handleNavClick(e, '#skills')} className="text-[#A99F9D] hover:text-[#E7DFDD] transition-colors">
             Skills
           </a>
-          <a href="#projects" onClick={(e) => handleNavClick(e, '#projects')} className="text-[#8EB69B] hover:text-[#DAF1DE] transition-colors">
+          <a href="#projects" onClick={(e) => handleNavClick(e, '#projects')} className="text-[#A99F9D] hover:text-[#E7DFDD] transition-colors">
             Projects
           </a>
-          <a href="#certifications" onClick={(e) => handleNavClick(e, '#certifications')} className="text-[#8EB69B] hover:text-[#DAF1DE] transition-colors">
+          <a href="#certifications" onClick={(e) => handleNavClick(e, '#certifications')} className="text-[#A99F9D] hover:text-[#E7DFDD] transition-colors">
             Certifications
           </a>
-          <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')} className="text-[#8EB69B] hover:text-[#DAF1DE] transition-colors">
+          <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')} className="text-[#A99F9D] hover:text-[#E7DFDD] transition-colors">
             Contact
           </a>
         </div>
 
         {/* Social Icons & Copyright */}
-        <div className="flex items-center space-x-3 text-[#8EB69B]/80 font-mono text-[11px]">
+        <div className="flex items-center space-x-3 text-[#A99F9D]/80 font-mono text-[11px]">
           <div className="flex items-center space-x-2">
             <a
               href="https://github.com/harshwardhanpal"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-1 rounded hover:text-[#DAF1DE] transition-colors"
+              className="p-1 rounded hover:text-[#A239CA] transition-colors"
               title="GitHub"
             >
               <Github className="w-3.5 h-3.5" />
@@ -60,14 +60,14 @@ export const Footer: React.FC = () => {
               href="https://linkedin.com/in/harshwardhan-pal"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-1 rounded hover:text-[#DAF1DE] transition-colors"
+              className="p-1 rounded hover:text-[#A239CA] transition-colors"
               title="LinkedIn"
             >
               <Linkedin className="w-3.5 h-3.5" />
             </a>
             <a
               href="mailto:harshwardhan.pal.analytics@gmail.com"
-              className="p-1 rounded hover:text-[#DAF1DE] transition-colors"
+              className="p-1 rounded hover:text-[#A239CA] transition-colors"
               title="Email"
             >
               <Mail className="w-3.5 h-3.5" />

@@ -1,76 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
-  <!-- Background Canvas -->
-  <rect width="800" height="500" rx="16" fill="#051F20" />
-  <rect x="1" y="1" width="798" height="498" rx="15" fill="none" stroke="#235347" stroke-width="2" />
+  <!-- Background Canvas: VOID -->
+  <rect width="800" height="500" rx="16" fill="#0E0B16" />
+  <rect x="1" y="1" width="798" height="498" rx="15" fill="none" stroke="#4717F6" stroke-width="2" stroke-opacity="0.4" />
 
   <!-- Window Header Bar -->
-  <rect x="0" y="0" width="800" height="44" rx="16" fill="#0B2B26" />
-  <circle cx="28" cy="22" r="5" fill="#235347" />
-  <circle cx="44" cy="22" r="5" fill="#235347" />
-  <circle cx="60" cy="22" r="5" fill="#8EB69B" />
-  <text x="400" y="27" font-family="'Inter', sans-serif" font-size="12" fill="#8EB69B" text-anchor="middle" font-weight="500">Sales_Performance_BI_Dashboard — Power BI &amp; SQL</text>
+  <rect x="0" y="0" width="800" height="44" rx="16" fill="#151022" />
+  <circle cx="28" cy="22" r="5" fill="#4717F6" />
+  <circle cx="44" cy="22" r="5" fill="#A239CA" />
+  <circle cx="60" cy="22" r="5" fill="#E7DFDD" />
+  <text x="400" y="27" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD" opacity="0.8" text-anchor="middle" font-weight="500">Sales_Performance_BI_Dashboard — Power BI &amp; SQL</text>
 
   <!-- KPI Cards -->
-  <rect x="30" y="64" width="225" height="85" rx="10" fill="#163832" stroke="#235347" stroke-width="1" />
-  <text x="48" y="92" font-family="'Inter', sans-serif" font-size="12" fill="#8EB69B">Gross Revenue (YTD)</text>
-  <text x="48" y="125" font-family="'Sora', sans-serif" font-size="24" fill="#DAF1DE" font-weight="700">$2.45M</text>
-  <rect x="180" y="80" width="55" height="22" rx="11" fill="#235347" />
-  <text x="207" y="95" font-family="'Inter', sans-serif" font-size="11" fill="#DAF1DE" text-anchor="middle" font-weight="600">+14.2%</text>
+  <rect x="30" y="64" width="225" height="85" rx="10" fill="#151022" stroke="#4717F6" stroke-width="1" stroke-opacity="0.4" />
+  <text x="48" y="92" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD" opacity="0.7">Gross Revenue (YTD)</text>
+  <text x="48" y="125" font-family="'Sora', sans-serif" font-size="24" fill="#E7DFDD" font-weight="700">$2.45M</text>
+  <rect x="180" y="80" width="55" height="22" rx="11" fill="#4717F6" />
+  <text x="207" y="95" font-family="'Inter', sans-serif" font-size="11" fill="#E7DFDD" text-anchor="middle" font-weight="600">+14.2%</text>
 
-  <rect x="285" y="64" width="225" height="85" rx="10" fill="#163832" stroke="#235347" stroke-width="1" />
-  <text x="303" y="92" font-family="'Inter', sans-serif" font-size="12" fill="#8EB69B">Net Profit Margin</text>
-  <text x="303" y="125" font-family="'Sora', sans-serif" font-size="24" fill="#8EB69B" font-weight="700">28.4%</text>
-  <rect x="435" y="80" width="55" height="22" rx="11" fill="#235347" />
-  <text x="462" y="95" font-family="'Inter', sans-serif" font-size="11" fill="#DAF1DE" text-anchor="middle" font-weight="600">+3.1%</text>
+  <rect x="285" y="64" width="225" height="85" rx="10" fill="#151022" stroke="#4717F6" stroke-width="1" stroke-opacity="0.4" />
+  <text x="303" y="92" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD" opacity="0.7">Net Profit Margin</text>
+  <text x="303" y="125" font-family="'Sora', sans-serif" font-size="24" fill="#A239CA" font-weight="700">28.4%</text>
+  <rect x="435" y="80" width="55" height="22" rx="11" fill="#4717F6" />
+  <text x="462" y="95" font-family="'Inter', sans-serif" font-size="11" fill="#E7DFDD" text-anchor="middle" font-weight="600">+3.1%</text>
 
-  <rect x="540" y="64" width="230" height="85" rx="10" fill="#163832" stroke="#235347" stroke-width="1" />
-  <text x="558" y="92" font-family="'Inter', sans-serif" font-size="12" fill="#8EB69B">Avg Order Value (AOV)</text>
-  <text x="558" y="125" font-family="'Sora', sans-serif" font-size="24" fill="#DAF1DE" font-weight="700">$184.20</text>
-  <rect x="695" y="80" width="55" height="22" rx="11" fill="#235347" />
-  <text x="722" y="95" font-family="'Inter', sans-serif" font-size="11" fill="#DAF1DE" text-anchor="middle" font-weight="600">+6.8%</text>
+  <rect x="540" y="64" width="230" height="85" rx="10" fill="#151022" stroke="#4717F6" stroke-width="1" stroke-opacity="0.4" />
+  <text x="558" y="92" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD" opacity="0.7">Avg Order Value (AOV)</text>
+  <text x="558" y="125" font-family="'Sora', sans-serif" font-size="24" fill="#E7DFDD" font-weight="700">$184.20</text>
+  <rect x="695" y="80" width="55" height="22" rx="11" fill="#4717F6" />
+  <text x="722" y="95" font-family="'Inter', sans-serif" font-size="11" fill="#E7DFDD" text-anchor="middle" font-weight="600">+6.8%</text>
 
   <!-- Main Chart Area -->
-  <rect x="30" y="170" width="480" height="295" rx="12" fill="#163832" stroke="#235347" stroke-width="1" />
-  <text x="52" y="202" font-family="'Sora', sans-serif" font-size="14" fill="#DAF1DE" font-weight="600">Monthly Revenue Velocity &amp; Target Tracking</text>
-  <text x="52" y="222" font-family="'Inter', sans-serif" font-size="11" fill="#8EB69B">Actual vs Budgeted Target (Jan - Dec 2024)</text>
+  <rect x="30" y="170" width="480" height="295" rx="12" fill="#151022" stroke="#4717F6" stroke-width="1" stroke-opacity="0.4" />
+  <text x="52" y="202" font-family="'Sora', sans-serif" font-size="14" fill="#E7DFDD" font-weight="600">Monthly Revenue Velocity &amp; Target Tracking</text>
+  <text x="52" y="222" font-family="'Inter', sans-serif" font-size="11" fill="#A239CA">Actual vs Budgeted Target (Jan - Dec 2024)</text>
 
   <!-- Gridlines -->
-  <line x1="52" y1="260" x2="480" y2="260" stroke="#235347" stroke-dasharray="3 3" />
-  <line x1="52" y1="310" x2="480" y2="310" stroke="#235347" stroke-dasharray="3 3" />
-  <line x1="52" y1="360" x2="480" y2="360" stroke="#235347" stroke-dasharray="3 3" />
-  <line x1="52" y1="410" x2="480" y2="410" stroke="#235347" />
+  <line x1="52" y1="260" x2="480" y2="260" stroke="#4717F6" stroke-opacity="0.25" stroke-dasharray="3 3" />
+  <line x1="52" y1="310" x2="480" y2="310" stroke="#4717F6" stroke-opacity="0.25" stroke-dasharray="3 3" />
+  <line x1="52" y1="360" x2="480" y2="360" stroke="#4717F6" stroke-opacity="0.25" stroke-dasharray="3 3" />
+  <line x1="52" y1="410" x2="480" y2="410" stroke="#4717F6" stroke-opacity="0.4" />
 
   <!-- Area & Line Graph -->
-  <polygon points="65,410 95,380 135,390 175,340 215,350 255,290 295,310 335,260 375,270 415,230 455,215 455,410" fill="#235347" fill-opacity="0.5" />
-  <polyline points="65,410 95,380 135,390 175,340 215,350 255,290 295,310 335,260 375,270 415,230 455,215" fill="none" stroke="#8EB69B" stroke-width="3" />
-  <polyline points="65,390 135,370 215,330 295,300 375,260 455,240" fill="none" stroke="#DAF1DE" stroke-width="2" stroke-dasharray="5 4" opacity="0.6" />
+  <polygon points="65,410 95,380 135,390 175,340 215,350 255,290 295,310 335,260 375,270 415,230 455,215 455,410" fill="#4717F6" fill-opacity="0.3" />
+  <polyline points="65,410 95,380 135,390 175,340 215,350 255,290 295,310 335,260 375,270 415,230 455,215" fill="none" stroke="#A239CA" stroke-width="3" />
+  <polyline points="65,390 135,370 215,330 295,300 375,260 455,240" fill="none" stroke="#4717F6" stroke-width="2" stroke-dasharray="5 4" opacity="0.8" />
 
-  <circle cx="255" cy="290" r="4" fill="#DAF1DE" stroke="#051F20" stroke-width="2" />
-  <circle cx="335" cy="260" r="4" fill="#DAF1DE" stroke="#051F20" stroke-width="2" />
-  <circle cx="455" cy="215" r="5" fill="#DAF1DE" stroke="#0B2B26" stroke-width="2" />
+  <circle cx="255" cy="290" r="4" fill="#E7DFDD" stroke="#0E0B16" stroke-width="2" />
+  <circle cx="335" cy="260" r="4" fill="#E7DFDD" stroke="#0E0B16" stroke-width="2" />
+  <circle cx="455" cy="215" r="5" fill="#E7DFDD" stroke="#4717F6" stroke-width="2" />
 
   <!-- Secondary Side Chart -->
-  <rect x="530" y="170" width="240" height="295" rx="12" fill="#163832" stroke="#235347" stroke-width="1" />
-  <text x="550" y="202" font-family="'Sora', sans-serif" font-size="14" fill="#DAF1DE" font-weight="600">Regional Performance</text>
-  <text x="550" y="222" font-family="'Inter', sans-serif" font-size="11" fill="#8EB69B">Share of Total Revenue</text>
+  <rect x="530" y="170" width="240" height="295" rx="12" fill="#151022" stroke="#4717F6" stroke-width="1" stroke-opacity="0.4" />
+  <text x="550" y="202" font-family="'Sora', sans-serif" font-size="14" fill="#E7DFDD" font-weight="600">Regional Performance</text>
+  <text x="550" y="222" font-family="'Inter', sans-serif" font-size="11" fill="#A239CA">Share of Total Revenue</text>
 
-  <text x="550" y="260" font-family="'Inter', sans-serif" font-size="12" fill="#DAF1DE">North America</text>
-  <text x="735" y="260" font-family="'Inter', sans-serif" font-size="12" fill="#8EB69B" text-anchor="end">38%</text>
-  <rect x="550" y="270" width="180" height="10" rx="5" fill="#0B2B26" />
-  <rect x="550" y="270" width="137" height="10" rx="5" fill="#8EB69B" />
+  <text x="550" y="260" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD">North America</text>
+  <text x="735" y="260" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD" opacity="0.7" text-anchor="end">38%</text>
+  <rect x="550" y="270" width="180" height="10" rx="5" fill="#0E0B16" />
+  <rect x="550" y="270" width="137" height="10" rx="5" fill="#4717F6" />
 
-  <text x="550" y="315" font-family="'Inter', sans-serif" font-size="12" fill="#DAF1DE">Europe</text>
-  <text x="735" y="315" font-family="'Inter', sans-serif" font-size="12" fill="#8EB69B" text-anchor="end">29%</text>
-  <rect x="550" y="325" width="180" height="10" rx="5" fill="#0B2B26" />
-  <rect x="550" y="325" width="104" height="10" rx="5" fill="#235347" />
+  <text x="550" y="315" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD">Europe</text>
+  <text x="735" y="315" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD" opacity="0.7" text-anchor="end">29%</text>
+  <rect x="550" y="325" width="180" height="10" rx="5" fill="#0E0B16" />
+  <rect x="550" y="325" width="104" height="10" rx="5" fill="#A239CA" />
 
-  <text x="550" y="370" font-family="'Inter', sans-serif" font-size="12" fill="#DAF1DE">Asia Pacific</text>
-  <text x="735" y="370" font-family="'Inter', sans-serif" font-size="12" fill="#8EB69B" text-anchor="end">21%</text>
-  <rect x="550" y="380" width="180" height="10" rx="5" fill="#0B2B26" />
-  <rect x="550" y="380" width="76" height="10" rx="5" fill="#8EB69B" opacity="0.8" />
+  <text x="550" y="370" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD">Asia Pacific</text>
+  <text x="735" y="370" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD" opacity="0.7" text-anchor="end">21%</text>
+  <rect x="550" y="380" width="180" height="10" rx="5" fill="#0E0B16" />
+  <rect x="550" y="380" width="76" height="10" rx="5" fill="#4717F6" opacity="0.7" />
 
-  <text x="550" y="425" font-family="'Inter', sans-serif" font-size="12" fill="#DAF1DE">Latin America</text>
-  <text x="735" y="425" font-family="'Inter', sans-serif" font-size="12" fill="#8EB69B" text-anchor="end">12%</text>
-  <rect x="550" y="435" width="180" height="10" rx="5" fill="#0B2B26" />
-  <rect x="550" y="435" width="43" height="10" rx="5" fill="#235347" />
+  <text x="550" y="425" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD">Latin America</text>
+  <text x="735" y="425" font-family="'Inter', sans-serif" font-size="12" fill="#E7DFDD" opacity="0.7" text-anchor="end">12%</text>
+  <rect x="550" y="435" width="180" height="10" rx="5" fill="#0E0B16" />
+  <rect x="550" y="435" width="43" height="10" rx="5" fill="#A239CA" opacity="0.7" />
 </svg>

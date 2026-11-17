@@ -55,7 +55,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#051F20]/90 backdrop-blur-md border-b border-[#235347]/70 py-3.5 shadow-forest-sm'
+          ? 'bg-[#0E0B16]/90 backdrop-blur-md border-b border-[#4717F6]/30 py-3.5 shadow-jewel-sm'
           : 'bg-transparent py-5'
       }`}
     >
@@ -67,18 +67,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
           onClick={(e) => handleNavClick(e, '#home')}
           className="flex items-center space-x-2.5 group"
         >
-          <div className="w-9 h-9 rounded-lg bg-[#163832] border border-[#235347] group-hover:border-[#8EB69B] flex items-center justify-center transition-all duration-300 shadow-sm">
-            <span className="font-heading font-bold text-[#DAF1DE] text-sm">
+          <div className="w-9 h-9 rounded-lg bg-[#151022] border border-[#4717F6]/40 group-hover:border-[#A239CA] flex items-center justify-center transition-all duration-300 shadow-sm">
+            <span className="font-heading font-bold text-[#E7DFDD] text-sm">
               HP
             </span>
           </div>
-          <span className="font-heading font-bold text-[#DAF1DE] text-base tracking-tight group-hover:text-[#8EB69B] transition-colors">
+          <span className="font-heading font-bold text-[#E7DFDD] text-base tracking-tight group-hover:text-[#A239CA] transition-colors">
             Harshwardhan Pal
           </span>
         </a>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden md:flex items-center space-x-1 bg-[#0B2B26]/80 border border-[#235347] rounded-xl px-2 py-1 backdrop-blur-sm">
+        <nav className="hidden md:flex items-center space-x-1 bg-[#151022]/85 border border-[#4717F6]/30 rounded-xl px-2 py-1 backdrop-blur-sm">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
             return (
@@ -88,8 +88,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                 onClick={(e) => handleNavClick(e, link.href)}
                 className={`px-3.5 py-1.5 text-xs font-medium rounded-lg transition-all duration-200 ${
                   isActive
-                    ? 'text-[#DAF1DE] bg-[#163832] border border-[#235347] font-semibold shadow-sm'
-                    : 'text-[#8EB69B] hover:text-[#DAF1DE] hover:bg-[#163832]/50'
+                    ? 'text-[#E7DFDD] bg-[#4717F6]/25 border border-[#A239CA]/50 font-semibold shadow-sm'
+                    : 'text-[#A99F9D] hover:text-[#E7DFDD] hover:bg-[#181228]'
                 }`}
               >
                 {link.name}
@@ -102,9 +102,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
         <div className="hidden sm:flex items-center space-x-3">
           <button
             onClick={onOpenResume}
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold text-[#DAF1DE] bg-[#235347] hover:bg-[#163832] border border-[#235347] hover:border-[#8EB69B] transition-all duration-200 shadow-sm hover:-translate-y-0.5"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold text-[#E7DFDD] bg-[#4717F6] hover:bg-[#A239CA] border border-[#4717F6] hover:border-[#A239CA] transition-all duration-200 shadow-jewel-sm hover:-translate-y-0.5"
           >
-            <Download className="w-3.5 h-3.5 text-[#8EB69B]" />
+            <Download className="w-3.5 h-3.5 text-[#E7DFDD]" />
             <span>Resume</span>
           </button>
         </div>
@@ -113,7 +113,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
         <div className="flex items-center space-x-2 md:hidden">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-lg bg-[#0B2B26] border border-[#235347] text-[#DAF1DE] hover:border-[#8EB69B]"
+            className="p-2 rounded-lg bg-[#151022] border border-[#4717F6]/40 text-[#E7DFDD] hover:border-[#A239CA]"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -123,14 +123,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#051F20]/95 backdrop-blur-xl border-b border-[#235347] px-6 py-4 shadow-forest-md">
+        <div className="md:hidden bg-[#0E0B16]/95 backdrop-blur-xl border-b border-[#4717F6]/30 px-6 py-4 shadow-jewel-md">
           <nav className="flex flex-col space-y-2">
             {navLinks.map((link) => (
               <a
                 key={link.id}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="px-3 py-2 rounded-lg text-sm font-medium text-[#8EB69B] hover:text-[#DAF1DE] hover:bg-[#163832]"
+                className="px-3 py-2 rounded-lg text-sm font-medium text-[#A99F9D] hover:text-[#E7DFDD] hover:bg-[#151022]"
               >
                 {link.name}
               </a>
@@ -141,9 +141,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                   setMobileMenuOpen(false);
                   onOpenResume();
                 }}
-                className="w-full py-2.5 rounded-lg bg-[#235347] hover:bg-[#163832] border border-[#235347] text-[#DAF1DE] text-xs font-semibold flex items-center justify-center gap-2"
+                className="w-full py-2.5 rounded-lg bg-[#4717F6] hover:bg-[#A239CA] border border-[#4717F6] text-[#E7DFDD] text-xs font-semibold flex items-center justify-center gap-2"
               >
-                <Download className="w-3.5 h-3.5 text-[#8EB69B]" />
+                <Download className="w-3.5 h-3.5 text-[#E7DFDD]" />
                 <span>Download Resume</span>
               </button>
             </div>

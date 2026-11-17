@@ -7,13 +7,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        forest: {
-          bg: '#051F20',         // Primary Background
-          secondary: '#0B2B26',  // Secondary Background
-          card: '#163832',       // Card Background
-          accent: '#235347',     // Primary Accent
-          sage: '#8EB69B',       // Secondary Accent
-          mint: '#DAF1DE',       // Primary Text
+        void: {
+          DEFAULT: '#0E0B16',
+          surface: '#151022',
+          card: '#181228',
+          hover: '#1F1735',
+          border: 'rgba(71, 23, 246, 0.25)',
+          borderHover: 'rgba(162, 57, 202, 0.5)',
+        },
+        fuschia: {
+          DEFAULT: '#A239CA',
+          light: '#B755DB',
+          dark: '#8624AC',
+        },
+        jewel: {
+          DEFAULT: '#4717F6',
+          light: '#6134F8',
+          dark: '#350EC5',
+        },
+        stark: {
+          DEFAULT: '#E7DFDD',
+          muted: '#A99F9D',
+          subtle: '#786F6E',
         }
       },
       fontFamily: {
@@ -22,10 +37,10 @@ export default {
         mono: ['JetBrains Mono', 'monospace'],
       },
       boxShadow: {
-        'forest-sm': '0 2px 8px rgba(5, 31, 32, 0.4)',
-        'forest-md': '0 4px 20px rgba(5, 31, 32, 0.6), 0 0 1px rgba(142, 182, 155, 0.2)',
-        'forest-lg': '0 12px 32px rgba(5, 31, 32, 0.75), 0 0 20px rgba(142, 182, 155, 0.08)',
-        'sage-glow': '0 0 20px rgba(142, 182, 155, 0.15)',
+        'jewel-sm': '0 2px 10px rgba(71, 23, 246, 0.2)',
+        'jewel-md': '0 6px 20px rgba(71, 23, 246, 0.3)',
+        'fuschia-glow': '0 0 25px rgba(162, 57, 202, 0.25)',
+        'purple-glow': '0 0 30px rgba(71, 23, 246, 0.18)',
       }
     },
   },

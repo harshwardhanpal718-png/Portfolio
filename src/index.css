@@ -9,50 +9,57 @@
   }
 
   body {
-    background-color: #051F20;
-    color: #DAF1DE;
+    background-color: #0E0B16;
+    color: #E7DFDD;
     overflow-x: hidden;
   }
 
-  /* Custom Minimal Green Scrollbar */
+  /* Custom Futuristic Purple Scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #051F20;
+    background: #0E0B16;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #235347;
+    background: #4717F6;
     border-radius: 9999px;
-    border: 2px solid #051F20;
+    border: 2px solid #0E0B16;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #8EB69B;
+    background: #A239CA;
   }
 }
 
 @layer utilities {
-  .forest-card {
-    background-color: #163832;
-    border: 1px solid #235347;
+  .void-card {
+    background-color: #151022;
+    border: 1px solid rgba(71, 23, 246, 0.25);
   }
 
-  .forest-card-hover {
+  .void-card-hover {
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .forest-card-hover:hover {
-    border-color: #8EB69B;
+  .void-card-hover:hover {
+    border-color: rgba(162, 57, 202, 0.6);
+    background-color: #191329;
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px -4px rgba(5, 31, 32, 0.6), 0 0 15px rgba(142, 182, 155, 0.1);
+    box-shadow: 0 10px 30px -10px rgba(71, 23, 246, 0.3), 0 0 15px rgba(162, 57, 202, 0.15);
   }
 
-  .text-gradient-forest {
-    background: linear-gradient(135deg, #DAF1DE 0%, #8EB69B 100%);
+  .text-gradient-purple {
+    background: linear-gradient(135deg, #E7DFDD 0%, #A239CA 50%, #4717F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-stark {
+    background: linear-gradient(135deg, #FFFFFF 0%, #E7DFDD 60%, #A239CA 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
