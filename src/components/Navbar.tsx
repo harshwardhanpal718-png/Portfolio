@@ -55,7 +55,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#0A0D14]/90 backdrop-blur-md border-b border-white/[0.08] py-3.5 shadow-lg'
+          ? 'bg-white/90 backdrop-blur-md border-b border-slate-200/80 py-3.5 shadow-sm'
           : 'bg-transparent py-5'
       }`}
     >
@@ -67,18 +67,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
           onClick={(e) => handleNavClick(e, '#home')}
           className="flex items-center space-x-2.5 group"
         >
-          <div className="w-9 h-9 rounded-lg bg-[#121724] border border-white/10 group-hover:border-[#3B82F6]/50 flex items-center justify-center transition-all duration-300 shadow-sm">
-            <span className="font-heading font-bold text-[#F8FAFC] text-sm">
+          <div className="w-9 h-9 rounded-lg bg-white border border-slate-200 group-hover:border-blue-500 flex items-center justify-center transition-all duration-300 shadow-sm">
+            <span className="font-heading font-bold text-slate-900 group-hover:text-blue-600 text-sm">
               HP
             </span>
           </div>
-          <span className="font-heading font-bold text-[#F8FAFC] text-base tracking-tight group-hover:text-[#3B82F6] transition-colors">
+          <span className="font-heading font-bold text-slate-900 text-base tracking-tight group-hover:text-blue-600 transition-colors">
             Harshwardhan Pal
           </span>
         </a>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden md:flex items-center space-x-1 bg-[#121724]/80 border border-white/[0.08] rounded-xl px-2 py-1 backdrop-blur-sm">
+        <nav className="hidden md:flex items-center space-x-1 bg-white/80 border border-slate-200/90 rounded-xl px-2 py-1 backdrop-blur-sm shadow-xs">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
             return (
@@ -88,8 +88,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                 onClick={(e) => handleNavClick(e, link.href)}
                 className={`px-3.5 py-1.5 text-xs font-medium rounded-lg transition-all duration-200 ${
                   isActive
-                    ? 'text-white bg-[#3B82F6]/15 border border-[#3B82F6]/30 font-semibold shadow-sm'
-                    : 'text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-white/[0.04]'
+                    ? 'text-blue-600 bg-blue-50 border border-blue-200/80 font-semibold shadow-xs'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                 }`}
               >
                 {link.name}
@@ -102,9 +102,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
         <div className="hidden sm:flex items-center space-x-3">
           <button
             onClick={onOpenResume}
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold text-white bg-[#3B82F6] hover:bg-[#2563EB] transition-all duration-200 shadow-accent-sm hover:-translate-y-0.5"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold text-white bg-[#2563EB] hover:bg-[#1D4ED8] transition-all duration-200 shadow-accent-sm hover:-translate-y-0.5"
           >
-            <Download className="w-3.5 h-3.5" />
+            <Download className="w-3.5 h-3.5 text-white" />
             <span>Resume</span>
           </button>
         </div>
@@ -113,7 +113,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
         <div className="flex items-center space-x-2 md:hidden">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-lg bg-[#121724] border border-white/10 text-[#F8FAFC] hover:border-[#3B82F6]/40"
+            className="p-2 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-blue-400"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -123,14 +123,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0A0D14]/95 backdrop-blur-xl border-b border-white/[0.08] px-6 py-4 shadow-xl">
+        <div className="md:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 px-6 py-4 shadow-lg">
           <nav className="flex flex-col space-y-2">
             {navLinks.map((link) => (
               <a
                 key={link.id}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="px-3 py-2 rounded-lg text-sm font-medium text-[#94A3B8] hover:text-white hover:bg-[#121724]"
+                className="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50"
               >
                 {link.name}
               </a>
@@ -141,7 +141,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                   setMobileMenuOpen(false);
                   onOpenResume();
                 }}
-                className="w-full py-2.5 rounded-lg bg-[#3B82F6] hover:bg-[#2563EB] text-white text-xs font-semibold flex items-center justify-center gap-2"
+                className="w-full py-2.5 rounded-lg bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs font-semibold flex items-center justify-center gap-2"
               >
                 <Download className="w-3.5 h-3.5" />
                 <span>Download Resume</span>

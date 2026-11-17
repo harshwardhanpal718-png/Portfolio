@@ -5,51 +5,51 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    color-scheme: dark;
+    color-scheme: light;
   }
 
   body {
-    background-color: #0A0D14;
-    color: #F8FAFC;
+    background-color: #F8FAFC;
+    color: #0F172A;
     overflow-x: hidden;
     font-family: 'Inter', sans-serif;
   }
 
-  /* Custom Clean Blue-Accented Scrollbar */
+  /* Custom Premium Light Scrollbar */
   ::-webkit-scrollbar {
     width: 7px;
     height: 7px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #0A0D14;
+    background: #F8FAFC;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #1E293B;
+    background: #CBD5E1;
     border-radius: 9999px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #3B82F6;
+    background: #94A3B8;
   }
 }
 
 @layer utilities {
-  .card-dark {
-    background-color: #121724;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+  .card-light {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
   }
 
-  .card-dark-hover {
+  .card-light-hover {
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .card-dark-hover:hover {
-    border-color: rgba(59, 130, 246, 0.35);
-    background-color: #161D2E;
+  .card-light-hover:hover {
+    border-color: #BFDBFE;
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 0 15px rgba(59, 130, 246, 0.1);
+    box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.08), 0 0 1px rgba(37, 99, 235, 0.2);
   }
 }
 

@@ -17,9 +17,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
   };
 
   return (
-    <section id="home" className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-[#0A0D14]">
-      {/* Subtle Blue Ambient Glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[550px] h-[300px] bg-[#3B82F6]/5 rounded-full blur-[140px] pointer-events-none" />
+    <section id="home" className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-[#F8FAFC]">
+      {/* Subtle Ambient Glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-blue-500/[0.04] rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -28,37 +28,37 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             
             {/* Status Pill */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#121724] border border-white/10 text-[#60A5FA] text-xs font-mono mb-4 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-[#3B82F6] animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-mono mb-4 shadow-xs">
+              <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
               <span className="font-medium">Available for Data Analyst Roles</span>
             </div>
 
             {/* Name Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading text-[#F8FAFC] tracking-tight mb-2">
-              Harshwardhan <span className="text-[#3B82F6]">Pal</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading text-slate-900 tracking-tight mb-2">
+              Harshwardhan <span className="text-[#2563EB]">Pal</span>
             </h1>
 
             {/* Role & Tagline */}
-            <h2 className="text-xl sm:text-2xl font-semibold text-[#94A3B8] mb-2">
+            <h2 className="text-xl sm:text-2xl font-semibold text-slate-700 mb-2">
               Aspiring Data Analyst
             </h2>
-            <p className="text-sm sm:text-base font-medium text-[#F8FAFC]/90 mb-5 italic">
+            <p className="text-sm sm:text-base font-medium text-slate-600 mb-5 italic">
               "Turning Data Into Meaningful Insights."
             </p>
 
             {/* Concise Bio */}
-            <p className="text-sm sm:text-base text-[#94A3B8] max-w-xl leading-relaxed mb-6 font-sans">
-              I am a Computer Science Engineering student at <strong className="text-[#F8FAFC] font-semibold">Jagannath University, Jaipur</strong> passionate about data exploration, exploratory data analysis (EDA), and transforming raw complex datasets into actionable business dashboards using SQL, Python, Power BI, and Excel.
+            <p className="text-sm sm:text-base text-slate-600 max-w-xl leading-relaxed mb-6 font-sans">
+              I am a Computer Science Engineering student at <strong className="text-slate-900 font-semibold">Jagannath University, Jaipur</strong> passionate about data exploration, exploratory data analysis (EDA), and transforming raw complex datasets into actionable business dashboards using SQL, Python, Power BI, and Excel.
             </p>
 
             {/* Meta Tags */}
-            <div className="flex flex-wrap items-center gap-2.5 mb-8 text-xs text-[#94A3B8] font-mono">
-              <span className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#121724] border border-white/[0.08]">
-                <GraduationCap className="w-3.5 h-3.5 text-[#3B82F6]" />
+            <div className="flex flex-wrap items-center gap-2.5 mb-8 text-xs text-slate-600 font-mono">
+              <span className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-white border border-slate-200 shadow-xs">
+                <GraduationCap className="w-3.5 h-3.5 text-blue-600" />
                 B.Tech CSE (Class of 2027)
               </span>
-              <span className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#121724] border border-white/[0.08]">
-                <MapPin className="w-3.5 h-3.5 text-[#60A5FA]" />
+              <span className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-white border border-slate-200 shadow-xs">
+                <MapPin className="w-3.5 h-3.5 text-blue-600" />
                 Jaipur, India
               </span>
             </div>
@@ -67,7 +67,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto mb-6">
               <a
                 href="#projects"
-                className="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-[#3B82F6] hover:bg-[#2563EB] text-white text-xs font-semibold flex items-center justify-center gap-2 transition-all duration-200 shadow-accent-sm hover:-translate-y-0.5"
+                className="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs font-semibold flex items-center justify-center gap-2 transition-all duration-200 shadow-accent-sm hover:-translate-y-0.5"
               >
                 <span>View Projects</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -75,15 +75,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
               <button
                 onClick={onOpenResume}
-                className="w-full sm:w-auto px-4 py-2.5 rounded-lg bg-[#121724] hover:bg-[#182032] border border-white/10 hover:border-[#3B82F6]/50 text-[#F8FAFC] text-xs font-medium flex items-center justify-center gap-2 transition-all duration-200"
+                className="w-full sm:w-auto px-4 py-2.5 rounded-lg bg-white hover:bg-slate-50 border border-slate-200 hover:border-blue-400 text-slate-800 text-xs font-medium flex items-center justify-center gap-2 transition-all duration-200 shadow-xs"
               >
-                <Download className="w-3.5 h-3.5 text-[#3B82F6]" />
+                <Download className="w-3.5 h-3.5 text-blue-600" />
                 <span>Download Resume</span>
               </button>
 
               <a
                 href="#contact"
-                className="w-full sm:w-auto px-4 py-2.5 rounded-lg border border-white/10 hover:border-[#3B82F6]/50 text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#121724] text-xs font-medium flex items-center justify-center gap-2 transition-all duration-200"
+                className="w-full sm:w-auto px-4 py-2.5 rounded-lg bg-white hover:bg-slate-50 border border-slate-200 hover:border-blue-400 text-slate-700 hover:text-blue-600 text-xs font-medium flex items-center justify-center gap-2 transition-all duration-200 shadow-xs"
               >
                 <Mail className="w-3.5 h-3.5" />
                 <span>Contact</span>
@@ -96,7 +96,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                 href="https://github.com/harshwardhanpal"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-[#121724] border border-white/10 text-[#94A3B8] hover:text-[#F8FAFC] hover:border-[#3B82F6]/50 transition-colors"
+                className="p-2 rounded-lg bg-white border border-slate-200 text-slate-600 hover:text-blue-600 hover:border-blue-400 transition-colors shadow-xs"
                 title="GitHub"
               >
                 <Github className="w-4 h-4" />
@@ -105,14 +105,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                 href="https://linkedin.com/in/harshwardhan-pal"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-[#121724] border border-white/10 text-[#94A3B8] hover:text-[#F8FAFC] hover:border-[#3B82F6]/50 transition-colors"
+                className="p-2 rounded-lg bg-white border border-slate-200 text-slate-600 hover:text-blue-600 hover:border-blue-400 transition-colors shadow-xs"
                 title="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
                 href="mailto:harshwardhan.pal.analytics@gmail.com"
-                className="p-2 rounded-lg bg-[#121724] border border-white/10 text-[#94A3B8] hover:text-[#F8FAFC] hover:border-[#3B82F6]/50 transition-colors"
+                className="p-2 rounded-lg bg-white border border-slate-200 text-slate-600 hover:text-blue-600 hover:border-blue-400 transition-colors shadow-xs"
                 title="Email"
               >
                 <Mail className="w-4 h-4" />
@@ -121,10 +121,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
           </div>
 
-          {/* Right Column: Clean Profile Photograph Frame */}
+          {/* Right Column: Clean Profile Frame */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-2xl bg-[#121724] border border-white/10 hover:border-[#3B82F6]/50 p-2 shadow-card overflow-hidden group transition-all duration-300">
-              <div className="w-full h-full rounded-xl overflow-hidden bg-[#0A0D14] flex items-center justify-center relative">
+            <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 p-2 shadow-premium-lg overflow-hidden group transition-all duration-300">
+              <div className="w-full h-full rounded-xl overflow-hidden bg-slate-50 flex items-center justify-center relative">
                 <img
                   src={imgSrc}
                   alt="Harshwardhan Pal"
@@ -135,7 +135,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
               {/* Bottom tag */}
               <div className="absolute bottom-4 inset-x-4 text-center">
-                <span className="inline-block px-3 py-1 rounded-full bg-[#0A0D14]/90 border border-white/10 text-[11px] font-mono text-[#F8FAFC] shadow-sm backdrop-blur-sm">
+                <span className="inline-block px-3 py-1 rounded-full bg-white/95 border border-slate-200 text-[11px] font-mono text-slate-800 shadow-sm backdrop-blur-sm">
                   Harshwardhan Pal • Data Analyst
                 </span>
               </div>

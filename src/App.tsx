@@ -14,11 +14,11 @@ export function App() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#0A0D14] text-[#F8FAFC] font-sans selection:bg-[#3B82F6]/30 selection:text-white">
+    <div className="min-h-screen bg-[#F8FAFC] text-[#0F172A] font-sans selection:bg-[#2563EB]/15 selection:text-[#1D4ED8]">
       {/* Sticky Navigation Bar */}
       <Navbar onOpenResume={() => setIsResumeModalOpen(true)} />
 
-      {/* ONLY The Six Defined Sections */}
+      {/* The Six Defined Sections */}
       <main>
         {/* Section 1: Hero */}
         <Hero onOpenResume={() => setIsResumeModalOpen(true)} />

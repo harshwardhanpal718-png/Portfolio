@@ -1,31 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
   <defs>
     <linearGradient id="avatarBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#121724" />
-      <stop offset="100%" stop-color="#0A0D14" />
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F1F5F9" />
     </linearGradient>
-    <linearGradient id="avatarGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#60A5FA" />
-      <stop offset="100%" stop-color="#3B82F6" />
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#1D4ED8" />
     </linearGradient>
   </defs>
 
   <!-- Background -->
   <rect width="400" height="400" rx="32" fill="url(#avatarBg)" />
-  <rect x="2" y="2" width="396" height="396" rx="30" fill="none" stroke="rgba(59, 130, 246, 0.3)" stroke-width="2" />
+  <rect x="2" y="2" width="396" height="396" rx="30" fill="none" stroke="#E2E8F0" stroke-width="2" />
 
   <!-- Grid Pattern -->
-  <circle cx="200" cy="160" r="70" fill="rgba(59, 130, 246, 0.08)" />
+  <circle cx="200" cy="160" r="70" fill="rgba(37, 99, 235, 0.05)" />
 
   <!-- Elegant Avatar Figure -->
-  <circle cx="200" cy="145" r="50" fill="#182032" stroke="rgba(59, 130, 246, 0.4)" stroke-width="2" />
-  <path d="M 120 285 C 120 230, 160 215, 200 215 C 240 215, 280 230, 280 285" fill="#182032" stroke="rgba(59, 130, 246, 0.4)" stroke-width="2" />
+  <circle cx="200" cy="145" r="50" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="2" />
+  <path d="M 120 285 C 120 230, 160 215, 200 215 C 240 215, 280 230, 280 285" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="2" />
 
   <!-- Monogram Initials -->
-  <text x="200" y="157" font-family="'Sora', sans-serif" font-size="36" font-weight="800" fill="url(#avatarGlow)" text-anchor="middle">HP</text>
+  <text x="200" y="157" font-family="'Sora', sans-serif" font-size="36" font-weight="800" fill="url(#blueGrad)" text-anchor="middle">HP</text>
 
   <!-- Professional Badge -->
-  <rect x="90" y="315" width="220" height="38" rx="19" fill="#0A0D14" stroke="rgba(59, 130, 246, 0.35)" stroke-width="1.5" />
-  <circle cx="112" cy="334" r="5" fill="#3B82F6" />
-  <text x="210" y="339" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#F8FAFC" text-anchor="middle">Harshwardhan Pal</text>
+  <rect x="90" y="315" width="220" height="38" rx="19" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.04))" />
+  <circle cx="112" cy="334" r="5" fill="#2563EB" />
+  <text x="210" y="339" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#0F172A" text-anchor="middle">Harshwardhan Pal</text>
 </svg>

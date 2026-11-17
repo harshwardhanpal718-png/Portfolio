@@ -8,27 +8,24 @@ export default {
     extend: {
       colors: {
         bg: {
-          DEFAULT: '#0A0D14', // Deep charcoal / near black
-          secondary: '#0F131D',
-          card: '#121724',
-          cardHover: '#161D2E',
-          surface: '#182032',
+          DEFAULT: '#F8FAFC', // Ultra-clean light slate canvas
+          surface: '#FFFFFF', // Pure white card
+          subtle: '#F1F5F9', // Subtle contrast surface
+          muted: '#E2E8F0', // Light border
         },
         accent: {
-          DEFAULT: '#3B82F6', // Blue accent
-          hover: '#2563EB',
-          light: '#60A5FA',
-          muted: 'rgba(59, 130, 246, 0.15)',
+          DEFAULT: '#2563EB', // Premium royal blue
+          hover: '#1D4ED8',
+          light: '#3B82F6',
+          subtle: '#EFF6FF',
+          border: '#BFDBFE',
         },
-        text: {
-          primary: '#F8FAFC', // White
-          secondary: '#94A3B8', // Soft grey
-          muted: '#64748B',
+        content: {
+          heading: '#0F172A', // Sharp dark slate
+          body: '#334155', // Balanced readable text
+          muted: '#64748B', // Soft grey
+          subtle: '#94A3B8',
         },
-        border: {
-          subtle: 'rgba(255, 255, 255, 0.08)',
-          hover: 'rgba(59, 130, 246, 0.35)',
-        }
       },
       fontFamily: {
         heading: ['Sora', 'sans-serif'],
@@ -36,9 +33,11 @@ export default {
         mono: ['JetBrains Mono', 'monospace'],
       },
       boxShadow: {
-        'accent-sm': '0 2px 10px rgba(59, 130, 246, 0.2)',
-        'accent-md': '0 6px 20px rgba(59, 130, 246, 0.25)',
-        'card': '0 4px 20px rgba(0, 0, 0, 0.35)',
+        'premium-sm': '0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03)',
+        'premium-md': '0 4px 14px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.03)',
+        'premium-lg': '0 12px 30px -6px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.03)',
+        'accent-sm': '0 2px 10px rgba(37, 99, 235, 0.2)',
+        'accent-md': '0 6px 20px rgba(37, 99, 235, 0.25)',
       }
     },
   },

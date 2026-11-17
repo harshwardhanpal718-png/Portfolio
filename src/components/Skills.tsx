@@ -29,15 +29,15 @@ export const Skills: React.FC = () => {
       title: 'Data Analysis',
       icon: Layers,
       skills: [
-        { name: 'Pandas', icon: Layers, tag: 'Data Wrangling & Cleaning' },
-        { name: 'NumPy', icon: Cpu, tag: 'Vector Computations' },
+        { name: 'Pandas', icon: Layers, tag: 'Data Wrangling' },
+        { name: 'NumPy', icon: Cpu, tag: 'Vector Computing' },
       ],
     },
     {
       title: 'Database',
       icon: Database,
       skills: [
-        { name: 'SQL', icon: Database, tag: 'Complex Queries & CTEs' },
+        { name: 'SQL', icon: Database, tag: 'Queries & CTEs' },
         { name: 'MySQL', icon: Database, tag: 'Relational Schema' },
       ],
     },
@@ -45,17 +45,17 @@ export const Skills: React.FC = () => {
       title: 'Visualization',
       icon: BarChart3,
       skills: [
-        { name: 'Power BI', icon: BarChart3, tag: 'DAX & Interactive Dashboards' },
-        { name: 'Microsoft Excel', icon: FileSpreadsheet, tag: 'Pivot Tables & Modeling' },
+        { name: 'Power BI', icon: BarChart3, tag: 'DAX & Dashboards' },
+        { name: 'Microsoft Excel', icon: FileSpreadsheet, tag: 'Pivots & Modeling' },
       ],
     },
     {
       title: 'Core Concepts',
       icon: Brain,
       skills: [
-        { name: 'Statistics', icon: Calculator, tag: 'Distributions & Hypotheses' },
-        { name: 'Data Cleaning', icon: Filter, tag: 'Validation & Normalization' },
-        { name: 'Exploratory Data Analysis', icon: Search, tag: 'Pattern & Trend Discovery' },
+        { name: 'Statistics', icon: Calculator, tag: 'Distributions & Tests' },
+        { name: 'Data Cleaning', icon: Filter, tag: 'Quality & Outliers' },
+        { name: 'Exploratory Data Analysis', icon: Search, tag: 'Pattern Discovery' },
       ],
     },
     {
@@ -63,25 +63,25 @@ export const Skills: React.FC = () => {
       icon: Wrench,
       skills: [
         { name: 'Git', icon: Terminal, tag: 'Version Control' },
-        { name: 'GitHub', icon: Github, tag: 'Repository Collaboration' },
+        { name: 'GitHub', icon: Github, tag: 'Collaboration' },
         { name: 'VS Code', icon: Monitor, tag: 'IDE Environment' },
       ],
     },
   ];
 
   return (
-    <section id="skills" className="py-16 md:py-20 border-t border-white/[0.06] bg-[#0A0D14] relative">
+    <section id="skills" className="py-16 md:py-20 border-t border-slate-200 bg-[#F8FAFC] relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="mb-10">
-          <span className="text-xs font-mono text-[#3B82F6] uppercase tracking-wider block mb-1">
+          <span className="text-xs font-mono text-blue-600 uppercase tracking-wider block mb-1">
             Capabilities
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold font-heading text-[#F8FAFC] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-bold font-heading text-slate-900 tracking-tight">
             Technical Skills
           </h2>
-          <div className="w-12 h-1 bg-[#3B82F6] mt-2 rounded-full" />
+          <div className="w-12 h-1 bg-[#2563EB] mt-2 rounded-full" />
         </div>
 
         {/* Clean Skills Categories Grid */}
@@ -91,14 +91,14 @@ export const Skills: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-[#121724] border border-white/[0.08] rounded-2xl p-5 shadow-sm hover:border-[#3B82F6]/30 transition-all duration-300 flex flex-col justify-between"
+                className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm hover:border-blue-300 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-white/[0.06]">
-                    <div className="w-7 h-7 rounded-lg bg-[#182032] border border-white/[0.08] flex items-center justify-center text-[#3B82F6]">
+                  <div className="flex items-center gap-2.5 mb-4 pb-3 border-b border-slate-100">
+                    <div className="w-7 h-7 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600">
                       <CatIcon className="w-3.5 h-3.5" />
                     </div>
-                    <h3 className="text-sm font-semibold text-[#F8FAFC]">
+                    <h3 className="text-sm font-semibold text-slate-900">
                       {cat.title}
                     </h3>
                   </div>
@@ -109,17 +109,17 @@ export const Skills: React.FC = () => {
                       return (
                         <div
                           key={sIdx}
-                          className="p-3 rounded-xl bg-[#0A0D14] border border-white/[0.06] hover:border-[#3B82F6]/40 hover:bg-[#182032] transition-all duration-200 group flex items-center justify-between"
+                          className="p-3 rounded-xl bg-slate-50 border border-slate-200/70 hover:border-blue-300 hover:bg-blue-50/30 transition-all duration-200 group flex items-center justify-between"
                         >
                           <div className="flex items-center gap-2.5 min-w-0">
-                            <div className="w-6 h-6 rounded-md bg-[#121724] border border-white/[0.08] text-[#3B82F6] group-hover:text-white group-hover:border-[#3B82F6] flex items-center justify-center transition-colors shrink-0">
+                            <div className="w-6 h-6 rounded-md bg-white border border-slate-200 text-blue-600 group-hover:border-blue-400 flex items-center justify-center transition-colors shrink-0 shadow-2xs">
                               <SkillIcon className="w-3 h-3" />
                             </div>
-                            <span className="text-xs font-medium text-[#F8FAFC] group-hover:text-white truncate">
+                            <span className="text-xs font-medium text-slate-800 group-hover:text-blue-700 truncate">
                               {skill.name}
                             </span>
                           </div>
-                          <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#121724] border border-white/[0.08] text-[#94A3B8] group-hover:text-[#60A5FA] group-hover:border-[#3B82F6]/30 shrink-0 ml-2 transition-colors">
+                          <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white border border-slate-200 text-slate-600 group-hover:text-blue-700 group-hover:border-blue-200 shrink-0 ml-2 transition-colors">
                             {skill.tag}
                           </span>
                         </div>
