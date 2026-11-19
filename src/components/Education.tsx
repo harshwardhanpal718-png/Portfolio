@@ -108,7 +108,7 @@ export const Education: React.FC = () => {
                     <span>Specialized Analytical Tracks</span>
                   </div>
                   <div className="space-y-1.5">
-                    {edu.focusAreas.map((focus, fIdx) => (
+                    {edu.focusAreas?.map((focus: string, fIdx: number) => (
                       <div key={fIdx} className="flex items-center gap-2 text-xs text-slate-300">
                         <CheckCircle className="w-3.5 h-3.5 text-purple-400 shrink-0" />
                         <span>{focus}</span>

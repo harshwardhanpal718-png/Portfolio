@@ -51,7 +51,7 @@ export const Certifications: React.FC = () => {
                 </p>
 
                 <div className="flex flex-wrap gap-1.5 mb-3">
-                  {cert.skillsCovered.map((skill, sIdx) => (
+                  {cert.skillsCovered.map((skill: string, sIdx: number) => (
                     <span
                       key={sIdx}
                       className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#0E0B16] border border-[#4717F6]/30 text-[#E7DFDD]"

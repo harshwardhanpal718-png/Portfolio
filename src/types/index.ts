@@ -1,4 +1,12 @@
-export type ProjectCategory = 'All' | 'Excel' | 'Power BI' | 'Python' | 'SQL';
+export type ProjectCategory = 
+  | 'All' 
+  | 'Data Analytics' 
+  | 'Exploratory Data Analysis' 
+  | 'Business Intelligence' 
+  | 'Python' 
+  | 'SQL' 
+  | 'Power BI' 
+  | 'Excel';
 
 export type ProjectStatus = 'Completed & Interactive Demo' | 'Case Study' | 'In Progress' | 'Planned';
 
@@ -48,9 +56,9 @@ export interface ExperienceItem {
   id: string;
   role: string;
   organization: string;
-  type: string;
   period: string;
   location: string;
+  type: string;
   statusBadge: string;
   summary: string;
   responsibilities: string[];
@@ -62,12 +70,14 @@ export interface EducationItem {
   field: string;
   institution: string;
   location: string;
-  expectedGraduation: string;
+  period?: string;
+  expectedGraduation?: string;
   status: string;
-  academicPerformance: string;
-  overview: string;
+  grade?: string;
+  academicPerformance?: string;
   coursework: string[];
-  focusAreas: string[];
+  focusAreas?: string[];
+  overview: string;
 }
 
 export interface CertificationItem {
@@ -77,16 +87,7 @@ export interface CertificationItem {
   issueDate: string;
   credentialId?: string;
   verificationUrl?: string;
-  status: 'Verified' | 'In Progress' | 'Planned';
+  status: string;
   skillsCovered: string[];
   description: string;
-}
-
-export interface DashboardMetric {
-  title: string;
-  value: string;
-  change: string;
-  isPositive: boolean;
-  benchmark: string;
-  subtext: string;
 }

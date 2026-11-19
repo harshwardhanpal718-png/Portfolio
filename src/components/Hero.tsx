@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { ArrowRight, Download, Mail, Github, Linkedin, MapPin, GraduationCap } from 'lucide-react';
+import { ArrowRight, Mail, Terminal, Database, TrendingUp, BarChart3, PieChart, Sparkles } from 'lucide-react';
 
 interface HeroProps {
   onOpenResume: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
+export const Hero: React.FC<HeroProps> = () => {
   const [imgSrc, setImgSrc] = useState('/profile.jpg');
   const [imgError, setImgError] = useState(false);
 
@@ -18,108 +18,103 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
   return (
     <section id="home" className="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
+      {/* Ambient Glow Orbs */}
+      <div className="absolute top-20 left-10 w-96 h-96 bg-[#7C3AED]/15 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute top-40 right-10 w-96 h-96 bg-[#06B6D4]/12 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute bottom-10 left-1/3 w-80 h-80 bg-[#F59E0B]/08 rounded-full blur-[120px] pointer-events-none" />
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Left Column: Hero Content */}
           <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
             
-            {/* Animated Cyber Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#7300ff]/10 border border-[#7300ff]/30 text-[#d8b4fe] text-xs font-bold uppercase tracking-wider mb-6 animate-pulseGlow">
-              <span>✦</span>
-              <span>ASPIRING DATA ANALYST</span>
+            {/* Introductory text & Title Badge */}
+            <div className="flex flex-wrap items-center gap-2.5 mb-5">
+              <span className="text-xs font-mono font-semibold tracking-wider text-[#06B6D4] uppercase flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
+                HELLO, I'M HARSHWARDHAN PAL
+              </span>
+              <span className="text-white/20">•</span>
+              <span className="px-3 py-1 rounded-full bg-[#7C3AED]/15 border border-[#7C3AED]/30 text-[#d8b4fe] text-[11px] font-bold uppercase tracking-wider animate-pulseGlow">
+                DATA ANALYST
+              </span>
             </div>
 
-            {/* Main Heading with Gradient Text */}
+            {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-white tracking-tight leading-[1.1] mb-5">
-              Hi, I'm Harshwardhan — <br />
-              <span className="gradient-text">Turning Raw Data Into Meaningful Insights.</span>
+              Turning Data <br className="hidden sm:inline" />
+              <span className="gradient-text">Into Decisions.</span>
             </h1>
 
-            {/* Subtitle Description */}
-            <p className="text-base sm:text-lg text-slate-400 max-w-xl leading-relaxed mb-6 font-sans">
-              I am a Computer Science Engineering student at <strong className="text-white font-semibold">Jagannath University, Jaipur</strong> passionate about data exploration, exploratory data analysis (EDA), and transforming raw complex datasets into actionable business dashboards using modern analytical tooling.
+            {/* Subtitle */}
+            <p className="text-base sm:text-lg text-[#94A3B8] max-w-xl leading-relaxed mb-8 font-sans">
+              "I transform complex datasets into meaningful insights through data analytics, visualization, and business intelligence."
             </p>
 
-            {/* Metadata Pills */}
-            <div className="flex flex-wrap items-center gap-2.5 mb-8 text-xs text-slate-300 font-mono">
-              <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/[0.08] backdrop-blur-sm">
-                <GraduationCap className="w-3.5 h-3.5 text-[#00f2fe]" />
-                B.Tech CSE (Class of 2027)
-              </span>
-              <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/[0.08] backdrop-blur-sm">
-                <MapPin className="w-3.5 h-3.5 text-[#ec38bc]" />
-                Jaipur, India
-              </span>
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto mb-8">
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto mb-10">
               <a
                 href="#projects"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl btn-gradient text-sm font-bold flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl btn-primary text-sm font-bold flex items-center justify-center gap-2 group"
               >
-                <span>View Master Work</span>
-                <ArrowRight className="w-4 h-4" />
+                <span>Explore My Work</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
-
-              <button
-                onClick={onOpenResume}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-xl btn-glass text-sm font-semibold flex items-center justify-center gap-2"
-              >
-                <Download className="w-4 h-4 text-[#00f2fe]" />
-                <span>Download Resume</span>
-              </button>
 
               <a
                 href="#contact"
-                className="w-full sm:w-auto px-6 py-3.5 rounded-xl btn-glass text-sm font-semibold flex items-center justify-center gap-2 text-slate-300 hover:text-white"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl btn-secondary text-sm font-semibold flex items-center justify-center gap-2"
               >
-                <Mail className="w-4 h-4 text-[#ec38bc]" />
-                <span>Let's Discuss</span>
+                <Mail className="w-4 h-4 text-[#06B6D4]" />
+                <span>Let's Connect</span>
               </a>
             </div>
 
-            {/* Social Icons */}
-            <div className="flex items-center gap-3">
-              <a
-                href="https://github.com/harshwardhanpal"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 rounded-xl bg-white/[0.03] border border-white/[0.08] text-slate-400 hover:text-[#00f2fe] hover:border-[#00f2fe]/40 transition-colors"
-                title="GitHub"
-              >
-                <Github className="w-4 h-4" />
-              </a>
-              <a
-                href="https://linkedin.com/in/harshwardhan-pal"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 rounded-xl bg-white/[0.03] border border-white/[0.08] text-slate-400 hover:text-[#ec38bc] hover:border-[#ec38bc]/40 transition-colors"
-                title="LinkedIn"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a
-                href="mailto:harshwardhan.pal.analytics@gmail.com"
-                className="p-2.5 rounded-xl bg-white/[0.03] border border-white/[0.08] text-slate-400 hover:text-[#00f2fe] hover:border-[#00f2fe]/40 transition-colors"
-                title="Email"
-              >
-                <Mail className="w-4 h-4" />
-              </a>
+            {/* Core Capability Badges */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full max-w-lg text-xs font-mono">
+              <div className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-center gap-2.5">
+                <div className="w-7 h-7 rounded-lg bg-[#06B6D4]/15 border border-[#06B6D4]/30 flex items-center justify-center text-[#06B6D4] shrink-0">
+                  <Database className="w-3.5 h-3.5" />
+                </div>
+                <div>
+                  <span className="text-[#94A3B8] block text-[10px]">DATABASE</span>
+                  <span className="text-white font-bold">SQL &amp; MySQL</span>
+                </div>
+              </div>
+
+              <div className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-center gap-2.5">
+                <div className="w-7 h-7 rounded-lg bg-[#7C3AED]/15 border border-[#7C3AED]/30 flex items-center justify-center text-[#7C3AED] shrink-0">
+                  <BarChart3 className="w-3.5 h-3.5" />
+                </div>
+                <div>
+                  <span className="text-[#94A3B8] block text-[10px]">DASHBOARDS</span>
+                  <span className="text-white font-bold">Power BI &amp; Excel</span>
+                </div>
+              </div>
+
+              <div className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-center gap-2.5 col-span-2 sm:col-span-1">
+                <div className="w-7 h-7 rounded-lg bg-[#F59E0B]/15 border border-[#F59E0B]/30 flex items-center justify-center text-[#F59E0B] shrink-0">
+                  <TrendingUp className="w-3.5 h-3.5" />
+                </div>
+                <div>
+                  <span className="text-[#94A3B8] block text-[10px]">ANALYTICS</span>
+                  <span className="text-white font-bold">Python &amp; Pandas</span>
+                </div>
+              </div>
             </div>
 
           </div>
 
-          {/* Right Column: Holographic Cyber-Grid Visual Panel */}
+          {/* Right Column: Interactive Multi-Card Analytics Visual Cluster */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-[420px] aspect-square rounded-3xl bg-[radial-gradient(circle,rgba(115,0,255,0.22)_0%,transparent_70%)] border border-white/[0.08] p-4 flex items-center justify-center backdrop-blur-md shadow-glass-card overflow-hidden">
+            <div className="relative w-full max-w-[440px] aspect-square rounded-3xl bg-[radial-gradient(circle,rgba(124,58,237,0.22)_0%,transparent_70%)] border border-white/[0.08] p-5 flex items-center justify-center backdrop-blur-xl shadow-obsidian-card">
               
-              {/* Cyber Grid Lines Overlay */}
-              <div className="absolute inset-0 cyber-grid-pattern pointer-events-none opacity-40" />
+              {/* Subtle Data Grid Pattern Overlay */}
+              <div className="absolute inset-0 data-grid-pattern pointer-events-none opacity-40 rounded-3xl" />
 
-              {/* Avatar Center Node */}
-              <div className="relative z-10 w-56 h-56 sm:w-64 sm:h-64 rounded-2xl overflow-hidden border border-white/[0.1] bg-[#03001e]/80 shadow-[0_0_30px_rgba(0,242,254,0.25)] flex items-center justify-center group">
+              {/* Portrait Center Frame */}
+              <div className="relative z-10 w-52 h-52 sm:w-60 sm:h-60 rounded-2xl overflow-hidden border border-white/[0.12] bg-[#06070D]/90 shadow-[0_0_35px_rgba(6,182,212,0.25)] flex items-center justify-center group">
                 <img
                   src={imgSrc}
                   alt="Harshwardhan Pal"
@@ -128,19 +123,37 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                 />
               </div>
 
-              {/* Simulated Interactive Micro-Badge 1 (Top Left) */}
-              <div className="absolute top-[12%] left-[6%] z-20 bg-[#03001e]/90 border border-white/[0.08] border-l-4 border-l-[#00f2fe] px-3.5 py-2 rounded-xl text-xs font-bold text-white shadow-2xl backdrop-blur-md animate-float flex items-center gap-2">
-                <span>📊 SQL &amp; Power BI</span>
+              {/* Floating Element 1: Power BI KPI Preview (Top Right) */}
+              <div className="absolute top-[8%] -right-[4%] z-20 bg-[#0B0D16]/95 border border-white/[0.1] border-l-4 border-l-[#F59E0B] p-3 rounded-xl text-xs font-mono text-white shadow-2xl backdrop-blur-md animate-float flex items-center gap-2.5">
+                <BarChart3 className="w-4 h-4 text-[#F59E0B]" />
+                <div>
+                  <span className="text-[10px] text-[#94A3B8] block">Power BI Model</span>
+                  <span className="font-bold text-white text-xs">Gross Margin: +14.2%</span>
+                </div>
               </div>
 
-              {/* Simulated Interactive Micro-Badge 2 (Bottom Right) */}
-              <div className="absolute bottom-[12%] right-[6%] z-20 bg-[#03001e]/90 border border-white/[0.08] border-l-4 border-l-[#ec38bc] px-3.5 py-2 rounded-xl text-xs font-bold text-white shadow-2xl backdrop-blur-md animate-floatSlow flex items-center gap-2">
-                <span>🐍 Python &amp; Pandas</span>
+              {/* Floating Element 2: SQL Query Window (Top Left) */}
+              <div className="absolute top-[12%] -left-[6%] z-20 bg-[#0B0D16]/95 border border-white/[0.1] border-l-4 border-l-[#06B6D4] p-3 rounded-xl text-xs font-mono text-white shadow-2xl backdrop-blur-md animate-floatSlow flex items-center gap-2.5">
+                <Database className="w-4 h-4 text-[#06B6D4]" />
+                <div>
+                  <span className="text-[10px] text-[#06B6D4] block font-bold">SQL CTE Query</span>
+                  <span className="text-slate-300 text-[11px]">SELECT region, SUM(rev)</span>
+                </div>
               </div>
 
-              {/* Simulated Interactive Micro-Badge 3 (Bottom Left) */}
-              <div className="absolute bottom-[28%] left-[4%] z-20 bg-[#03001e]/90 border border-white/[0.08] border-l-4 border-l-[#7300ff] px-3 py-1.5 rounded-lg text-[11px] font-bold text-slate-200 shadow-xl backdrop-blur-md hidden sm:flex items-center gap-1.5">
-                <span>⚡ EDA Workflows</span>
+              {/* Floating Element 3: Python Pandas Analytics Snippet (Bottom Left) */}
+              <div className="absolute -bottom-[2%] left-[4%] z-20 bg-[#0B0D16]/95 border border-white/[0.1] border-l-4 border-l-[#7C3AED] p-3 rounded-xl text-xs font-mono text-white shadow-2xl backdrop-blur-md animate-float flex items-center gap-2.5">
+                <Terminal className="w-4 h-4 text-[#7C3AED]" />
+                <div>
+                  <span className="text-[10px] text-[#94A3B8] block">Pandas EDA</span>
+                  <span className="text-white text-[11px] font-bold">df.groupby('segment').agg()</span>
+                </div>
+              </div>
+
+              {/* Floating Element 4: Interactive Micro Chip (Bottom Right) */}
+              <div className="absolute bottom-[10%] -right-[6%] z-20 bg-[#0B0D16]/95 border border-white/[0.1] px-3 py-1.5 rounded-lg text-[11px] font-mono text-slate-200 shadow-xl backdrop-blur-md hidden sm:flex items-center gap-1.5">
+                <PieChart className="w-3.5 h-3.5 text-[#06B6D4]" />
+                <span className="text-[#06B6D4] font-bold">RFM Cohorts: 4 Tiers</span>
               </div>
 
             </div>

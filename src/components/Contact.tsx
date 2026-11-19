@@ -36,28 +36,31 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
   };
 
   const handleMailto = () => {
-    const mailto = `mailto:${email}?subject=${encodeURIComponent(formData.subject || 'Portfolio Inquiry')}&body=${encodeURIComponent(`From: ${formData.name} (${formData.email})\n\n${formData.message}`)}`;
+    const mailto = `mailto:${email}?subject=${encodeURIComponent(formData.subject || 'Data Analytics Role / Project Inquiry')}&body=${encodeURIComponent(`From: ${formData.name} (${formData.email})\n\n${formData.message}`)}`;
     window.location.href = mailto;
   };
 
   return (
     <section id="contact" className="py-20 md:py-28 border-t border-white/[0.06] relative overflow-hidden">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/3 -left-32 w-96 h-96 bg-[#7300ff]/10 rounded-full blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-10 -right-32 w-96 h-96 bg-[#00f2fe]/10 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute top-1/3 -left-36 w-96 h-96 bg-[#7C3AED]/12 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute bottom-10 -right-36 w-96 h-96 bg-[#06B6D4]/10 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Heading */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[#00f2fe] text-xs font-mono uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[#06B6D4] text-xs font-mono uppercase tracking-wider mb-3">
             <span>✦</span>
             <span>Get In Touch</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-white tracking-tight">
-            Contact <span className="gradient-text">Me</span>
+            Let's Turn Data <span className="gradient-text">Into Insights.</span>
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-[#00f2fe] via-[#ec38bc] to-[#7300ff] mt-3 rounded-full" />
+          <p className="text-sm text-[#94A3B8] mt-2 font-sans">
+            "Have an interesting project or opportunity? Let's connect."
+          </p>
+          <div className="w-16 h-1 bg-gradient-to-r from-[#06B6D4] via-[#7C3AED] to-[#F59E0B] mt-3 rounded-full" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
@@ -66,24 +69,24 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
           <div className="md:col-span-5 space-y-4">
             <div className="glass-card rounded-3xl p-6 sm:p-7 space-y-4 border border-white/[0.08]">
               <h3 className="text-lg font-bold text-white">
-                Let's Connect
+                Initiate Conversation
               </h3>
-              <p className="text-xs text-slate-400 leading-relaxed font-sans">
-                I am actively seeking data analyst internships, junior roles, and analytical collaborative projects. Feel free to reach out directly through email or LinkedIn.
+              <p className="text-xs text-[#94A3B8] leading-relaxed font-sans">
+                I am actively seeking data analyst internships, entry-level opportunities, and analytical collaborative projects. Reach out via email, LinkedIn, or the inquiry form.
               </p>
 
               {/* Email with Copy */}
               <div className="p-3.5 rounded-2xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-between gap-3">
                 <div className="flex items-center gap-2.5 overflow-hidden">
-                  <Mail className="w-4 h-4 text-[#00f2fe] shrink-0" />
+                  <Mail className="w-4 h-4 text-[#06B6D4] shrink-0" />
                   <span className="text-xs font-mono text-slate-200 truncate">{email}</span>
                 </div>
                 <button
                   onClick={handleCopy}
-                  className="p-1.5 rounded-lg bg-white/[0.04] hover:bg-white/[0.1] text-slate-400 hover:text-white transition-colors"
+                  className="p-1.5 rounded-lg bg-white/[0.04] hover:bg-white/[0.1] text-[#94A3B8] hover:text-white transition-colors"
                   title="Copy email"
                 >
-                  {copied ? <Check className="w-3.5 h-3.5 text-[#00f2fe]" /> : <Copy className="w-3.5 h-3.5 text-slate-400" />}
+                  {copied ? <Check className="w-3.5 h-3.5 text-[#06B6D4]" /> : <Copy className="w-3.5 h-3.5 text-[#94A3B8]" />}
                 </button>
               </div>
 
@@ -93,25 +96,25 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
                   href="https://linkedin.com/in/harshwardhan-pal"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 py-2.5 px-3 rounded-xl btn-glass flex items-center justify-center gap-2 text-xs font-semibold text-slate-200 hover:text-white"
+                  className="flex-1 py-2.5 px-3 rounded-xl btn-secondary flex items-center justify-center gap-2 text-xs font-semibold text-slate-200 hover:text-white"
                 >
-                  <Linkedin className="w-3.5 h-3.5 text-[#00f2fe]" />
+                  <Linkedin className="w-3.5 h-3.5 text-[#06B6D4]" />
                   <span>LinkedIn</span>
                 </a>
                 <a
                   href="https://github.com/harshwardhanpal"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 py-2.5 px-3 rounded-xl btn-glass flex items-center justify-center gap-2 text-xs font-semibold text-slate-200 hover:text-white"
+                  className="flex-1 py-2.5 px-3 rounded-xl btn-secondary flex items-center justify-center gap-2 text-xs font-semibold text-slate-200 hover:text-white"
                 >
-                  <Github className="w-3.5 h-3.5 text-[#ec38bc]" />
+                  <Github className="w-3.5 h-3.5 text-[#7C3AED]" />
                   <span>GitHub</span>
                 </a>
               </div>
 
               {/* Location */}
-              <div className="flex items-center gap-2 text-xs text-slate-400 pt-1">
-                <MapPin className="w-3.5 h-3.5 text-[#7300ff] shrink-0" />
+              <div className="flex items-center gap-2 text-xs text-[#94A3B8] pt-1">
+                <MapPin className="w-3.5 h-3.5 text-[#F59E0B] shrink-0" />
                 <span>Jaipur, Rajasthan, India</span>
               </div>
             </div>
@@ -120,11 +123,11 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
             <div className="glass-card rounded-2xl p-5 flex items-center justify-between gap-4 border border-white/[0.08]">
               <div>
                 <span className="text-xs font-bold text-white block">Download Resume</span>
-                <span className="text-[11px] text-slate-400">Verified PDF Document</span>
+                <span className="text-[11px] text-[#94A3B8]">Verified PDF Curriculum</span>
               </div>
               <button
                 onClick={onOpenResume}
-                className="px-4 py-2 rounded-xl btn-gradient text-white text-xs font-bold flex items-center gap-1.5 transition-opacity"
+                className="px-4 py-2 rounded-xl btn-primary text-white text-xs font-bold flex items-center gap-1.5 transition-opacity"
               >
                 <Download className="w-3.5 h-3.5" />
                 <span>Resume</span>
@@ -137,17 +140,17 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
             <div className="glass-card rounded-3xl p-6 sm:p-8 border border-white/[0.08]">
               {submitted ? (
                 <div className="py-10 text-center space-y-3">
-                  <div className="w-12 h-12 rounded-full bg-[#00f2fe]/10 border border-[#00f2fe]/30 text-[#00f2fe] flex items-center justify-center mx-auto">
+                  <div className="w-12 h-12 rounded-full bg-[#06B6D4]/15 border border-[#06B6D4]/30 text-[#06B6D4] flex items-center justify-center mx-auto">
                     <CheckCircle2 className="w-6 h-6" />
                   </div>
                   <h4 className="text-lg font-bold text-white">Message Prepared!</h4>
-                  <p className="text-xs text-slate-400 max-w-sm mx-auto font-sans leading-relaxed">
+                  <p className="text-xs text-[#94A3B8] max-w-sm mx-auto font-sans leading-relaxed">
                     Click below to open your preferred email client with your message pre-filled and ready to send.
                   </p>
                   <div className="pt-2 flex justify-center gap-3">
                     <button
                       onClick={handleMailto}
-                      className="px-5 py-2.5 rounded-xl btn-gradient text-white text-xs font-bold flex items-center gap-1.5 transition-opacity"
+                      className="px-5 py-2.5 rounded-xl btn-primary text-white text-xs font-bold flex items-center gap-1.5 transition-opacity"
                     >
                       <Send className="w-3.5 h-3.5" />
                       <span>Send via Email</span>
@@ -157,7 +160,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
                         setSubmitted(false);
                         setFormData({ name: '', email: '', subject: '', message: '' });
                       }}
-                      className="px-4 py-2.5 rounded-xl btn-glass text-slate-300 hover:text-white text-xs font-medium"
+                      className="px-4 py-2.5 rounded-xl btn-secondary text-slate-300 hover:text-white text-xs font-medium"
                     >
                       Reset
                     </button>
@@ -174,61 +177,61 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-mono text-slate-400 mb-1.5">
-                        Name *
+                      <label className="block text-xs font-mono text-[#94A3B8] mb-1.5">
+                        Full Name *
                       </label>
                       <input
                         type="text"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        placeholder="Your Name"
-                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder-slate-500 text-xs focus:outline-none focus:border-[#00f2fe] focus:bg-white/[0.06] transition-all"
+                        placeholder="Your Full Name"
+                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder-[#94A3B8]/60 text-xs focus:outline-none focus:border-[#06B6D4] focus:bg-white/[0.06] transition-all"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono text-slate-400 mb-1.5">
-                        Email *
+                      <label className="block text-xs font-mono text-[#94A3B8] mb-1.5">
+                        Email Address *
                       </label>
                       <input
                         type="email"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="your@email.com"
-                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder-slate-500 text-xs focus:outline-none focus:border-[#00f2fe] focus:bg-white/[0.06] transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder-[#94A3B8]/60 text-xs focus:outline-none focus:border-[#06B6D4] focus:bg-white/[0.06] transition-all"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-mono text-slate-400 mb-1.5">
+                    <label className="block text-xs font-mono text-[#94A3B8] mb-1.5">
                       Subject
                     </label>
                     <input
                       type="text"
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      placeholder="e.g. Data Analyst Role / Analytics Collaboration"
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder-slate-500 text-xs focus:outline-none focus:border-[#00f2fe] focus:bg-white/[0.06] transition-all"
+                      placeholder="e.g. Data Analyst Role / Business Intelligence Project"
+                      className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder-[#94A3B8]/60 text-xs focus:outline-none focus:border-[#06B6D4] focus:bg-white/[0.06] transition-all"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-mono text-slate-400 mb-1.5">
+                    <label className="block text-xs font-mono text-[#94A3B8] mb-1.5">
                       Message *
                     </label>
                     <textarea
                       rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Write your message here..."
-                      className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder-slate-500 text-xs focus:outline-none focus:border-[#00f2fe] focus:bg-white/[0.06] transition-all resize-none"
+                      placeholder="Write your analytical inquiry or message here..."
+                      className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder-[#94A3B8]/60 text-xs focus:outline-none focus:border-[#06B6D4] focus:bg-white/[0.06] transition-all resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 rounded-xl btn-gradient text-white text-xs font-bold flex items-center justify-center gap-2"
+                    className="w-full py-3.5 rounded-xl btn-primary text-white text-xs font-bold flex items-center justify-center gap-2"
                   >
                     <span>Send Message</span>
                     <Send className="w-3.5 h-3.5" />

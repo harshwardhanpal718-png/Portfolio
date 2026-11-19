@@ -2,58 +2,14 @@ import { Project } from '../types';
 
 export const projectsData: Project[] = [
   {
-    id: 'sales-performance-analysis',
-    title: 'Sales Performance Analysis',
-    subtitle: 'End-to-end multi-region sales, margin trends, and product category diagnostics',
-    category: 'Power BI',
-    status: 'Completed & Interactive Demo',
-    tools: ['Power BI', 'Microsoft Excel', 'SQL', 'DAX'],
-    businessProblem:
-      'A multi-region commercial enterprise experienced inconsistent quarterly revenue and unexplained margin compression. Executive leadership lacked a unified view to determine whether revenue drops stemmed from regional logistics delays, high discounting, or underperforming product categories.',
-    datasetInfo:
-      'Transactional dataset containing 50,000+ sales records across 4 global regions, 3 core product categories (Technology, Furniture, Office Supplies), including unit cost, discount rates, shipping modes, and order timestamps over a 24-month horizon.',
-    dataCleaningApproach: [
-      'Extracted raw data from transactional MySQL database using modular SQL views and common table expressions (CTEs).',
-      'Cleaned inconsistent geographic strings, removed duplicate transactions, and standardized postal codes in Power Query.',
-      'Constructed a dynamic Calendar Dimension table to support time-intelligence calculations (YoY, MoM, QTD).',
-      'Imputed missing customer segment records and validated numerical constraints on profit margins.'
-    ],
-    analysisMethodology: [
-      'Calculated dynamic DAX measures for YTD Revenue, Prior Year Variance, Gross Margin %, and Discount Sensitivity.',
-      'Constructed a Star-Schema dimensional model linking Fact Orders to Dim Customer, Dim Product, and Dim Date.',
-      'Conducted Pareto (80/20) analysis to isolate top-performing SKUs contributing disproportionately to gross margin.',
-      'Analyzed shipping duration vs customer churn across delivery carriers.'
-    ],
-    keyInsights: [
-      'Top 20% of catalog SKUs drove 74% of total gross profit, while bottom 15% generated negative net margins due to high return rates.',
-      'The Southern region suffered an 18% decline in repeat customer orders directly correlated with a 4.2-day average shipping delay.',
-      'Promotional discounts above 20% failed to boost order volume and eroded operating margins by 11.4%.'
-    ],
-    businessRecommendations: [
-      'Rationalize unprofitable SKUs in the Furniture category and renegotiate volume discounts with top manufacturers.',
-      'Transition Southern region logistics to localized 3PL fulfillment centers to bring average delivery under 48 hours.',
-      'Implement an automated discount cap in the POS/checkout system at 18% to preserve baseline margin integrity.'
-    ],
-    metricsSummary: [
-      { label: 'Dataset Records', value: '50,000+' },
-      { label: 'Revenue Analyzed', value: '$2.45M' },
-      { label: 'Unprofitable SKUs Isolated', value: '15%' },
-      { label: 'Logistics SLA Gap', value: '4.2 Days' }
-    ],
-    githubUrl: 'https://github.com/harshwardhanpal/sales-performance-analysis',
-    liveDemoUrl: '#dashboard-demo',
-    image: '/projects/sales-analysis.svg',
-    accentGradient: 'from-blue-600 to-indigo-600'
-  },
-  {
     id: 'ecommerce-customer-analysis',
-    title: 'E-commerce Customer Analysis',
+    title: 'E-Commerce Customer Analysis',
     subtitle: 'Customer purchasing behavior, RFM cohort segmentation, and churn propensity exploration',
-    category: 'Python',
+    category: 'Data Analytics',
     status: 'Completed & Interactive Demo',
-    tools: ['Python', 'Pandas', 'SQL', 'Matplotlib', 'NumPy'],
+    tools: ['Python', 'Pandas', 'SQL', 'Power BI'],
     businessProblem:
-      'Digital retail platform was experiencing escalating customer acquisition costs (CAC) alongside a stagnant 90-day repeat purchase rate. Marketing required customer segmentation to deliver tailored retention campaigns rather than generic blanket email blasts.',
+      'A digital retail enterprise was experiencing escalating customer acquisition costs (CAC) alongside a stagnant 90-day repeat purchase rate. Marketing required customer segmentation to deliver tailored retention campaigns rather than generic blanket email blasts.',
     datasetInfo:
       '120,000+ customer transaction rows including unique customer identifiers, invoice timestamps, basket item count, line-item totals, and acquisition channel tags.',
     dataCleaningApproach: [
@@ -90,52 +46,10 @@ export const projectsData: Project[] = [
     accentGradient: 'from-cyan-600 to-blue-600'
   },
   {
-    id: 'hr-analytics-dashboard',
-    title: 'HR Analytics Dashboard',
-    subtitle: 'Workforce attrition drivers, department distribution, and retention indicators',
-    category: 'Power BI',
-    status: 'Case Study',
-    tools: ['Power BI', 'Microsoft Excel', 'Data Modeling', 'DAX'],
-    businessProblem:
-      'An enterprise noticed voluntary employee turnover climbing to 16.1%, with tech and sales departments taking the hardest hit. HR leadership required an executive dashboard to pinpoint retention risk factors before talent exits occurred.',
-    datasetInfo:
-      'Standardized HR dataset of 1,470 employee records across 35 attributes including department, job role, monthly income, overtime frequency, performance rating, and employee engagement survey scores.',
-    dataCleaningApproach: [
-      'Checked for categorical integrity, mapped survey Likert scales (1-5) to descriptive labels.',
-      'Grouped numerical fields into intuitive categories (Tenure: 0-1 yr, 1-2 yr, 3-5 yr, 5+ yr; Age buckets).',
-      'Created standardized data validation rules in Excel before importing into Power BI.'
-    ],
-    analysisMethodology: [
-      'Developed dynamic DAX measures for Attrition Rate %, Active Headcount, and Average Tenure.',
-      'Built interactive department and role slicers with drill-through functionality into individual tenure cohorts.',
-      'Constructed correlation matrices to test the relationship between overtime hours, salary hikes, and exit flags.'
-    ],
-    keyInsights: [
-      'Employees subjected to frequent overtime experienced a 30.5% attrition rate—nearly double the organizational benchmark.',
-      'Tenure vulnerability spiked dramatically between months 12 and 24, specifically among high-performing junior engineers.',
-      'Sales Representatives had the highest departmental attrition at 20.6%, coupled with the lowest work-life balance satisfaction scores.'
-    ],
-    businessRecommendations: [
-      'Institute strict weekly overtime alert thresholds and provide compensatory time-off policies.',
-      'Schedule a structured 12-month career progression review for all junior engineering talent to curb the 1-2 year flight risk.',
-      'Revamp sales compensation structures to provide higher base stability and reduce burnout.'
-    ],
-    metricsSummary: [
-      { label: 'Workforce Records', value: '1,470' },
-      { label: 'Baseline Attrition', value: '16.1%' },
-      { label: 'Overtime Risk Factor', value: '2.8x' },
-      { label: 'Vulnerable Tenure', value: '12-24 Mo' }
-    ],
-    githubUrl: 'https://github.com/harshwardhanpal/hr-analytics-dashboard',
-    liveDemoUrl: 'https://github.com/harshwardhanpal/hr-analytics-dashboard#dashboard',
-    image: '/projects/hr-analytics.svg',
-    accentGradient: 'from-purple-600 to-pink-600'
-  },
-  {
     id: 'netflix-data-analysis',
     title: 'Netflix Data Analysis',
     subtitle: 'Global content distribution, genre evolution, and platform release trajectory',
-    category: 'Python',
+    category: 'Exploratory Data Analysis',
     status: 'Case Study',
     tools: ['Python', 'Pandas', 'Matplotlib', 'Seaborn'],
     businessProblem:
@@ -174,43 +88,89 @@ export const projectsData: Project[] = [
     accentGradient: 'from-rose-600 to-red-600'
   },
   {
-    id: 'student-performance-analysis',
-    title: 'Student Performance Analysis',
-    subtitle: 'Statistical evaluation of academic outcome indicators, study habits, and attendance',
-    category: 'SQL',
-    status: 'Planned',
-    tools: ['Python', 'SQL', 'Statistics', 'Jupyter'],
+    id: 'sales-performance-analysis',
+    title: 'Sales Performance Dashboard',
+    subtitle: 'End-to-end multi-region sales, margin trends, and product category diagnostics',
+    category: 'Business Intelligence',
+    status: 'Completed & Interactive Demo',
+    tools: ['Power BI', 'Microsoft Excel', 'SQL'],
     businessProblem:
-      'Educational institutions require proactive identification of students at risk of underachievement to implement supportive interventions before midterm exams, rather than reactive remedies at semester conclusion.',
+      'A multi-region commercial enterprise experienced inconsistent quarterly revenue and unexplained margin compression. Executive leadership lacked a unified view to determine whether revenue drops stemmed from regional logistics delays, high discounting, or underperforming product categories.',
     datasetInfo:
-      'Academic dataset comprising demographic factors, parental educational attainment, test preparation course completion status, attendance logs, and multi-subject standardized test scores (Math, Reading, Writing).',
+      'Transactional dataset containing 50,000+ sales records across 4 global regions, 3 core product categories (Technology, Furniture, Office Supplies), including unit cost, discount rates, shipping modes, and order timestamps over a 24-month horizon.',
     dataCleaningApproach: [
-      'Validated score ranges within 0-100 bounds and verified zero missing records across core testing metrics.',
-      'Aggregated subject scores into composite grade points and mapped percentage score bands into standard letter grades.',
-      'Created SQL window functions to rank student performance relative to demographic cohort peers.'
+      'Extracted raw data from transactional MySQL database using modular SQL views and common table expressions (CTEs).',
+      'Cleaned inconsistent geographic strings, removed duplicate transactions, and standardized postal codes in Power Query.',
+      'Constructed a dynamic Calendar Dimension table to support time-intelligence calculations (YoY, MoM, QTD).',
+      'Imputed missing customer segment records and validated numerical constraints on profit margins.'
     ],
     analysisMethodology: [
-      'Descriptive statistics (Mean, Median, Standard Deviation, Interquartile Range) across subject scores.',
-      'Independent two-sample t-tests to evaluate the statistical significance of test preparation courses.',
-      'Correlation matrix computation (Pearson r) assessing the relative weight of attendance vs parental background.'
+      'Calculated dynamic DAX measures for YTD Revenue, Prior Year Variance, Gross Margin %, and Discount Sensitivity.',
+      'Constructed a Star-Schema dimensional model linking Fact Orders to Dim Customer, Dim Product, and Dim Date.',
+      'Conducted Pareto (80/20) analysis to isolate top-performing SKUs contributing disproportionately to gross margin.',
+      'Analyzed shipping duration vs customer churn across delivery carriers.'
     ],
     keyInsights: [
-      'Students completing test preparation courses achieved a statistically significant +12.3% higher average score across all subjects (p < 0.001).',
-      'Attendance rate exhibited the single highest positive correlation (r = 0.72) with exam outcomes, outweighing socioeconomic variables.',
-      'Writing and reading scores demonstrated high collinearity (r = 0.95), suggesting strong underlying literacy interdependence.'
+      'Top 20% of catalog SKUs drove 74% of total gross profit, while bottom 15% generated negative net margins due to high return rates.',
+      'The Southern region suffered an 18% decline in repeat customer orders directly correlated with a 4.2-day average shipping delay.',
+      'Promotional discounts above 20% failed to boost order volume and eroded operating margins by 11.4%.'
     ],
     businessRecommendations: [
-      'Deploy an automated early-warning alert system triggering academic advisor check-ins whenever attendance drops below 85%.',
-      'Provide institutionally subsidized test preparation modules to democratize access and bridge performance discrepancies.'
+      'Rationalize unprofitable SKUs in the Furniture category and renegotiate volume discounts with top manufacturers.',
+      'Transition Southern region logistics to localized 3PL fulfillment centers to bring average delivery under 48 hours.',
+      'Implement an automated discount cap in the POS/checkout system at 18% to preserve baseline margin integrity.'
     ],
     metricsSummary: [
-      { label: 'Analyzed Cohorts', value: '1,000+' },
-      { label: 'Prep Course Uplift', value: '+12.3%' },
-      { label: 'Attendance Correlation', value: 'r = 0.72' },
-      { label: 'Statistical Significance', value: 'p < 0.001' }
+      { label: 'Dataset Records', value: '50,000+' },
+      { label: 'Revenue Analyzed', value: '$2.45M' },
+      { label: 'Unprofitable SKUs Isolated', value: '15%' },
+      { label: 'Logistics SLA Gap', value: '4.2 Days' }
     ],
-    githubUrl: 'https://github.com/harshwardhanpal/student-performance-analysis',
-    image: '/projects/student-performance.svg',
-    accentGradient: 'from-emerald-600 to-teal-600'
+    githubUrl: 'https://github.com/harshwardhanpal/sales-performance-analysis',
+    liveDemoUrl: '#dashboard-demo',
+    image: '/projects/sales-analysis.svg',
+    accentGradient: 'from-blue-600 to-indigo-600'
+  },
+  {
+    id: 'hr-analytics-dashboard',
+    title: 'HR Workforce Attrition Analytics',
+    subtitle: 'Workforce attrition drivers, department distribution, and retention indicators',
+    category: 'Data Analytics',
+    status: 'Case Study',
+    tools: ['Power BI', 'Microsoft Excel', 'SQL', 'DAX'],
+    businessProblem:
+      'An enterprise noticed voluntary employee turnover climbing to 16.1%, with tech and sales departments taking the hardest hit. HR leadership required an executive dashboard to pinpoint retention risk factors before talent exits occurred.',
+    datasetInfo:
+      'Standardized HR dataset of 1,470 employee records across 35 attributes including department, job role, monthly income, overtime frequency, performance rating, and employee engagement survey scores.',
+    dataCleaningApproach: [
+      'Checked for categorical integrity, mapped survey Likert scales (1-5) to descriptive labels.',
+      'Grouped numerical fields into intuitive categories (Tenure: 0-1 yr, 1-2 yr, 3-5 yr, 5+ yr; Age buckets).',
+      'Created standardized data validation rules in Excel before importing into Power BI.'
+    ],
+    analysisMethodology: [
+      'Developed dynamic DAX measures for Attrition Rate %, Active Headcount, and Average Tenure.',
+      'Built interactive department and role slicers with drill-through functionality into individual tenure cohorts.',
+      'Constructed correlation matrices to test the relationship between overtime hours, salary hikes, and exit flags.'
+    ],
+    keyInsights: [
+      'Employees subjected to frequent overtime experienced a 30.5% attrition rate—nearly double the organizational benchmark.',
+      'Tenure vulnerability spiked dramatically between months 12 and 24, specifically among high-performing junior engineers.',
+      'Sales Representatives had the highest departmental attrition at 20.6%, coupled with the lowest work-life balance satisfaction scores.'
+    ],
+    businessRecommendations: [
+      'Institute strict weekly overtime alert thresholds and provide compensatory time-off policies.',
+      'Schedule a structured 12-month career progression review for all junior engineering talent to curb the 1-2 year flight risk.',
+      'Revamp sales compensation structures to provide higher base stability and reduce burnout.'
+    ],
+    metricsSummary: [
+      { label: 'Workforce Records', value: '1,470' },
+      { label: 'Baseline Attrition', value: '16.1%' },
+      { label: 'Overtime Risk Factor', value: '2.8x' },
+      { label: 'Vulnerable Tenure', value: '12-24 Mo' }
+    ],
+    githubUrl: 'https://github.com/harshwardhanpal/hr-analytics-dashboard',
+    liveDemoUrl: 'https://github.com/harshwardhanpal/hr-analytics-dashboard#dashboard',
+    image: '/projects/hr-analytics.svg',
+    accentGradient: 'from-purple-600 to-pink-600'
   }
 ];
