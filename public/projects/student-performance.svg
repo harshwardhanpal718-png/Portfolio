@@ -1,72 +1,83 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
-  <rect width="800" height="500" rx="16" fill="#F4F4F5" />
-  <rect x="1" y="1" width="798" height="498" rx="15" fill="none" stroke="#E4E4E7" stroke-width="2" />
+  <defs>
+    <linearGradient id="spCyanGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7300ff" />
+      <stop offset="100%" stop-color="#00f2fe" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" rx="16" fill="#050126" />
+  <rect x="1" y="1" width="798" height="498" rx="15" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+
+  <!-- Ambient light -->
+  <circle cx="200" cy="250" r="140" fill="#00f2fe" opacity="0.08" filter="blur(40px)" />
+  <circle cx="650" cy="200" r="140" fill="#7300ff" opacity="0.12" filter="blur(40px)" />
 
   <!-- Window Header -->
-  <rect x="0" y="0" width="800" height="44" rx="16" fill="#FFFFFF" />
-  <line x1="0" y1="44" x2="800" y2="44" stroke="#E4E4E7" />
-  <circle cx="28" cy="22" r="5" fill="#D4D4D8" />
-  <circle cx="44" cy="22" r="5" fill="#D4D4D8" />
-  <circle cx="60" cy="22" r="5" fill="#D4D4D8" />
-  <text x="400" y="27" font-family="'JetBrains Mono', monospace" font-size="12" fill="#52525B" text-anchor="middle">student_academic_factors_regression.sql &amp; py — Statistical Modeling</text>
+  <rect x="0" y="0" width="800" height="44" rx="16" fill="#0c0538" />
+  <line x1="0" y1="44" x2="800" y2="44" stroke="rgba(255,255,255,0.08)" />
+  <circle cx="28" cy="22" r="5" fill="#ec38bc" />
+  <circle cx="44" cy="22" r="5" fill="#7300ff" />
+  <circle cx="60" cy="22" r="5" fill="#00f2fe" />
+  <text x="400" y="27" font-family="'Plus Jakarta Sans', monospace" font-size="12" fill="#9ca3af" text-anchor="middle" font-weight="600">student_academic_factors_regression.sql &amp; py — Statistical Modeling</text>
 
   <!-- Left Card: Test Prep Impact -->
-  <rect x="30" y="64" width="350" height="400" rx="12" fill="#FFFFFF" stroke="#E4E4E7" />
-  <text x="50" y="96" font-family="'Sora', sans-serif" font-size="14" fill="#09090B" font-weight="600">Test Preparation Course Effect</text>
-  <text x="50" y="116" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Two-Sample t-test: p &lt; 0.001 (Statistically Significant)</text>
+  <rect x="30" y="64" width="350" height="400" rx="12" fill="#0e0742" stroke="rgba(255,255,255,0.08)" />
+  <text x="50" y="96" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" fill="#ffffff" font-weight="700">Test Preparation Course Effect</text>
+  <text x="50" y="116" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">Two-Sample t-test: p &lt; 0.001 (Statistically Significant)</text>
 
   <!-- Math score bars comparison -->
-  <text x="50" y="160" font-family="'Inter', sans-serif" font-size="12" fill="#09090B">Mathematics Mean Score</text>
+  <text x="50" y="160" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#ffffff" font-weight="600">Mathematics Mean Score</text>
   
-  <rect x="50" y="172" width="180" height="20" rx="4" fill="#09090B" />
-  <text x="240" y="187" font-family="'Inter', sans-serif" font-size="11" fill="#09090B" font-weight="600">Completed: 74.2%</text>
+  <rect x="50" y="172" width="180" height="20" rx="4" fill="url(#spCyanGrad)" />
+  <text x="240" y="187" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#00f2fe" font-weight="700">Completed: 74.2%</text>
 
-  <rect x="50" y="200" width="150" height="20" rx="4" fill="#E4E4E7" />
-  <text x="210" y="215" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">None: 61.9%</text>
+  <rect x="50" y="200" width="150" height="20" rx="4" fill="rgba(255,255,255,0.08)" />
+  <text x="210" y="215" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">None: 61.9%</text>
 
   <!-- Reading score bars -->
-  <text x="50" y="250" font-family="'Inter', sans-serif" font-size="12" fill="#09090B">Reading Mean Score</text>
-  <rect x="50" y="262" width="190" height="20" rx="4" fill="#09090B" />
-  <text x="250" y="277" font-family="'Inter', sans-serif" font-size="11" fill="#09090B" font-weight="600">Completed: 77.8%</text>
+  <text x="50" y="250" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#ffffff" font-weight="600">Reading Mean Score</text>
+  <rect x="50" y="262" width="190" height="20" rx="4" fill="#ec38bc" />
+  <text x="250" y="277" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#ec38bc" font-weight="700">Completed: 77.8%</text>
 
-  <rect x="50" y="290" width="156" height="20" rx="4" fill="#E4E4E7" />
-  <text x="216" y="305" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">None: 64.5%</text>
+  <rect x="50" y="290" width="156" height="20" rx="4" fill="rgba(255,255,255,0.08)" />
+  <text x="216" y="305" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">None: 64.5%</text>
 
   <!-- Writing score bars -->
-  <text x="50" y="340" font-family="'Inter', sans-serif" font-size="12" fill="#09090B">Writing Mean Score</text>
-  <rect x="50" y="352" width="195" height="20" rx="4" fill="#09090B" />
-  <text x="255" y="367" font-family="'Inter', sans-serif" font-size="11" fill="#09090B" font-weight="600">Completed: 79.4%</text>
+  <text x="50" y="340" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#ffffff" font-weight="600">Writing Mean Score</text>
+  <rect x="50" y="352" width="195" height="20" rx="4" fill="#00f2fe" />
+  <text x="255" y="367" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#00f2fe" font-weight="700">Completed: 79.4%</text>
 
-  <rect x="50" y="380" width="154" height="20" rx="4" fill="#E4E4E7" />
-  <text x="214" y="395" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">None: 63.3%</text>
+  <rect x="50" y="380" width="154" height="20" rx="4" fill="rgba(255,255,255,0.08)" />
+  <text x="214" y="395" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">None: 63.3%</text>
 
   <!-- Stat highlight -->
-  <rect x="50" y="415" width="310" height="35" rx="6" fill="#F4F4F5" stroke="#E4E4E7" />
-  <text x="205" y="437" font-family="'Inter', sans-serif" font-size="11" fill="#09090B" text-anchor="middle" font-weight="600">Net Average Exam Uplift: +12.3%</text>
+  <rect x="50" y="415" width="310" height="35" rx="6" fill="#130a54" stroke="rgba(255,255,255,0.08)" />
+  <text x="205" y="437" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#00f2fe" text-anchor="middle" font-weight="700">✦ Net Average Exam Uplift: +12.3%</text>
 
   <!-- Right Card: Factor Correlation Heatmap Matrix -->
-  <rect x="400" y="64" width="370" height="400" rx="12" fill="#FFFFFF" stroke="#E4E4E7" />
-  <text x="420" y="96" font-family="'Sora', sans-serif" font-size="14" fill="#09090B" font-weight="600">Correlation Coefficient Matrix</text>
-  <text x="420" y="116" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Pearson r correlation with final composite outcome</text>
+  <rect x="400" y="64" width="370" height="400" rx="12" fill="#0e0742" stroke="rgba(255,255,255,0.08)" />
+  <text x="420" y="96" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" fill="#ffffff" font-weight="700">Correlation Coefficient Matrix</text>
+  <text x="420" y="116" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">Pearson r correlation with final composite outcome</text>
 
-  <rect x="420" y="150" width="150" height="85" rx="8" fill="#F4F4F5" stroke="#18181B" stroke-width="1.5" />
-  <text x="435" y="180" font-family="'Inter', sans-serif" font-size="12" fill="#09090B" font-weight="600">Prep Course</text>
-  <text x="435" y="212" font-family="'Sora', sans-serif" font-size="20" fill="#09090B" font-weight="700">r = +0.72</text>
+  <rect x="420" y="150" width="150" height="85" rx="8" fill="#130a54" stroke="#00f2fe" stroke-width="1.5" />
+  <text x="435" y="180" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#ffffff" font-weight="600">Prep Course</text>
+  <text x="435" y="212" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" fill="#00f2fe" font-weight="800">r = +0.72</text>
 
-  <rect x="590" y="150" width="160" height="85" rx="8" fill="#F4F4F5" stroke="#E4E4E7" />
-  <text x="605" y="180" font-family="'Inter', sans-serif" font-size="12" fill="#09090B" font-weight="600">Parental Education</text>
-  <text x="605" y="212" font-family="'Sora', sans-serif" font-size="20" fill="#52525B" font-weight="700">r = +0.58</text>
+  <rect x="590" y="150" width="160" height="85" rx="8" fill="#100847" stroke="rgba(255,255,255,0.08)" />
+  <text x="605" y="180" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#ffffff" font-weight="600">Parental Education</text>
+  <text x="605" y="212" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" fill="#ec38bc" font-weight="800">r = +0.58</text>
 
-  <rect x="420" y="255" width="150" height="85" rx="8" fill="#F4F4F5" stroke="#E4E4E7" />
-  <text x="435" y="285" font-family="'Inter', sans-serif" font-size="12" fill="#09090B" font-weight="600">Lunch Program</text>
-  <text x="435" y="317" font-family="'Sora', sans-serif" font-size="20" fill="#71717A" font-weight="700">r = +0.44</text>
+  <rect x="420" y="255" width="150" height="85" rx="8" fill="#100847" stroke="rgba(255,255,255,0.08)" />
+  <text x="435" y="285" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#ffffff" font-weight="600">Lunch Program</text>
+  <text x="435" y="317" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" fill="#7300ff" font-weight="800">r = +0.44</text>
 
-  <rect x="590" y="255" width="160" height="85" rx="8" fill="#F4F4F5" stroke="#E4E4E7" />
-  <text x="605" y="285" font-family="'Inter', sans-serif" font-size="12" fill="#09090B" font-weight="600">Prior Test History</text>
-  <text x="605" y="317" font-family="'Sora', sans-serif" font-size="20" fill="#09090B" font-weight="700">r = +0.81</text>
+  <rect x="590" y="255" width="160" height="85" rx="8" fill="#130a54" stroke="#ec38bc" stroke-width="1.5" />
+  <text x="605" y="285" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#ffffff" font-weight="600">Prior Test History</text>
+  <text x="605" y="317" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" fill="#ec38bc" font-weight="800">r = +0.81</text>
 
-  <rect x="420" y="360" width="330" height="80" rx="8" fill="#F4F4F5" stroke="#E4E4E7" />
-  <text x="435" y="388" font-family="'Inter', sans-serif" font-size="11" fill="#09090B" font-weight="600">Policy Recommendation</text>
-  <text x="435" y="410" font-family="'Inter', sans-serif" font-size="10" fill="#71717A">Mandatory course completion yields highest composite grade</text>
-  <text x="435" y="425" font-family="'Inter', sans-serif" font-size="10" fill="#71717A">improvements across disadvantaged student cohorts.</text>
+  <rect x="420" y="360" width="330" height="80" rx="8" fill="#130a54" stroke="rgba(255,255,255,0.08)" />
+  <text x="435" y="388" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#00f2fe" font-weight="700">✦ Policy Recommendation</text>
+  <text x="435" y="410" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#9ca3af">Mandatory course completion yields highest composite grade</text>
+  <text x="435" y="425" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#9ca3af">improvements across disadvantaged student cohorts.</text>
 </svg>

@@ -14,11 +14,11 @@ export function App() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#FAFAF9] text-[#09090B] font-sans selection:bg-[#09090B] selection:text-white">
-      {/* Sticky Navigation Bar */}
+    <div className="min-h-screen bg-[#03001e] text-[#f3f4f6] font-sans selection:bg-[#7300ff]/40 selection:text-[#00f2fe]">
+      {/* Glassmorphism Floating Navigation */}
       <Navbar onOpenResume={() => setIsResumeModalOpen(true)} />
 
-      {/* The Six Defined Sections */}
+      {/* The Six Core Sections */}
       <main>
         {/* Section 1: Hero */}
         <Hero onOpenResume={() => setIsResumeModalOpen(true)} />
@@ -39,7 +39,7 @@ export function App() {
         <Contact onOpenResume={() => setIsResumeModalOpen(true)} />
       </main>
 
-      {/* Minimal Footer */}
+      {/* Glassmorphic Minimal Footer */}
       <Footer />
 
       {/* Back to top */}

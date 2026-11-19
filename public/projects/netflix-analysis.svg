@@ -1,56 +1,67 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
-  <rect width="800" height="500" rx="16" fill="#F4F4F5" />
-  <rect x="1" y="1" width="798" height="498" rx="15" fill="none" stroke="#E4E4E7" stroke-width="2" />
+  <defs>
+    <linearGradient id="nfPinkGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ec38bc" />
+      <stop offset="100%" stop-color="#00f2fe" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" rx="16" fill="#050126" />
+  <rect x="1" y="1" width="798" height="498" rx="15" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+
+  <!-- Ambient glow -->
+  <circle cx="240" cy="220" r="140" fill="#ec38bc" opacity="0.1" filter="blur(40px)" />
+  <circle cx="600" cy="260" r="150" fill="#7300ff" opacity="0.1" filter="blur(40px)" />
 
   <!-- Window Header -->
-  <rect x="0" y="0" width="800" height="44" rx="16" fill="#FFFFFF" />
-  <line x1="0" y1="44" x2="800" y2="44" stroke="#E4E4E7" />
-  <circle cx="28" cy="22" r="5" fill="#D4D4D8" />
-  <circle cx="44" cy="22" r="5" fill="#D4D4D8" />
-  <circle cx="60" cy="22" r="5" fill="#D4D4D8" />
-  <text x="400" y="27" font-family="'JetBrains Mono', monospace" font-size="12" fill="#52525B" text-anchor="middle" font-weight="600">netflix_titles_eda.py — Python, Matplotlib, Seaborn</text>
+  <rect x="0" y="0" width="800" height="44" rx="16" fill="#0c0538" />
+  <line x1="0" y1="44" x2="800" y2="44" stroke="rgba(255,255,255,0.08)" />
+  <circle cx="28" cy="22" r="5" fill="#ec38bc" />
+  <circle cx="44" cy="22" r="5" fill="#7300ff" />
+  <circle cx="60" cy="22" r="5" fill="#00f2fe" />
+  <text x="400" y="27" font-family="'Plus Jakarta Sans', monospace" font-size="12" fill="#9ca3af" text-anchor="middle" font-weight="600">netflix_titles_eda.py — Python, Matplotlib, Seaborn</text>
 
   <!-- Left Stats & Distribution -->
-  <rect x="30" y="64" width="350" height="400" rx="12" fill="#FFFFFF" stroke="#E4E4E7" />
-  <text x="50" y="96" font-family="'Sora', sans-serif" font-size="14" fill="#09090B" font-weight="600">Catalog Content Split</text>
-  <text x="50" y="116" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">8,807 Titles Analyzed (Movies vs TV Shows)</text>
+  <rect x="30" y="64" width="350" height="400" rx="12" fill="#0e0742" stroke="rgba(255,255,255,0.08)" />
+  <text x="50" y="96" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" fill="#ffffff" font-weight="700">Catalog Content Split</text>
+  <text x="50" y="116" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">8,807 Titles Analyzed (Movies vs TV Shows)</text>
 
   <!-- Donut Chart representation -->
-  <circle cx="140" cy="210" r="65" fill="none" stroke="#F4F4F5" stroke-width="28" />
-  <circle cx="140" cy="210" r="65" fill="none" stroke="#09090B" stroke-width="28" stroke-dasharray="280 400" stroke-dashoffset="0" />
-  <circle cx="140" cy="210" r="65" fill="none" stroke="#71717A" stroke-width="28" stroke-dasharray="130 400" stroke-dashoffset="-280" />
-  <text x="140" y="206" font-family="'Sora', sans-serif" font-size="16" fill="#09090B" text-anchor="middle" font-weight="700">8.8k</text>
-  <text x="140" y="222" font-family="'Inter', sans-serif" font-size="10" fill="#71717A" text-anchor="middle">Titles</text>
+  <circle cx="140" cy="210" r="65" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="28" />
+  <circle cx="140" cy="210" r="65" fill="none" stroke="#ec38bc" stroke-width="28" stroke-dasharray="280 400" stroke-dashoffset="0" />
+  <circle cx="140" cy="210" r="65" fill="none" stroke="#00f2fe" stroke-width="28" stroke-dasharray="130 400" stroke-dashoffset="-280" />
+  <text x="140" y="206" font-family="'Plus Jakarta Sans', sans-serif" font-size="17" fill="#ffffff" text-anchor="middle" font-weight="800">8.8k</text>
+  <text x="140" y="222" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Titles</text>
 
   <!-- Legend -->
-  <rect x="235" y="175" width="12" height="12" rx="3" fill="#09090B" />
-  <text x="255" y="186" font-family="'Inter', sans-serif" font-size="12" fill="#09090B">Movies: 69.6%</text>
+  <rect x="235" y="175" width="12" height="12" rx="3" fill="#ec38bc" />
+  <text x="255" y="186" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#ffffff" font-weight="600">Movies: 69.6%</text>
 
-  <rect x="235" y="210" width="12" height="12" rx="3" fill="#71717A" />
-  <text x="255" y="221" font-family="'Inter', sans-serif" font-size="12" fill="#09090B">TV Shows: 30.4%</text>
+  <rect x="235" y="210" width="12" height="12" rx="3" fill="#00f2fe" />
+  <text x="255" y="221" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#ffffff" font-weight="600">TV Shows: 30.4%</text>
 
   <!-- Trend badge -->
-  <rect x="50" y="300" width="310" height="145" rx="8" fill="#F4F4F5" stroke="#E4E4E7" />
-  <text x="66" y="328" font-family="'Sora', sans-serif" font-size="12" fill="#09090B" font-weight="600">Top Content Producing Countries</text>
-  <text x="66" y="356" font-family="'Inter', sans-serif" font-size="11" fill="#09090B">1. United States (3,689 titles)</text>
-  <text x="66" y="380" font-family="'Inter', sans-serif" font-size="11" fill="#09090B">2. India (1,046 titles) — +310% surge</text>
-  <text x="66" y="404" font-family="'Inter', sans-serif" font-size="11" fill="#09090B">3. United Kingdom (804 titles)</text>
-  <text x="66" y="428" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">4. South Korea, Japan &amp; Spain</text>
+  <rect x="50" y="300" width="310" height="145" rx="8" fill="#130a54" stroke="rgba(255,255,255,0.08)" />
+  <text x="66" y="328" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#00f2fe" font-weight="700">Top Content Producing Countries</text>
+  <text x="66" y="356" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#ffffff">1. United States (3,689 titles)</text>
+  <text x="66" y="380" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#ec38bc" font-weight="600">2. India (1,046 titles) — +310% surge</text>
+  <text x="66" y="404" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#ffffff">3. United Kingdom (804 titles)</text>
+  <text x="66" y="428" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">4. South Korea, Japan &amp; Spain</text>
 
   <!-- Right Chart -->
-  <rect x="400" y="64" width="370" height="400" rx="12" fill="#FFFFFF" stroke="#E4E4E7" />
-  <text x="420" y="96" font-family="'Sora', sans-serif" font-size="14" fill="#09090B" font-weight="600">Historical Content Release Velocity</text>
-  <text x="420" y="116" font-family="'Inter', sans-serif" font-size="11" fill="#71717A">Release year distribution curve (2000 - 2021)</text>
+  <rect x="400" y="64" width="370" height="400" rx="12" fill="#0e0742" stroke="rgba(255,255,255,0.08)" />
+  <text x="420" y="96" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" fill="#ffffff" font-weight="700">Historical Release Velocity</text>
+  <text x="420" y="116" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">Release year distribution curve (2000 - 2021)</text>
 
-  <line x1="430" y1="360" x2="740" y2="360" stroke="#E4E4E7" />
+  <line x1="430" y1="360" x2="740" y2="360" stroke="rgba(255,255,255,0.08)" />
   
-  <path d="M 440 355 Q 500 345 560 320 T 630 220 T 680 160 T 730 200" fill="none" stroke="#09090B" stroke-width="3" />
-  <path d="M 440 358 Q 500 355 560 340 T 630 280 T 680 210 T 730 230" fill="none" stroke="#71717A" stroke-width="2" stroke-dasharray="4 3" />
+  <path d="M 440 355 Q 500 345 560 320 T 630 220 T 680 160 T 730 200" fill="none" stroke="url(#nfPinkGrad)" stroke-width="3.5" />
+  <path d="M 440 358 Q 500 355 560 340 T 630 280 T 680 210 T 730 230" fill="none" stroke="#7300ff" stroke-width="2" stroke-dasharray="4 3" />
 
-  <circle cx="680" cy="160" r="5" fill="#09090B" stroke="#FFFFFF" stroke-width="2" />
-  <text x="680" y="145" font-family="'Inter', sans-serif" font-size="11" fill="#09090B" text-anchor="middle" font-weight="600">Peak Catalog Inflow (2018-2019)</text>
+  <circle cx="680" cy="160" r="5" fill="#00f2fe" stroke="#ffffff" stroke-width="2" />
+  <text x="680" y="145" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#00f2fe" text-anchor="middle" font-weight="700">Peak Catalog Inflow (2018-2019)</text>
 
-  <rect x="430" y="380" width="310" height="60" rx="8" fill="#F4F4F5" stroke="#E4E4E7" />
-  <text x="445" y="405" font-family="'Inter', sans-serif" font-size="11" fill="#09090B" font-weight="600">Trend Observation</text>
-  <text x="445" y="425" font-family="'Inter', sans-serif" font-size="10" fill="#71717A">International originals surpassed domestic productions by 2020.</text>
+  <rect x="430" y="380" width="310" height="60" rx="8" fill="#130a54" stroke="rgba(255,255,255,0.08)" />
+  <text x="445" y="405" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#ffffff" font-weight="700">✦ Trend Observation</text>
+  <text x="445" y="425" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" fill="#9ca3af">International originals surpassed domestic productions by 2020.</text>
 </svg>

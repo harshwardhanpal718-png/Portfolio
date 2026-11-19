@@ -8,18 +8,23 @@ export const Projects: React.FC = () => {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="py-16 md:py-20 border-t border-zinc-200 bg-[#FAFAF9] relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-20 md:py-28 border-t border-white/[0.06] relative overflow-hidden">
+      {/* Background ambient lighting */}
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#00f2fe]/10 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute bottom-10 -right-32 w-96 h-96 bg-[#7300ff]/10 rounded-full blur-[130px] pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Heading */}
-        <div className="mb-10">
-          <span className="text-xs font-mono text-zinc-600 uppercase tracking-wider block mb-1">
-            Portfolio
-          </span>
-          <h2 className="text-2xl sm:text-3xl font-bold font-heading text-zinc-900 tracking-tight">
-            Featured Projects
+        <div className="mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[#00f2fe] text-xs font-mono uppercase tracking-wider mb-3">
+            <span>✦</span>
+            <span>Portfolio Showcase</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-white tracking-tight">
+            Featured <span className="gradient-text">Projects</span>
           </h2>
-          <div className="w-12 h-1 bg-[#09090B] mt-2 rounded-full" />
+          <div className="w-16 h-1 bg-gradient-to-r from-[#00f2fe] via-[#7300ff] to-[#ec38bc] mt-3 rounded-full" />
         </div>
 
         {/* Projects Grid */}
@@ -27,32 +32,32 @@ export const Projects: React.FC = () => {
           {projectsData.map((project) => (
             <div
               key={project.id}
-              className="bg-white border border-zinc-200 rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-zinc-400 hover:shadow-premium-lg transition-all duration-300"
+              className="glass-card rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-white/20 transition-all duration-300"
             >
               <div>
                 {/* Project Image Banner */}
-                <div className="relative aspect-video w-full bg-zinc-100 overflow-hidden border-b border-zinc-200">
+                <div className="relative aspect-video w-full bg-[#03001e] overflow-hidden border-b border-white/[0.08]">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
                   <div className="absolute top-3 left-3">
-                    <span className="text-[10px] font-mono font-medium px-2.5 py-0.5 rounded-full bg-white/95 border border-zinc-200 text-zinc-800 backdrop-blur-sm shadow-2xs">
+                    <span className="text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-[#03001e]/85 border border-white/[0.1] text-[#00f2fe] backdrop-blur-md">
                       {project.status}
                     </span>
                   </div>
                 </div>
 
                 {/* Card Content */}
-                <div className="p-5">
+                <div className="p-6">
                   {/* Tech stack badges */}
-                  <div className="flex flex-wrap gap-1.5 mb-2.5">
+                  <div className="flex flex-wrap gap-1.5 mb-3">
                     {project.tools.map((tool, idx) => (
                       <span
                         key={idx}
-                        className="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-100 border border-zinc-200 text-zinc-800"
+                        className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.03] border border-white/[0.08] text-slate-300"
                       >
                         {tool}
                       </span>
@@ -60,21 +65,21 @@ export const Projects: React.FC = () => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-base font-bold font-heading text-zinc-900 group-hover:text-zinc-700 transition-colors mb-2">
+                  <h3 className="text-lg font-bold font-heading text-white group-hover:text-[#00f2fe] transition-colors mb-2">
                     {project.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-xs text-zinc-600 leading-relaxed line-clamp-3 mb-4 font-sans">
+                  <p className="text-xs text-slate-400 leading-relaxed line-clamp-3 mb-4 font-sans">
                     {project.businessProblem}
                   </p>
 
                   {/* Quick Metric Snapshot */}
-                  <div className="grid grid-cols-2 gap-2 p-2.5 rounded-lg bg-zinc-50 border border-zinc-200/80 text-[11px] font-mono">
+                  <div className="grid grid-cols-2 gap-2 p-3 rounded-xl bg-white/[0.02] border border-white/[0.06] text-[11px] font-mono">
                     {project.metricsSummary.slice(0, 2).map((m, mIdx) => (
                       <div key={mIdx}>
-                        <span className="text-zinc-500 block text-[10px] truncate">{m.label}</span>
-                        <span className="text-zinc-900 font-semibold">{m.value}</span>
+                        <span className="text-slate-400 block text-[10px] truncate">{m.label}</span>
+                        <span className="text-white font-bold">{m.value}</span>
                       </div>
                     ))}
                   </div>
@@ -82,10 +87,10 @@ export const Projects: React.FC = () => {
               </div>
 
               {/* Card Footer Actions */}
-              <div className="p-5 pt-0 flex items-center justify-between gap-3 border-t border-zinc-100 mt-4">
+              <div className="p-6 pt-0 flex items-center justify-between gap-3 border-t border-white/[0.06] mt-4">
                 <button
                   onClick={() => setActiveProject(project)}
-                  className="text-xs font-semibold text-zinc-900 hover:text-zinc-600 flex items-center gap-1 transition-colors"
+                  className="px-3.5 py-1.5 rounded-xl btn-glass text-xs font-semibold text-white hover:text-[#00f2fe] flex items-center gap-1.5 transition-colors"
                 >
                   <span>Case Study</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -96,7 +101,7 @@ export const Projects: React.FC = () => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-1.5 rounded-lg bg-white border border-zinc-200 text-zinc-700 hover:text-zinc-950 hover:border-zinc-400 transition-colors shadow-2xs"
+                    className="p-2 rounded-xl bg-white/[0.03] border border-white/[0.08] text-slate-400 hover:text-white hover:border-[#ec38bc]/40 transition-colors"
                     title="GitHub Repository"
                   >
                     <Github className="w-4 h-4" />
@@ -106,8 +111,8 @@ export const Projects: React.FC = () => {
                       href={project.liveDemoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-1.5 rounded-lg bg-[#09090B] text-white hover:bg-[#27272A] transition-colors shadow-2xs"
-                      title="Demo"
+                      className="p-2 rounded-xl btn-gradient text-white transition-opacity"
+                      title="Live Interactive Demo"
                     >
                       <ExternalLink className="w-4 h-4" />
                     </a>

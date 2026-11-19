@@ -1,20 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="neonGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#ec38bc" />
+      <stop offset="100%" stop-color="#7300ff" />
+    </linearGradient>
+  </defs>
+
   <!-- Background -->
-  <rect width="400" height="400" rx="32" fill="#F4F4F5" />
-  <rect x="2" y="2" width="396" height="396" rx="30" fill="none" stroke="#E4E4E7" stroke-width="2" />
+  <rect width="400" height="400" rx="32" fill="#03001e" />
+  <rect x="2" y="2" width="396" height="396" rx="30" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="2" />
 
-  <!-- Subtle Radial Frame -->
-  <circle cx="200" cy="160" r="70" fill="#E4E4E7" opacity="0.6" />
+  <!-- Radial Glow -->
+  <circle cx="200" cy="160" r="85" fill="rgba(115, 0, 255, 0.15)" />
 
-  <!-- Silhouette Figure -->
-  <circle cx="200" cy="145" r="50" fill="#18181B" />
-  <path d="M 120 285 C 120 230, 160 215, 200 215 C 240 215, 280 230, 280 285" fill="#18181B" />
+  <!-- Avatar Silhouette with Cyber Glow -->
+  <circle cx="200" cy="145" r="52" fill="rgba(255, 255, 255, 0.04)" stroke="url(#neonGlow)" stroke-width="2" />
+  <path d="M 120 285 C 120 225, 160 210, 200 210 C 240 210, 280 225, 280 285" fill="rgba(255, 255, 255, 0.04)" stroke="url(#neonGlow)" stroke-width="2" />
 
   <!-- Monogram Initials -->
-  <text x="200" y="157" font-family="'Sora', sans-serif" font-size="34" font-weight="800" fill="#FAFAFA" text-anchor="middle">HP</text>
+  <text x="200" y="157" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="800" fill="url(#neonGlow)" text-anchor="middle">HP</text>
 
-  <!-- Professional Badge -->
-  <rect x="90" y="315" width="220" height="38" rx="19" fill="#FFFFFF" stroke="#E4E4E7" stroke-width="1.5" />
-  <circle cx="112" cy="334" r="4.5" fill="#18181B" />
-  <text x="210" y="339" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#09090B" text-anchor="middle">Harshwardhan Pal</text>
+  <!-- Floating Badge -->
+  <rect x="90" y="315" width="220" height="38" rx="19" fill="rgba(3, 0, 30, 0.85)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1.5" />
+  <circle cx="112" cy="334" r="4.5" fill="#00f2fe" />
+  <text x="210" y="339" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#f3f4f6" text-anchor="middle">Harshwardhan Pal</text>
 </svg>

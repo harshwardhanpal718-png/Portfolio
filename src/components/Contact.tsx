@@ -41,87 +41,92 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-20 border-t border-zinc-200 bg-[#FAFAF9] relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 md:py-28 border-t border-white/[0.06] relative overflow-hidden">
+      {/* Background ambient lighting */}
+      <div className="absolute top-1/3 -left-32 w-96 h-96 bg-[#7300ff]/10 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute bottom-10 -right-32 w-96 h-96 bg-[#00f2fe]/10 rounded-full blur-[130px] pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Heading */}
-        <div className="mb-10">
-          <span className="text-xs font-mono text-zinc-600 uppercase tracking-wider block mb-1">
-            Get In Touch
-          </span>
-          <h2 className="text-2xl sm:text-3xl font-bold font-heading text-zinc-900 tracking-tight">
-            Contact
+        <div className="mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[#00f2fe] text-xs font-mono uppercase tracking-wider mb-3">
+            <span>✦</span>
+            <span>Get In Touch</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-white tracking-tight">
+            Contact <span className="gradient-text">Me</span>
           </h2>
-          <div className="w-12 h-1 bg-[#09090B] mt-2 rounded-full" />
+          <div className="w-16 h-1 bg-gradient-to-r from-[#00f2fe] via-[#ec38bc] to-[#7300ff] mt-3 rounded-full" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           
           {/* Left Info Column */}
           <div className="md:col-span-5 space-y-4">
-            <div className="bg-white border border-zinc-200 rounded-2xl p-6 space-y-4 shadow-xs">
-              <h3 className="text-base font-bold text-zinc-900">
+            <div className="glass-card rounded-3xl p-6 sm:p-7 space-y-4 border border-white/[0.08]">
+              <h3 className="text-lg font-bold text-white">
                 Let's Connect
               </h3>
-              <p className="text-xs text-zinc-600 leading-relaxed font-sans">
-                I am open to data analyst internships, entry-level opportunities, and collaborative analytical projects. Feel free to reach out directly.
+              <p className="text-xs text-slate-400 leading-relaxed font-sans">
+                I am actively seeking data analyst internships, junior roles, and analytical collaborative projects. Feel free to reach out directly through email or LinkedIn.
               </p>
 
               {/* Email with Copy */}
-              <div className="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200 flex items-center justify-between gap-3">
+              <div className="p-3.5 rounded-2xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-between gap-3">
                 <div className="flex items-center gap-2.5 overflow-hidden">
-                  <Mail className="w-4 h-4 text-zinc-800 shrink-0" />
-                  <span className="text-xs font-mono text-zinc-800 truncate">{email}</span>
+                  <Mail className="w-4 h-4 text-[#00f2fe] shrink-0" />
+                  <span className="text-xs font-mono text-slate-200 truncate">{email}</span>
                 </div>
                 <button
                   onClick={handleCopy}
-                  className="p-1.5 rounded-md hover:bg-white text-zinc-500 hover:text-zinc-900 transition-colors shadow-2xs"
+                  className="p-1.5 rounded-lg bg-white/[0.04] hover:bg-white/[0.1] text-slate-400 hover:text-white transition-colors"
                   title="Copy email"
                 >
-                  {copied ? <Check className="w-3.5 h-3.5 text-zinc-900" /> : <Copy className="w-3.5 h-3.5 text-zinc-400" />}
+                  {copied ? <Check className="w-3.5 h-3.5 text-[#00f2fe]" /> : <Copy className="w-3.5 h-3.5 text-slate-400" />}
                 </button>
               </div>
 
               {/* Social Channels */}
-              <div className="flex items-center gap-2.5 pt-1">
+              <div className="flex items-center gap-3 pt-1">
                 <a
                   href="https://linkedin.com/in/harshwardhan-pal"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 py-2 px-3 rounded-xl bg-white border border-zinc-200 hover:border-zinc-900 flex items-center justify-center gap-2 text-xs font-semibold text-zinc-700 hover:text-zinc-950 transition-colors shadow-2xs"
+                  className="flex-1 py-2.5 px-3 rounded-xl btn-glass flex items-center justify-center gap-2 text-xs font-semibold text-slate-200 hover:text-white"
                 >
-                  <Linkedin className="w-3.5 h-3.5 text-zinc-800" />
+                  <Linkedin className="w-3.5 h-3.5 text-[#00f2fe]" />
                   <span>LinkedIn</span>
                 </a>
                 <a
                   href="https://github.com/harshwardhanpal"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 py-2 px-3 rounded-xl bg-white border border-zinc-200 hover:border-zinc-900 flex items-center justify-center gap-2 text-xs font-semibold text-zinc-700 hover:text-zinc-950 transition-colors shadow-2xs"
+                  className="flex-1 py-2.5 px-3 rounded-xl btn-glass flex items-center justify-center gap-2 text-xs font-semibold text-slate-200 hover:text-white"
                 >
-                  <Github className="w-3.5 h-3.5 text-zinc-800" />
+                  <Github className="w-3.5 h-3.5 text-[#ec38bc]" />
                   <span>GitHub</span>
                 </a>
               </div>
 
               {/* Location */}
-              <div className="flex items-center gap-2 text-xs text-zinc-600 pt-1">
-                <MapPin className="w-3.5 h-3.5 text-zinc-800 shrink-0" />
+              <div className="flex items-center gap-2 text-xs text-slate-400 pt-1">
+                <MapPin className="w-3.5 h-3.5 text-[#7300ff] shrink-0" />
                 <span>Jaipur, Rajasthan, India</span>
               </div>
             </div>
 
             {/* Quick Resume Card */}
-            <div className="bg-white border border-zinc-200 rounded-2xl p-5 flex items-center justify-between gap-4 shadow-xs">
+            <div className="glass-card rounded-2xl p-5 flex items-center justify-between gap-4 border border-white/[0.08]">
               <div>
-                <span className="text-xs font-semibold text-zinc-900 block">Download Resume</span>
-                <span className="text-[11px] text-zinc-500">Verified PDF format</span>
+                <span className="text-xs font-bold text-white block">Download Resume</span>
+                <span className="text-[11px] text-slate-400">Verified PDF Document</span>
               </div>
               <button
                 onClick={onOpenResume}
-                className="px-3.5 py-2 rounded-lg bg-[#09090B] hover:bg-[#27272A] text-white text-xs font-semibold flex items-center gap-1.5 transition-all shadow-xs"
+                className="px-4 py-2 rounded-xl btn-gradient text-white text-xs font-bold flex items-center gap-1.5 transition-opacity"
               >
-                <Download className="w-3.5 h-3.5 text-zinc-300" />
+                <Download className="w-3.5 h-3.5" />
                 <span>Resume</span>
               </button>
             </div>
@@ -129,20 +134,20 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
 
           {/* Right Form Column */}
           <div className="md:col-span-7">
-            <div className="bg-white border border-zinc-200 rounded-2xl p-6 sm:p-7 shadow-xs">
+            <div className="glass-card rounded-3xl p-6 sm:p-8 border border-white/[0.08]">
               {submitted ? (
-                <div className="py-8 text-center space-y-3">
-                  <div className="w-12 h-12 rounded-full bg-zinc-100 border border-zinc-300 text-zinc-900 flex items-center justify-center mx-auto">
+                <div className="py-10 text-center space-y-3">
+                  <div className="w-12 h-12 rounded-full bg-[#00f2fe]/10 border border-[#00f2fe]/30 text-[#00f2fe] flex items-center justify-center mx-auto">
                     <CheckCircle2 className="w-6 h-6" />
                   </div>
-                  <h4 className="text-base font-bold text-zinc-900">Message Prepared!</h4>
-                  <p className="text-xs text-zinc-600 max-w-sm mx-auto font-sans">
-                    Click below to open your default email client with your message pre-filled.
+                  <h4 className="text-lg font-bold text-white">Message Prepared!</h4>
+                  <p className="text-xs text-slate-400 max-w-sm mx-auto font-sans leading-relaxed">
+                    Click below to open your preferred email client with your message pre-filled and ready to send.
                   </p>
                   <div className="pt-2 flex justify-center gap-3">
                     <button
                       onClick={handleMailto}
-                      className="px-4 py-2 rounded-lg bg-[#09090B] hover:bg-[#27272A] text-white text-xs font-semibold flex items-center gap-1.5 transition-all shadow-sm"
+                      className="px-5 py-2.5 rounded-xl btn-gradient text-white text-xs font-bold flex items-center gap-1.5 transition-opacity"
                     >
                       <Send className="w-3.5 h-3.5" />
                       <span>Send via Email</span>
@@ -152,7 +157,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
                         setSubmitted(false);
                         setFormData({ name: '', email: '', subject: '', message: '' });
                       }}
-                      className="px-3 py-2 rounded-lg bg-zinc-50 border border-zinc-200 text-zinc-600 hover:text-zinc-900 text-xs font-medium"
+                      className="px-4 py-2.5 rounded-xl btn-glass text-slate-300 hover:text-white text-xs font-medium"
                     >
                       Reset
                     </button>
@@ -161,7 +166,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4 font-sans">
                   {error && (
-                    <div className="p-3 rounded-lg bg-red-50 border border-red-200 text-red-600 text-xs flex items-center gap-2">
+                    <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/30 text-red-300 text-xs flex items-center gap-2">
                       <AlertCircle className="w-4 h-4 shrink-0" />
                       <span>{error}</span>
                     </div>
@@ -169,7 +174,7 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-mono text-zinc-600 mb-1">
+                      <label className="block text-xs font-mono text-slate-400 mb-1.5">
                         Name *
                       </label>
                       <input
@@ -177,12 +182,12 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="Your Name"
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-zinc-50 border border-zinc-200 text-zinc-900 placeholder-zinc-400 text-xs focus:outline-none focus:border-zinc-900 focus:bg-white transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder-slate-500 text-xs focus:outline-none focus:border-[#00f2fe] focus:bg-white/[0.06] transition-all"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono text-zinc-600 mb-1">
+                      <label className="block text-xs font-mono text-slate-400 mb-1.5">
                         Email *
                       </label>
                       <input
@@ -190,26 +195,26 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="your@email.com"
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-zinc-50 border border-zinc-200 text-zinc-900 placeholder-zinc-400 text-xs focus:outline-none focus:border-zinc-900 focus:bg-white transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder-slate-500 text-xs focus:outline-none focus:border-[#00f2fe] focus:bg-white/[0.06] transition-all"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-mono text-zinc-600 mb-1">
+                    <label className="block text-xs font-mono text-slate-400 mb-1.5">
                       Subject
                     </label>
                     <input
                       type="text"
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      placeholder="e.g. Data Analyst Role / Inquiry"
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-zinc-50 border border-zinc-200 text-zinc-900 placeholder-zinc-400 text-xs focus:outline-none focus:border-zinc-900 focus:bg-white transition-colors"
+                      placeholder="e.g. Data Analyst Role / Analytics Collaboration"
+                      className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder-slate-500 text-xs focus:outline-none focus:border-[#00f2fe] focus:bg-white/[0.06] transition-all"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-mono text-zinc-600 mb-1">
+                    <label className="block text-xs font-mono text-slate-400 mb-1.5">
                       Message *
                     </label>
                     <textarea
@@ -217,13 +222,13 @@ export const Contact: React.FC<ContactProps> = ({ onOpenResume }) => {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Write your message here..."
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-zinc-50 border border-zinc-200 text-zinc-900 placeholder-zinc-400 text-xs focus:outline-none focus:border-zinc-900 focus:bg-white transition-colors resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] text-white placeholder-slate-500 text-xs focus:outline-none focus:border-[#00f2fe] focus:bg-white/[0.06] transition-all resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-2.5 rounded-lg bg-[#09090B] hover:bg-[#27272A] text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition-all shadow-sm"
+                    className="w-full py-3.5 rounded-xl btn-gradient text-white text-xs font-bold flex items-center justify-center gap-2"
                   >
                     <span>Send Message</span>
                     <Send className="w-3.5 h-3.5" />
