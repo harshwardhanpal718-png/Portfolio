@@ -37,53 +37,53 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#06070D]/85 backdrop-blur-md overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto"
       onClick={onClose}
     >
       <div 
-        className="relative w-full max-w-3xl bg-[#0B0D16] border border-white/[0.1] rounded-3xl shadow-obsidian-card overflow-hidden my-8 backdrop-blur-2xl"
+        className="relative w-full max-w-3xl bg-[#0B0B0B] border border-[#242424] shadow-2xl overflow-hidden my-8"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Header */}
-        <div className="p-6 sm:p-7 border-b border-white/[0.08] flex items-start justify-between gap-4 bg-white/[0.02]">
+        <div className="p-6 sm:p-8 border-b border-[#242424] flex items-start justify-between gap-4 bg-[#050505]">
           <div>
             <div className="flex flex-wrap items-center gap-2 mb-2">
-              <span className="text-[10px] font-mono font-medium px-2.5 py-0.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-[#94A3B8]">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 bg-[#C81024] text-white">
                 {project.category}
               </span>
-              <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-[#06B6D4]/10 border border-[#06B6D4]/30 text-[#06B6D4]">
+              <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 border border-[#242424] text-[#A1A1AA]">
                 {project.status}
               </span>
             </div>
 
-            <h2 className="text-xl sm:text-2xl font-extrabold font-heading text-white">
+            <h2 className="font-display text-3xl sm:text-4xl text-white tracking-wide">
               {project.title}
             </h2>
-            <p className="text-xs text-[#94A3B8] mt-1">
+            <p className="text-xs text-[#A1A1AA] mt-1 font-sans">
               {project.subtitle}
             </p>
           </div>
 
           <button
             onClick={onClose}
-            className="p-2 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-[#94A3B8] hover:text-white border border-white/[0.08] transition-colors shrink-0"
+            className="p-2 border border-[#242424] hover:border-[#C81024] text-[#A1A1AA] hover:text-white transition-colors shrink-0 bg-[#0B0B0B]"
             aria-label="Close modal"
           >
-            <X className="w-4 h-4" />
+            <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Modal Body */}
-        <div className="p-6 sm:p-7 space-y-6 max-h-[70vh] overflow-y-auto font-sans">
+        <div className="p-6 sm:p-8 space-y-6 max-h-[70vh] overflow-y-auto font-sans">
           
           {/* Key Metrics */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {project.metricsSummary.map((metric, mIdx) => (
-              <div key={mIdx} className="p-3.5 rounded-2xl bg-white/[0.02] border border-white/[0.06] text-center">
-                <span className="text-[10px] font-mono text-[#94A3B8] block mb-1">
+              <div key={mIdx} className="p-4 bg-[#050505] border border-[#242424] text-center">
+                <span className="text-[10px] font-mono text-[#A1A1AA] block mb-1 uppercase tracking-wider">
                   {metric.label}
                 </span>
-                <span className="text-base sm:text-lg font-bold font-heading text-white">
+                <span className="font-display text-2xl text-[#C81024] font-bold">
                   {metric.value}
                 </span>
               </div>
@@ -92,22 +92,22 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
           {/* Business Problem & Dataset */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-2">
-              <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#F59E0B]">
+            <div className="p-5 bg-[#050505] border border-[#242424] space-y-2">
+              <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#C81024] uppercase tracking-wider">
                 <AlertCircle className="w-3.5 h-3.5" />
-                <span>PROBLEM STATEMENT</span>
+                <span>BUSINESS PROBLEM</span>
               </div>
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <p className="text-xs text-[#A1A1AA] leading-relaxed">
                 {project.businessProblem}
               </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-2">
-              <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#06B6D4]">
-                <Database className="w-3.5 h-3.5" />
-                <span>DATASET INFORMATION</span>
+            <div className="p-5 bg-[#050505] border border-[#242424] space-y-2">
+              <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#FFFFFF] uppercase tracking-wider">
+                <Database className="w-3.5 h-3.5 text-[#C81024]" />
+                <span>DATASET DETAILS</span>
               </div>
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <p className="text-xs text-[#A1A1AA] leading-relaxed">
                 {project.datasetInfo}
               </p>
             </div>
@@ -115,14 +115,14 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
           {/* Data Cleaning Approach */}
           <div className="space-y-2">
-            <div className="flex items-center gap-2 text-xs font-heading font-bold text-white">
-              <Filter className="w-3.5 h-3.5 text-[#06B6D4]" />
-              <span>Data Cleaning &amp; Transformation Approach</span>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white uppercase tracking-wider">
+              <Filter className="w-3.5 h-3.5 text-[#C81024]" />
+              <span>Data Cleaning &amp; Preparation</span>
             </div>
             <div className="space-y-1.5">
               {project.dataCleaningApproach.map((item, idx) => (
-                <div key={idx} className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-start gap-2.5 text-xs text-slate-300">
-                  <span className="text-[#06B6D4] font-mono font-bold text-[10px] shrink-0 mt-0.5">
+                <div key={idx} className="p-3 bg-[#050505] border border-[#242424] flex items-start gap-2.5 text-xs text-[#A1A1AA]">
+                  <span className="text-[#C81024] font-mono font-bold text-[11px] shrink-0">
                     0{idx + 1}.
                   </span>
                   <span className="leading-relaxed">{item}</span>
@@ -133,14 +133,14 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
           {/* Methodology */}
           <div className="space-y-2">
-            <div className="flex items-center gap-2 text-xs font-heading font-bold text-white">
-              <Layers className="w-3.5 h-3.5 text-[#7C3AED]" />
-              <span>Analytical Methodology &amp; Modeling</span>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white uppercase tracking-wider">
+              <Layers className="w-3.5 h-3.5 text-[#C81024]" />
+              <span>Analytical Methodology</span>
             </div>
             <div className="space-y-1.5">
               {project.analysisMethodology.map((item, idx) => (
-                <div key={idx} className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-start gap-2.5 text-xs text-slate-300">
-                  <span className="text-[#7C3AED] font-mono font-bold text-[10px] shrink-0 mt-0.5">
+                <div key={idx} className="p-3 bg-[#050505] border border-[#242424] flex items-start gap-2.5 text-xs text-[#A1A1AA]">
+                  <span className="text-[#C81024] font-mono font-bold text-[11px] shrink-0">
                     0{idx + 1}.
                   </span>
                   <span className="leading-relaxed">{item}</span>
@@ -151,15 +151,15 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
           {/* Key Insights */}
           <div className="space-y-2">
-            <div className="flex items-center gap-2 text-xs font-heading font-bold text-white">
-              <TrendingUp className="w-3.5 h-3.5 text-[#06B6D4]" />
-              <span>Key Findings &amp; Discoveries</span>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white uppercase tracking-wider">
+              <TrendingUp className="w-3.5 h-3.5 text-[#C81024]" />
+              <span>Key Analytical Insights</span>
             </div>
             <div className="space-y-1.5">
               {project.keyInsights.map((insight, idx) => (
-                <div key={idx} className="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-start gap-2.5 text-xs text-slate-200">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#06B6D4] shrink-0 mt-0.5" />
-                  <span className="leading-relaxed">{insight}</span>
+                <div key={idx} className="p-3.5 bg-[#050505] border border-[#242424] flex items-start gap-2.5 text-xs text-white">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C81024] shrink-0 mt-0.5" />
+                  <span className="leading-relaxed text-[#D4D4D8]">{insight}</span>
                 </div>
               ))}
             </div>
@@ -167,15 +167,15 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
           {/* Business Recommendations */}
           <div className="space-y-2">
-            <div className="flex items-center gap-2 text-xs font-heading font-bold text-white">
-              <Lightbulb className="w-3.5 h-3.5 text-[#F59E0B]" />
-              <span>Actionable Business Recommendations</span>
+            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white uppercase tracking-wider">
+              <Lightbulb className="w-3.5 h-3.5 text-[#C81024]" />
+              <span>Actionable Recommendations</span>
             </div>
             <div className="space-y-1.5">
               {project.businessRecommendations.map((rec, idx) => (
-                <div key={idx} className="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.06] flex items-start gap-2.5 text-xs text-slate-200">
-                  <span className="text-[#F59E0B] font-bold shrink-0">→</span>
-                  <span className="leading-relaxed">{rec}</span>
+                <div key={idx} className="p-3.5 bg-[#050505] border border-[#242424] flex items-start gap-2.5 text-xs text-white">
+                  <span className="text-[#C81024] font-bold shrink-0">→</span>
+                  <span className="leading-relaxed text-[#D4D4D8]">{rec}</span>
                 </div>
               ))}
             </div>
@@ -183,12 +183,14 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
           {/* Tools */}
           <div className="pt-2">
-            <span className="text-[10px] font-mono text-[#94A3B8] block mb-2 uppercase">TECHNOLOGY STACK:</span>
-            <div className="flex flex-wrap gap-1.5">
+            <span className="text-[10px] font-mono text-[#71717A] block mb-2 uppercase tracking-wider">
+              TECHNOLOGIES USED:
+            </span>
+            <div className="flex flex-wrap gap-2">
               {project.tools.map((tool, idx) => (
                 <span
                   key={idx}
-                  className="px-2.5 py-1 rounded-md bg-white/[0.03] border border-white/[0.08] text-[11px] font-mono text-slate-300"
+                  className="px-3 py-1 bg-[#050505] border border-[#242424] text-xs font-mono text-white"
                 >
                   {tool}
                 </span>
@@ -199,9 +201,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         </div>
 
         {/* Modal Footer */}
-        <div className="p-5 sm:p-6 border-t border-white/[0.08] bg-white/[0.02] flex items-center justify-between gap-3">
-          <span className="text-xs text-[#94A3B8]">
-            Source repository verified on GitHub
+        <div className="p-6 border-t border-[#242424] bg-[#050505] flex items-center justify-between gap-4">
+          <span className="text-xs font-mono text-[#A1A1AA]">
+            GitHub Repository Verified
           </span>
 
           <div className="flex items-center gap-3">
@@ -209,10 +211,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 rounded-xl btn-secondary text-xs font-medium flex items-center gap-1.5 transition-colors"
+              className="px-5 py-2.5 border border-[#242424] hover:border-[#C81024] text-xs font-mono tracking-wider text-white flex items-center gap-2 transition-colors bg-[#0B0B0B]"
             >
-              <Github className="w-3.5 h-3.5" />
-              <span>Code Repository</span>
+              <Github className="w-3.5 h-3.5 text-[#C81024]" />
+              <span>VIEW REPO</span>
             </a>
 
             {project.liveDemoUrl && (
@@ -220,9 +222,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 href={project.liveDemoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 rounded-xl btn-primary text-xs font-bold flex items-center gap-1.5 transition-opacity"
+                className="px-5 py-2.5 bg-[#C81024] hover:bg-[#E31B32] text-xs font-mono tracking-wider text-white font-bold flex items-center gap-2 transition-colors"
               >
-                <span>Live Demo</span>
+                <span>LIVE DEMO</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             )}

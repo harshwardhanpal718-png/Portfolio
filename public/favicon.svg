@@ -1,11 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
-  <defs>
-    <linearGradient id="favGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#06B6D4" />
-      <stop offset="100%" stop-color="#7C3AED" />
-    </linearGradient>
-  </defs>
-  <rect width="100" height="100" rx="28" fill="#06070D" />
-  <rect x="2" y="2" width="96" height="96" rx="26" fill="none" stroke="url(#favGrad)" stroke-width="3" opacity="0.8" />
-  <text x="50" y="64" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="44" font-weight="900" fill="url(#favGrad)" text-anchor="middle" letter-spacing="-1">HP</text>
+  <rect width="100" height="100" rx="20" fill="#050505" />
+  <rect x="2" y="2" width="96" height="96" rx="18" fill="none" stroke="#C81024" stroke-width="3" />
+  <text x="50" y="68" font-family="'Bebas Neue', sans-serif" font-size="52" font-weight="900" fill="#C81024" text-anchor="middle" letter-spacing="1">HP</text>
 </svg>

@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
-import { DataShowcase } from './components/DataShowcase';
-import { ExperienceEducation } from './components/ExperienceEducation';
+import { EducationSkills } from './components/EducationSkills';
+import { DataWorkflow } from './components/DataWorkflow';
+import { QuoteSection } from './components/QuoteSection';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -15,38 +14,35 @@ export function App() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#06070D] text-[#F8FAFC] font-sans selection:bg-[#7C3AED]/40 selection:text-[#06B6D4]">
-      {/* Floating Glassmorphism Navigation */}
+    <div className="min-h-screen bg-[#050505] text-[#FFFFFF] font-sans selection:bg-[#C81024] selection:text-white">
+      {/* Editorial Floating Navbar */}
       <Navbar onOpenResume={() => setIsResumeModalOpen(true)} />
 
-      {/* Main Content Sections */}
+      {/* Main Editorial Sections */}
       <main>
-        {/* Section 1: Hero */}
-        <Hero onOpenResume={() => setIsResumeModalOpen(true)} />
+        {/* Section 1: Hero Section with Oversized Red PORTFOLIO & Portrait */}
+        <Hero />
 
-        {/* Section 2: About Me */}
-        <About />
-
-        {/* Section 3: Technical Skills Ecosystem */}
-        <Skills />
-
-        {/* Section 4: Featured Projects Showcase */}
+        {/* Section 2: Selected Projects (3 Horizontal Showcase Cards) */}
         <Projects />
 
-        {/* Section 5: Analytics Showcase — "Data In Action" */}
-        <DataShowcase />
+        {/* Section 3: Education & Technical Skills (Two-Column Layout) */}
+        <EducationSkills />
 
-        {/* Section 6: Education & Certifications Timeline */}
-        <ExperienceEducation />
+        {/* Section 4: Data Analysis Workflow (HOW I WORK WITH DATA - 5 Steps) */}
+        <DataWorkflow />
 
-        {/* Section 7: Contact */}
+        {/* Section 5: Quote / Personal Philosophy (Dedicated Crimson-Red Panel) */}
+        <QuoteSection />
+
+        {/* Section 6: Contact Section (LET'S WORK WITH DATA.) */}
         <Contact onOpenResume={() => setIsResumeModalOpen(true)} />
       </main>
 
       {/* Footer */}
       <Footer />
 
-      {/* Back to top floating trigger */}
+      {/* Back to top button */}
       <ScrollToTop />
 
       {/* Resume Download / Preview Modal */}

@@ -1,12 +1,10 @@
 export type ProjectCategory = 
   | 'All' 
-  | 'Data Analytics' 
-  | 'Exploratory Data Analysis' 
   | 'Business Intelligence' 
-  | 'Python' 
-  | 'SQL' 
-  | 'Power BI' 
-  | 'Excel';
+  | 'Entertainment Analytics' 
+  | 'Customer Analytics' 
+  | 'Data Analytics' 
+  | 'Exploratory Data Analysis';
 
 export type ProjectStatus = 'Completed & Interactive Demo' | 'Case Study' | 'In Progress' | 'Planned';
 

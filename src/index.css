@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --bg-color: #06070D;
-  --secondary-bg: #0B0D16;
-  --card-bg: #101321;
-  --accent-violet: #7C3AED;
-  --accent-cyan: #06B6D4;
-  --accent-amber: #F59E0B;
-  --text-light: #F8FAFC;
-  --text-muted: #94A3B8;
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --bg-color: #050505;
+  --secondary-bg: #0B0B0B;
+  --card-bg: #111111;
+  --crimson: #C81024;
+  --crimson-light: #E31B32;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A1A1AA;
+  --border-color: #242424;
 }
 
 * {
@@ -28,123 +27,91 @@ html {
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-light);
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: #050505;
+  color: #FFFFFF;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
   background-image: 
-    radial-gradient(circle at 12% 18%, rgba(124, 58, 237, 0.12) 0%, transparent 45%),
-    radial-gradient(circle at 88% 28%, rgba(6, 182, 212, 0.09) 0%, transparent 45%),
-    radial-gradient(circle at 50% 80%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 50% 15%, rgba(200, 16, 36, 0.12) 0%, transparent 60%),
+    radial-gradient(circle at 10% 80%, rgba(200, 16, 36, 0.06) 0%, transparent 40%);
   min-height: 100vh;
 }
 
-/* Glassmorphic Panels */
-.glass-panel {
-  background: rgba(11, 13, 22, 0.82);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--glass-border);
+/* Editorial Typography */
+.font-display {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.04em;
 }
 
-.glass-card {
-  background: rgba(16, 19, 33, 0.78);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+.font-script {
+  font-family: 'Caveat', cursive;
 }
 
-.glass-card:hover {
-  border-color: rgba(6, 182, 212, 0.35);
-  box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.15);
+/* Red Hover Underline Interaction */
+.hover-red-line {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.hover-red-line::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #C81024;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-red-line:hover::after {
+  width: 100%;
+}
+
+/* Buttons */
+.btn-crimson {
+  background-color: #C81024;
+  color: #FFFFFF;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.08em;
+  font-size: 1.15rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(200, 16, 36, 0.35);
+}
+
+.btn-crimson:hover {
+  background-color: #E31B32;
+  box-shadow: 0 15px 35px rgba(200, 16, 36, 0.55);
   transform: translateY(-2px);
 }
 
-/* High-Impact Typography */
-.gradient-text {
-  background: linear-gradient(135deg, #F8FAFC 0%, #06B6D4 50%, #7C3AED 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient-text-cyan {
-  background: linear-gradient(135deg, #06B6D4 0%, #38BDF8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient-text-amber {
-  background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.logo-gradient {
-  background: linear-gradient(135deg, #06B6D4 0%, #7C3AED 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: -0.5px;
-}
-
-/* Premium Buttons */
-.btn-primary {
-  background: linear-gradient(135deg, #7C3AED 0%, #06B6D4 100%);
-  color: #F8FAFC;
-  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
+.btn-outline {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1px solid #242424;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.08em;
+  font-size: 1.15rem;
   transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-  opacity: 0.95;
-  box-shadow: 0 12px 30px rgba(6, 182, 212, 0.45);
-  transform: translateY(-1px);
+.btn-outline:hover {
+  border-color: #C81024;
+  background-color: rgba(200, 16, 36, 0.08);
+  color: #FFFFFF;
 }
 
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid var(--glass-border);
-  color: #F8FAFC;
-  transition: all 0.3s ease;
-}
-
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-}
-
-/* Minimal Cyber-Data Grid Pattern */
-.data-grid-pattern {
-  background-size: 24px 24px;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-}
-
-/* Custom Scrollbar */
+/* Custom Scrollbar in Dark Crimson */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #06070D;
+  background: #050505;
 }
 ::-webkit-scrollbar-thumb {
-  background: #15192C;
-  border-radius: 4px;
-  border: 2px solid #06070D;
+  background: #242424;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #06B6D4;
-}
-
-/* Recharts Tooltip Customization */
-.recharts-default-tooltip {
-  background-color: #101321 !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8) !important;
+  background: #C81024;
 }

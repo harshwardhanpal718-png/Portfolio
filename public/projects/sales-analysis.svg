@@ -1,99 +1,95 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
   <defs>
-    <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#00f2fe" />
-      <stop offset="100%" stop-color="#7300ff" />
+    <linearGradient id="crimsonBarGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E31B32" />
+      <stop offset="100%" stop-color="#7A0A16" />
     </linearGradient>
-    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ec38bc" />
-      <stop offset="100%" stop-color="#00f2fe" />
-    </linearGradient>
-    <linearGradient id="glowGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#7300ff" stop-opacity="0.25" />
-      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.05" />
+    <linearGradient id="crimsonLineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#C81024" />
     </linearGradient>
   </defs>
 
-  <rect width="800" height="500" rx="16" fill="#050126" />
-  <rect x="1" y="1" width="798" height="498" rx="15" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+  <rect width="800" height="500" fill="#080808" />
+  <rect x="1" y="1" width="798" height="498" fill="none" stroke="#242424" stroke-width="2" />
 
-  <!-- Ambient light -->
-  <circle cx="200" cy="150" r="140" fill="#7300ff" opacity="0.12" filter="blur(40px)" />
-  <circle cx="650" cy="350" r="130" fill="#00f2fe" opacity="0.08" filter="blur(40px)" />
+  <!-- Ambient red glow -->
+  <circle cx="200" cy="180" r="160" fill="#C81024" opacity="0.08" filter="blur(50px)" />
+  <circle cx="680" cy="360" r="140" fill="#C81024" opacity="0.06" filter="blur(50px)" />
 
   <!-- Header Bar -->
-  <rect x="0" y="0" width="800" height="44" rx="16" fill="#0c0538" />
-  <line x1="0" y1="44" x2="800" y2="44" stroke="rgba(255,255,255,0.08)" />
-  <circle cx="28" cy="22" r="5" fill="#ec38bc" />
-  <circle cx="44" cy="22" r="5" fill="#7300ff" />
-  <circle cx="60" cy="22" r="5" fill="#00f2fe" />
-  <text x="400" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle" font-weight="600">Sales_Performance_Diagnostic.pbix — Power BI &amp; SQL</text>
+  <rect x="0" y="0" width="800" height="46" fill="#0D0D0D" />
+  <line x1="0" y1="46" x2="800" y2="46" stroke="#242424" />
+  <circle cx="28" cy="23" r="5" fill="#C81024" />
+  <circle cx="44" cy="23" r="5" fill="#404040" />
+  <circle cx="60" cy="23" r="5" fill="#242424" />
+  <text x="400" y="28" font-family="'JetBrains Mono', monospace" font-size="12" fill="#A1A1AA" text-anchor="middle" font-weight="600">Sales_Performance_Diagnostic.pbix — Power BI &amp; SQL</text>
 
   <!-- KPI row -->
-  <rect x="30" y="64" width="168" height="76" rx="10" fill="#0e0742" stroke="rgba(255,255,255,0.08)" />
-  <text x="45" y="88" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">Total Gross Revenue</text>
-  <text x="45" y="118" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" fill="#00f2fe" font-weight="800">$2.45M</text>
+  <rect x="30" y="68" width="168" height="76" fill="#0F0F0F" stroke="#242424" />
+  <text x="45" y="92" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Total Gross Revenue</text>
+  <text x="45" y="122" font-family="'Bebas Neue', sans-serif" font-size="28" fill="#FFFFFF">$2.45M</text>
 
-  <rect x="218" y="64" width="168" height="76" rx="10" fill="#0e0742" stroke="rgba(255,255,255,0.08)" />
-  <text x="233" y="88" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">YoY Growth</text>
-  <text x="233" y="118" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" fill="#ec38bc" font-weight="800">+14.2%</text>
+  <rect x="218" y="68" width="168" height="76" fill="#0F0F0F" stroke="#242424" />
+  <text x="233" y="92" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">YoY Growth</text>
+  <text x="233" y="122" font-family="'Bebas Neue', sans-serif" font-size="28" fill="#C81024">+14.2%</text>
 
-  <rect x="406" y="64" width="168" height="76" rx="10" fill="#0e0742" stroke="rgba(255,255,255,0.08)" />
-  <text x="421" y="88" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">Gross Margin %</text>
-  <text x="421" y="118" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" fill="#ffffff" font-weight="800">28.4%</text>
+  <rect x="406" y="68" width="168" height="76" fill="#0F0F0F" stroke="#242424" />
+  <text x="421" y="92" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Gross Margin %</text>
+  <text x="421" y="122" font-family="'Bebas Neue', sans-serif" font-size="28" fill="#FFFFFF">28.4%</text>
 
-  <rect x="594" y="64" width="176" height="76" rx="10" fill="#0e0742" stroke="rgba(255,255,255,0.08)" />
-  <text x="609" y="88" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">Avg Order Value</text>
-  <text x="609" y="118" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" fill="#00f2fe" font-weight="800">$184.20</text>
+  <rect x="594" y="68" width="176" height="76" fill="#0F0F0F" stroke="#242424" />
+  <text x="609" y="92" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Avg Order Value</text>
+  <text x="609" y="122" font-family="'Bebas Neue', sans-serif" font-size="28" fill="#C81024">$184.20</text>
 
   <!-- Main Chart: Monthly Sales Volume -->
-  <rect x="30" y="156" width="460" height="310" rx="12" fill="#0e0742" stroke="rgba(255,255,255,0.08)" />
-  <text x="50" y="188" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" fill="#ffffff" font-weight="700">Monthly Revenue &amp; Target Horizon</text>
-  <text x="50" y="206" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">24-month trend with seasonal peak analysis</text>
+  <rect x="30" y="164" width="460" height="305" fill="#0F0F0F" stroke="#242424" />
+  <text x="50" y="196" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#FFFFFF" letter-spacing="1">MONTHLY REVENUE &amp; TARGET HORIZON</text>
+  <text x="50" y="214" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">24-month trend with seasonal peak analysis</text>
 
   <!-- Grid lines -->
-  <line x1="50" y1="240" x2="470" y2="240" stroke="rgba(255,255,255,0.04)" />
-  <line x1="50" y1="300" x2="470" y2="300" stroke="rgba(255,255,255,0.04)" />
-  <line x1="50" y1="360" x2="470" y2="360" stroke="rgba(255,255,255,0.04)" />
-  <line x1="50" y1="420" x2="470" y2="420" stroke="rgba(255,255,255,0.08)" />
+  <line x1="50" y1="248" x2="470" y2="248" stroke="#1A1A1A" />
+  <line x1="50" y1="305" x2="470" y2="305" stroke="#1A1A1A" />
+  <line x1="50" y1="362" x2="470" y2="362" stroke="#1A1A1A" />
+  <line x1="50" y1="420" x2="470" y2="420" stroke="#242424" />
 
-  <!-- Bar Charts in Cyber Gradient -->
-  <rect x="70" y="340" width="22" height="80" rx="4" fill="#7300ff" opacity="0.6" />
-  <rect x="105" y="320" width="22" height="100" rx="4" fill="#7300ff" opacity="0.75" />
-  <rect x="140" y="300" width="22" height="120" rx="4" fill="#7300ff" opacity="0.85" />
-  <rect x="175" y="270" width="22" height="150" rx="4" fill="url(#barGrad)" />
-  <rect x="210" y="290" width="22" height="130" rx="4" fill="url(#barGrad)" />
-  <rect x="245" y="250" width="22" height="170" rx="4" fill="url(#barGrad)" />
-  <rect x="280" y="230" width="22" height="190" rx="4" fill="#00f2fe" />
-  <rect x="315" y="260" width="22" height="160" rx="4" fill="url(#barGrad)" />
-  <rect x="350" y="220" width="22" height="200" rx="4" fill="#00f2fe" />
-  <rect x="385" y="190" width="22" height="230" rx="4" fill="#ec38bc" />
-  <rect x="420" y="240" width="22" height="180" rx="4" fill="url(#barGrad)" />
+  <!-- Bar Charts in Crimson Gradient -->
+  <rect x="70" y="340" width="22" height="80" fill="#33060B" />
+  <rect x="105" y="320" width="22" height="100" fill="#4D0910" />
+  <rect x="140" y="300" width="22" height="120" fill="#660C16" />
+  <rect x="175" y="270" width="22" height="150" fill="url(#crimsonBarGrad)" />
+  <rect x="210" y="290" width="22" height="130" fill="url(#crimsonBarGrad)" />
+  <rect x="245" y="250" width="22" height="170" fill="url(#crimsonBarGrad)" />
+  <rect x="280" y="230" width="22" height="190" fill="#C81024" />
+  <rect x="315" y="260" width="22" height="160" fill="url(#crimsonBarGrad)" />
+  <rect x="350" y="220" width="22" height="200" fill="#C81024" />
+  <rect x="385" y="190" width="22" height="230" fill="#E31B32" />
+  <rect x="420" y="240" width="22" height="180" fill="url(#crimsonBarGrad)" />
 
-  <!-- Trendline in neon magenta to cyan -->
-  <path d="M 80 330 Q 180 260 280 230 T 430 200" fill="none" stroke="url(#lineGrad)" stroke-width="3" />
-  <circle cx="385" cy="190" r="4" fill="#ffffff" stroke="#ec38bc" stroke-width="2" />
+  <!-- Trendline in white/crimson -->
+  <path d="M 80 330 Q 180 260 280 230 T 430 200" fill="none" stroke="url(#crimsonLineGrad)" stroke-width="3" />
+  <circle cx="385" cy="190" r="4.5" fill="#FFFFFF" stroke="#C81024" stroke-width="2" />
 
   <!-- Right Chart: Category Breakdown -->
-  <rect x="510" y="156" width="260" height="310" rx="12" fill="#0e0742" stroke="rgba(255,255,255,0.08)" />
-  <text x="530" y="188" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" fill="#ffffff" font-weight="700">Category Mix</text>
-  <text x="530" y="206" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#9ca3af">Revenue contribution</text>
+  <rect x="510" y="164" width="260" height="305" fill="#0F0F0F" stroke="#242424" />
+  <text x="530" y="196" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#FFFFFF" letter-spacing="1">CATEGORY MIX</text>
+  <text x="530" y="214" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Revenue contribution</text>
 
   <!-- Category 1: Tech -->
-  <text x="530" y="248" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#00f2fe" font-weight="600">Technology (48%)</text>
-  <rect x="530" y="258" width="220" height="10" rx="5" fill="rgba(255,255,255,0.05)" />
-  <rect x="530" y="258" width="105" height="10" rx="5" fill="#00f2fe" />
+  <text x="530" y="252" font-family="'Inter', sans-serif" font-size="12" fill="#FFFFFF" font-weight="600">Technology (48%)</text>
+  <rect x="530" y="262" width="220" height="8" fill="#1C1C1C" />
+  <rect x="530" y="262" width="105" height="8" fill="#C81024" />
 
   <!-- Category 2: Office Supplies -->
-  <text x="530" y="308" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#ec38bc" font-weight="600">Office Supplies (31%)</text>
-  <rect x="530" y="318" width="220" height="10" rx="5" fill="rgba(255,255,255,0.05)" />
-  <rect x="530" y="318" width="68" height="10" rx="5" fill="#ec38bc" />
+  <text x="530" y="312" font-family="'Inter', sans-serif" font-size="12" fill="#FFFFFF" font-weight="600">Office Supplies (31%)</text>
+  <rect x="530" y="322" width="220" height="8" fill="#1C1C1C" />
+  <rect x="530" y="322" width="68" height="8" fill="#E31B32" />
 
   <!-- Category 3: Furniture -->
-  <text x="530" y="368" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#d8b4fe" font-weight="600">Furniture (21%)</text>
-  <rect x="530" y="378" width="220" height="10" rx="5" fill="rgba(255,255,255,0.05)" />
-  <rect x="530" y="378" width="46" height="10" rx="5" fill="#7300ff" />
+  <text x="530" y="372" font-family="'Inter', sans-serif" font-size="12" fill="#FFFFFF" font-weight="600">Furniture (21%)</text>
+  <rect x="530" y="382" width="220" height="8" fill="#1C1C1C" />
+  <rect x="530" y="382" width="46" height="8" fill="#4D0910" />
 
   <!-- Footer note -->
-  <text x="530" y="435" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="#00f2fe" font-weight="700">✦ Tech driving 62% of margin</text>
+  <text x="530" y="440" font-family="'JetBrains Mono', monospace" font-size="11" fill="#C81024" font-weight="700">✦ Tech driving 62% of margin</text>
 </svg>

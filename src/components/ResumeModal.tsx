@@ -10,25 +10,29 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#06070D]/85 backdrop-blur-md animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fadeIn">
       <div 
-        className="relative w-full max-w-xl bg-[#0B0D16] border border-white/[0.1] rounded-3xl p-6 sm:p-8 shadow-obsidian-card overflow-hidden backdrop-blur-2xl"
+        className="relative w-full max-w-xl bg-[#0B0B0B] border border-[#242424] shadow-2xl p-6 sm:p-8 overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between pb-5 border-b border-white/[0.08]">
+        <div className="flex items-center justify-between pb-5 border-b border-[#242424]">
           <div className="flex items-center space-x-3.5">
-            <div className="w-11 h-11 rounded-2xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-[#06B6D4]">
-              <FileText className="w-5 h-5" />
+            <div className="w-12 h-12 bg-[#050505] border border-[#C81024] flex items-center justify-center text-[#C81024]">
+              <FileText className="w-6 h-6" />
             </div>
             <div>
-              <h3 className="text-lg font-bold font-heading text-white">Harshwardhan Pal — Resume</h3>
-              <p className="text-xs text-[#94A3B8]">Data Analyst • B.Tech CSE (Class of 2027)</p>
+              <h3 className="font-display text-2xl text-white tracking-wide">
+                HARSHWARDHAN PAL — RESUME
+              </h3>
+              <p className="text-xs font-mono text-[#A1A1AA]">
+                Data Analyst • B.Tech CSE (Class of 2027)
+              </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-xl text-[#94A3B8] hover:text-white bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] transition-colors"
+            className="p-2 text-[#A1A1AA] hover:text-white border border-[#242424] hover:border-[#C81024] bg-[#050505] transition-colors"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -36,53 +40,55 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
         </div>
 
         {/* Content Body */}
-        <div className="py-6 space-y-4 text-xs text-slate-300">
-          <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06] flex items-start gap-3">
-            <CheckCircle2 className="w-4 h-4 text-[#06B6D4] shrink-0 mt-0.5" />
+        <div className="py-6 space-y-4 text-xs font-mono text-[#A1A1AA]">
+          <div className="p-4 bg-[#050505] border border-[#242424] flex items-start gap-3">
+            <CheckCircle2 className="w-4 h-4 text-[#C81024] shrink-0 mt-0.5" />
             <div>
-              <span className="font-semibold text-white">Verified Curriculum Details:</span>
-              <p className="mt-1 text-[#94A3B8] leading-relaxed">
-                You can download the verified PDF curriculum directly or preview the document in a new browser tab.
+              <span className="font-bold text-white block uppercase mb-0.5">
+                Verified Curriculum &amp; Analytical Details:
+              </span>
+              <p className="text-xs text-[#A1A1AA] font-sans leading-relaxed">
+                You can download the verified PDF resume directly or preview it in a new browser window.
               </p>
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-3 text-[11px]">
-            <div className="p-3.5 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
-              <span className="text-[#94A3B8] block mb-1">Core Analytical Stack</span>
+            <div className="p-3.5 bg-[#050505] border border-[#242424]">
+              <span className="text-[#71717A] block mb-1 uppercase tracking-wider">Core Analytical Stack</span>
               <span className="font-bold text-white">Python, SQL, Power BI, Excel</span>
             </div>
-            <div className="p-3.5 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
-              <span className="text-[#94A3B8] block mb-1">Academic Program</span>
+            <div className="p-3.5 bg-[#050505] border border-[#242424]">
+              <span className="text-[#71717A] block mb-1 uppercase tracking-wider">Academic Program</span>
               <span className="font-bold text-white">B.Tech CSE, Jagannath Univ.</span>
             </div>
           </div>
         </div>
 
         {/* Footer Actions */}
-        <div className="flex items-center justify-end gap-3 pt-4 border-t border-white/[0.08]">
+        <div className="flex items-center justify-end gap-3 pt-5 border-t border-[#242424]">
           <button
             onClick={onClose}
-            className="px-4 py-2.5 rounded-xl border border-white/[0.08] text-[#94A3B8] hover:text-white hover:bg-white/[0.04] text-xs font-medium transition-colors"
+            className="px-4 py-2.5 border border-[#242424] text-[#A1A1AA] hover:text-white text-xs font-mono tracking-wider transition-colors"
           >
-            Close
+            CLOSE
           </button>
           <a
             href="/Harshwardhan_Pal_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2.5 rounded-xl btn-secondary text-slate-200 hover:text-white text-xs font-semibold flex items-center gap-1.5 transition-colors"
+            className="px-4 py-2.5 btn-outline text-xs tracking-wider flex items-center gap-1.5 transition-colors"
           >
-            <ExternalLink className="w-3.5 h-3.5 text-[#06B6D4]" />
-            <span>Preview</span>
+            <ExternalLink className="w-3.5 h-3.5 text-[#C81024]" />
+            <span>PREVIEW</span>
           </a>
           <a
             href="/Harshwardhan_Pal_Resume.pdf"
             download="Harshwardhan_Pal_Resume.pdf"
-            className="px-5 py-2.5 rounded-xl btn-primary text-white text-xs font-bold flex items-center gap-1.5 transition-opacity"
+            className="px-5 py-2.5 btn-crimson text-xs tracking-wider flex items-center gap-1.5"
           >
             <Download className="w-3.5 h-3.5" />
-            <span>Download PDF</span>
+            <span>DOWNLOAD PDF</span>
           </a>
         </div>
       </div>
