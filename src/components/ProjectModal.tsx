@@ -76,6 +76,28 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         {/* Modal Body */}
         <div className="p-6 sm:p-8 space-y-6 max-h-[70vh] overflow-y-auto font-sans">
 
+          {/* Project Dashboard Screenshot Preview */}
+          {project.image && (
+            <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-[#EBE5DC] shadow-soft-sm bg-[#171923] group">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+              {project.liveDemoUrl && (
+                <a
+                  href={project.liveDemoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-3 right-3 px-3.5 py-1.5 rounded-full bg-[#171923]/90 hover:bg-black text-white text-xs font-semibold flex items-center gap-1.5 backdrop-blur-xs transition-colors shadow-soft"
+                >
+                  <span>Launch Live War Room</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-[#A98468]" />
+                </a>
+              )}
+            </div>
+          )}
+
           {/* Key Metrics */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {project.metricsSummary.map((metric, mIdx) => (
