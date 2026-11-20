@@ -116,24 +116,19 @@ export const Hero: React.FC = () => {
 
           </div>
 
-          {/* Right Column: Permanent Portrait (5 Cols) */}
-          <div className="lg:col-span-5 relative flex justify-center items-center py-6">
+          {/* Right Column: Free-Standing Cutout PNG Portrait (5 Cols) */}
+          <div className="lg:col-span-5 relative flex justify-center items-end py-4">
             
-            {/* Soft Organic Pastel Ambient Backdrop */}
-            <div className="absolute w-[340px] sm:w-[380px] h-[460px] rounded-[2.5rem] bg-[#E8F1E8] rotate-2 pointer-events-none" />
-            <div className="absolute w-[340px] sm:w-[380px] h-[460px] rounded-[2.5rem] bg-[#F9EBDD] -rotate-2 pointer-events-none opacity-80" />
+            {/* Soft Ambient Radial Glow Behind Cutout */}
+            <div className="absolute w-[340px] sm:w-[420px] h-[340px] sm:h-[420px] rounded-full bg-gradient-to-tr from-[#E8F1E8] via-[#F9EBDD] to-[#FAF7F2] blur-3xl opacity-80 -z-10 pointer-events-none" />
 
-            {/* Central Portrait Container */}
-            <div className="relative w-full max-w-[320px] sm:max-w-[350px] aspect-[4/5] rounded-[2rem] border-2 border-white bg-gradient-to-b from-[#FAF7F2] to-[#EBE5DC] overflow-hidden shadow-soft-lg group">
-              {/* Profile Image */}
+            {/* Free-Standing Cutout PNG — Completely Out of the Box */}
+            <div className="relative z-10 w-full max-w-[360px] sm:max-w-[420px] flex justify-center">
               <img
-                src="/profile.png?v=2"
+                src="/profile.png?v=3"
                 alt={personalInfo.name}
-                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-auto max-h-[520px] object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.15)] transition-transform duration-500 hover:scale-[1.02]"
               />
-
-              {/* Bottom Subtle Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
             </div>
 
           </div>
