@@ -124,16 +124,16 @@ export const Hero: React.FC = () => {
             <div className="absolute w-[340px] sm:w-[380px] h-[460px] rounded-[2.5rem] bg-[#F9EBDD] -rotate-2 pointer-events-none opacity-80" />
 
             {/* Central Portrait Container */}
-            <div className="relative w-full max-w-[320px] sm:max-w-[350px] aspect-[4/5] rounded-[2rem] border-2 border-white bg-white overflow-hidden shadow-soft-lg group">
+            <div className="relative w-full max-w-[320px] sm:max-w-[350px] aspect-[4/5] rounded-[2rem] border-2 border-white bg-gradient-to-b from-[#FAF7F2] to-[#EBE5DC] overflow-hidden shadow-soft-lg group">
               {/* Profile Image */}
               <img
-                src="/profile.png"
+                src="/profile.png?v=2"
                 alt={personalInfo.name}
                 className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
               />
 
               {/* Bottom Subtle Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
             </div>
 
           </div>
