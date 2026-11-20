@@ -47,47 +47,48 @@ export const projectsData: Project[] = [
   },
   {
     id: 'ecommerce-customer-analysis',
-    title: 'E-commerce Customer Analysis',
-    subtitle: 'Segmented customer buying behaviors, retention cohorts, and revenue drivers across 50,000+ transaction records.',
-    category: 'DATA ANALYTICS',
-    status: 'Completed Case Study',
-    tools: ['Python', 'Pandas', 'SQL', 'Power BI', 'Excel'],
+    title: 'E-commerce Customer Analysis // Olist Suite',
+    subtitle: 'Power BI Obsidian Cockpit tracking R$ 15.42M Gross Merchandise Value, 96,478 orders, RFM segmentation, and delivery SLAs.',
+    category: 'BUSINESS INTELLIGENCE & ANALYTICS',
+    status: 'Live Interactive Dashboard',
+    tools: ['Power BI', 'DAX', 'SQL', 'Python', 'RFM Modeling', 'Vercel'],
     businessProblem:
-      'A global retail enterprise experienced unpredictable quarterly retention rates and margin compression. Management needed deep customer segmentation to identify high-value cohorts, detect churn early, and optimize promotional expenditure.',
+      'Executive leadership needed real-time visibility into macro revenue trajectory, customer lifetime value, logistics SLAs, and product sales velocity across 96,000+ commercial transactions.',
     datasetInfo:
-      '50,000+ order records across 4 geographic regions, containing customer identifiers, transaction dates, product categories, discount tiers, shipping SLAs, and profit margins.',
+      '96,478 delivered orders and 1.5M relational records encompassing customer geography, payment types, freight costs, and 73 product categories.',
     dataCleaningApproach: [
-      'Extracted raw data from relational MySQL database utilizing CTEs and partitioned views.',
-      'Treated anomalous negative spend records, null postal codes, and duplicated order lines.',
-      'Calculated normalized Recency, Frequency, and Monetary (RFM) indices for each distinct customer.',
-      'Constructed a robust Calendar Dimension table in Power Query for cohort retention tracking.'
+      'Extracted raw transactional records from production relational engine containing 1.5M rows.',
+      'Constructed normalized dimensional Star-Schema connecting Fact Orders with Customer, Product, and Geo dimensions.',
+      'Calculated normalized Recency, Frequency, and Monetary (RFM) indices for 93,358 active customers.',
+      'Standardized Brazilian Real currency conversions and validated freight burden distributions.'
     ],
     analysisMethodology: [
-      'Engineered an RFM segmentation model categorizing consumers into VIP Champions, Loyalists, and At-Risk groups.',
-      'Performed cohort survival analysis across 12 consecutive months to evaluate retention curves.',
-      'Analyzed price elasticity and discount sensitivity across core product lines.',
-      'Designed an interactive Power BI dashboard featuring dynamic slicers and DAX margin measures.'
+      'Engineered executive overview cockpit tracking MoM GMV growth (+14.2%) and average order values (R$ 159.83).',
+      'Constructed monthly revenue and completed order volume dual-axis trajectories from 2017 to 2018.',
+      'Designed Pareto product category breakdown isolating top GMV contributors (Health & Beauty, Watches, Bed & Bath).',
+      'Built geographic market penetration choropleth correlating delivery times with customer satisfaction.'
     ],
     keyInsights: [
-      'VIP Champions accounted for only 14% of the customer base but generated 46% of total net profits.',
-      'Orders with promotional discounts above 20% exhibited a 22% higher return rate with zero lifetime value gain.',
-      'Repeat orders within 30 days increased by 3.2x when initial shipments were delivered within 48 hours.'
+      'Captured R$ 15.42M Gross Merchandise Value with a 97.02% order fulfillment completion rate.',
+      'Active customer base reached 93,358 unique accounts with steady basket expansion to R$ 137.04.',
+      'Top 5 categories produced over 42% of platform gross merchandise volume.',
+      'Identified regional freight burden spikes in Northern states impacting repeat purchase frequency.'
     ],
     businessRecommendations: [
-      'Launch targeted VIP early-access incentives rather than broad-scale margin-diluting discount codes.',
-      'Prioritize fulfillment center logistics in low-performing regions to maintain SLA integrity.',
-      'Automate re-engagement triggers at day 45 for consumers entering the "At-Risk" RFM cluster.'
+      'Optimize fulfillment partner allocations in high-freight regional corridors to protect net margins.',
+      'Focus retention campaigns on Health & Beauty and Watches cohorts exhibiting high repeat basket size.',
+      'Deploy automated SLA escalation triggers for orders exceeding 5-day dispatch thresholds.'
     ],
     metricsSummary: [
-      { label: 'Records Processed', value: '50,000+' },
-      { label: 'VIP Profit Share', value: '46%' },
-      { label: 'Retention Boost', value: '3.2x' },
-      { label: 'Margin Recovery', value: '+14%' }
+      { label: 'Gross GMV', value: 'R$ 15.42M' },
+      { label: 'Delivered Orders', value: '96,478' },
+      { label: 'Fulfillment Rate', value: '97.02%' },
+      { label: 'Avg Order Value', value: 'R$ 159.83' }
     ],
-    githubUrl: 'https://github.com/harshwardhanpal718-png/ecommerce-customer-analysis',
-    liveDemoUrl: 'https://github.com/harshwardhanpal718-png/ecommerce-customer-analysis#dashboard',
-    image: '/projects/ecommerce-analysis.svg',
-    accentGradient: 'from-[#13D9E8] to-[#087CDA]'
+    githubUrl: 'https://github.com/harshwardhanpal718-png/Portfolio',
+    liveDemoUrl: 'https://e-commerce-customer-analysis-olive.vercel.app/',
+    image: '/projects/ecommerce-dashboard.jpg',
+    accentGradient: 'from-[#00F0FF] to-[#3B82F6]'
   },
   {
     id: 'netflix-data-analysis',
