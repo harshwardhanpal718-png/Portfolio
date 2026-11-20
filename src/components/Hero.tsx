@@ -30,10 +30,16 @@ export const Hero: React.FC = () => {
               </span>
             </div>
 
-            {/* Eyebrow Label */}
-            <span className="text-xs font-semibold uppercase tracking-widest text-[#A98468] mb-2 font-sans">
-              {personalInfo.eyebrow}
-            </span>
+            {/* Eyebrow Label with Full Name */}
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-xs font-semibold uppercase tracking-widest text-[#A98468] font-sans">
+                HELLO, I'M
+              </span>
+              <span className="text-sm font-bold tracking-wider text-[#171923] font-sans uppercase">
+                HARSHWARDHAN PAL
+              </span>
+              <span className="text-xs text-[#A98468]">✦</span>
+            </div>
 
             {/* Large Elegant Display Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-[#171923] tracking-tight leading-[1.12] mb-6">

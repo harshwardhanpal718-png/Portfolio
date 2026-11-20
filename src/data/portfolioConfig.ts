@@ -25,12 +25,13 @@ export const sectionVisibility = {
 // 2. PERSONAL INFORMATION (Apni details yahan edit karein)
 export const personalInfo = {
   name: 'Harshwardhan Pal',
-  shortName: 'HARSHWARDHAN',
+  shortName: 'HARSHWARDHAN PAL',
   role: 'Data Analyst',
-  eyebrow: "HELLO, I'M A",
+  eyebrow: "HELLO, I'M HARSHWARDHAN PAL",
   headlineMain: 'Turning Raw Data Into',
   headlineAccent: 'Business Insights', // Ye stylish handwritten font me dikhta hai
   tagline: 'Turning Data Into Better Decisions.',
+  profileImage: '/profile.png',
   
   // Hero Section Short Bio
   heroBio:
