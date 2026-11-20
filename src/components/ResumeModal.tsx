@@ -48,22 +48,29 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
             <div>
               <span className="font-semibold text-[#171923] block mb-0.5">
-                Verified Curriculum &amp; Analytical Details:
+                ATS-Optimized &amp; Verified Professional Resume:
               </span>
               <p className="text-xs text-[#62616A] leading-relaxed">
-                You can download the verified PDF resume directly or preview it in a new browser window.
+                Single-page executive format featuring verified AI internship experience, real-time live BI projects, and technical metrics across SQL, Python, Power BI, and Excel.
               </p>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 text-[11px]">
-            <div className="p-4 rounded-2xl bg-[#E8F1E8] border border-[#DCE9DF]">
-              <span className="text-[#62616A] block mb-1 font-semibold uppercase tracking-wider">Core Stack</span>
-              <span className="font-bold text-[#171923]">Python, SQL, Power BI, Excel</span>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-[11px]">
+            <div className="p-3.5 rounded-2xl bg-[#E8F1E8] border border-[#DCE9DF]">
+              <span className="text-[#62616A] block mb-0.5 font-semibold uppercase tracking-wider text-[10px]">Internship</span>
+              <span className="font-bold text-[#171923] block">Knowx Innovations</span>
+              <span className="text-[10px] text-emerald-800 font-medium">AI &amp; Data Science Intern</span>
             </div>
-            <div className="p-4 rounded-2xl bg-[#E5EEF8] border border-[#D2E2F2]">
-              <span className="text-[#62616A] block mb-1 font-semibold uppercase tracking-wider">Academic Track</span>
-              <span className="font-bold text-[#171923]">B.Tech CSE, Jagannath Univ.</span>
+            <div className="p-3.5 rounded-2xl bg-[#E5EEF8] border border-[#D2E2F2]">
+              <span className="text-[#62616A] block mb-0.5 font-semibold uppercase tracking-wider text-[10px]">Core Stack</span>
+              <span className="font-bold text-[#171923] block">Python, SQL, Power BI</span>
+              <span className="text-[10px] text-blue-800 font-medium">Advanced Excel, DAX</span>
+            </div>
+            <div className="p-3.5 rounded-2xl bg-[#F9EBDD] border border-[#EEDAC7]">
+              <span className="text-[#62616A] block mb-0.5 font-semibold uppercase tracking-wider text-[10px]">Academics</span>
+              <span className="font-bold text-[#171923] block">Jagannath University</span>
+              <span className="text-[10px] text-[#A98468] font-medium">B.Tech CSE (2023–27)</span>
             </div>
           </div>
         </div>
