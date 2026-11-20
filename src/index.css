@@ -1,117 +1,131 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --bg-color: #050505;
-  --secondary-bg: #0B0B0B;
-  --card-bg: #111111;
-  --crimson: #C81024;
-  --crimson-light: #E31B32;
-  --text-primary: #FFFFFF;
-  --text-secondary: #A1A1AA;
-  --border-color: #242424;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #FAF7F2;
+    color: #171923;
+  }
+
+  body {
+    background-color: #FAF7F2;
+    color: #171923;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #171923;
+  }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Custom Components for the Editorial Warm Cream Design */
+@layer components {
+  /* Minimal Cream Navbar */
+  .nav-blur-cream {
+    background-color: rgba(250, 247, 242, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Dark CTA Button */
+  .btn-dark {
+    background-color: #171923;
+    color: #FFFFFF;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-dark:hover {
+    background-color: #2D3748;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(23, 25, 35, 0.15);
+  }
+
+  /* Bordered Button */
+  .btn-cream-border {
+    background-color: #FFFFFF;
+    color: #171923;
+    border: 1px solid #EBE5DC;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-cream-border:hover {
+    background-color: #F5F0E9;
+    border-color: #A98468;
+    transform: translateY(-1px);
+  }
+
+  /* Pastel Card Base */
+  .card-pastel {
+    border: 1px solid #EBE5DC;
+    border-radius: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .card-pastel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px -4px rgba(23, 25, 35, 0.08);
+  }
+
+  /* White Editorial Card */
+  .card-editorial {
+    background-color: #FFFFFF;
+    border: 1px solid #EBE5DC;
+    border-radius: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+  }
+
+  .card-editorial:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px -4px rgba(23, 25, 35, 0.08);
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-  color-scheme: dark;
-}
-
-body {
-  background-color: #050505;
-  color: #FFFFFF;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  overflow-x: hidden;
-  background-image: 
-    radial-gradient(circle at 50% 15%, rgba(200, 16, 36, 0.12) 0%, transparent 60%),
-    radial-gradient(circle at 10% 80%, rgba(200, 16, 36, 0.06) 0%, transparent 40%);
-  min-height: 100vh;
-}
-
-/* Editorial Typography */
-.font-display {
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 0.04em;
-}
-
-.font-script {
-  font-family: 'Caveat', cursive;
-}
-
-/* Red Hover Underline Interaction */
-.hover-red-line {
-  position: relative;
-  transition: color 0.25s ease;
-}
-
-.hover-red-line::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: #C81024;
-  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.hover-red-line:hover::after {
-  width: 100%;
-}
-
-/* Buttons */
-.btn-crimson {
-  background-color: #C81024;
-  color: #FFFFFF;
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 0.08em;
-  font-size: 1.15rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 25px rgba(200, 16, 36, 0.35);
-}
-
-.btn-crimson:hover {
-  background-color: #E31B32;
-  box-shadow: 0 15px 35px rgba(200, 16, 36, 0.55);
-  transform: translateY(-2px);
-}
-
-.btn-outline {
-  background-color: transparent;
-  color: #FFFFFF;
-  border: 1px solid #242424;
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 0.08em;
-  font-size: 1.15rem;
-  transition: all 0.3s ease;
-}
-
-.btn-outline:hover {
-  border-color: #C81024;
-  background-color: rgba(200, 16, 36, 0.08);
-  color: #FFFFFF;
-}
-
-/* Custom Scrollbar in Dark Crimson */
+/* Custom Scrollbar for Warm Cream Palette */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #FAF7F2;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #242424;
-  border-radius: 3px;
+  background: #D8D1C7;
+  border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #C81024;
+  background: #A98468;
+}
+
+/* Floating Animations */
+@keyframes softFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes softFloatDelayed {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-soft-float {
+  animation: softFloat 4s ease-in-out infinite;
+}
+
+.animate-soft-float-delayed {
+  animation: softFloatDelayed 5s ease-in-out 1.5s infinite;
 }

@@ -1,66 +1,69 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
-  <defs>
-    <linearGradient id="nfRedGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#C81024" />
-      <stop offset="100%" stop-color="#E31B32" />
-    </linearGradient>
-  </defs>
+  <rect width="800" height="500" rx="20" fill="#FAF7F2" />
+  <rect x="1" y="1" width="798" height="498" rx="19" fill="none" stroke="#EBE5DC" stroke-width="2" />
 
-  <rect width="800" height="500" fill="#080808" />
-  <rect x="1" y="1" width="798" height="498" fill="none" stroke="#242424" stroke-width="2" />
+  <!-- Window Header Bar -->
+  <rect x="0" y="0" width="800" height="46" rx="20" fill="#F5F0E9" />
+  <line x1="0" y1="46" x2="800" y2="46" stroke="#EBE5DC" />
+  <circle cx="28" cy="23" r="5" fill="#E7D6D3" />
+  <circle cx="44" cy="23" r="5" fill="#DCE9DF" />
+  <circle cx="60" cy="23" r="5" fill="#E5EEF8" />
+  <text x="400" y="28" font-family="'Inter', sans-serif" font-size="12" fill="#62616A" text-anchor="middle" font-weight="600">netflix_titles_eda.py — Python, Pandas &amp; Seaborn</text>
 
-  <!-- Ambient glow -->
-  <circle cx="240" cy="220" r="150" fill="#C81024" opacity="0.08" filter="blur(50px)" />
+  <!-- Left: Content Type Distribution -->
+  <rect x="30" y="68" width="350" height="395" rx="16" fill="#FFFFFF" stroke="#EBE5DC" />
+  <text x="50" y="100" font-family="'Playfair Display', serif" font-size="16" fill="#171923" font-weight="700">MOVIES VS TV SHOWS EVOLUTION</text>
+  <text x="50" y="118" font-family="'Inter', sans-serif" font-size="11" fill="#62616A">Historical Catalog Share (2015 – 2021)</text>
 
-  <!-- Window Header -->
-  <rect x="0" y="0" width="800" height="46" fill="#0D0D0D" />
-  <line x1="0" y1="46" x2="800" y2="46" stroke="#242424" />
-  <circle cx="28" cy="23" r="5" fill="#C81024" />
-  <circle cx="44" cy="23" r="5" fill="#404040" />
-  <circle cx="60" cy="23" r="5" fill="#242424" />
-  <text x="400" y="28" font-family="'JetBrains Mono', monospace" font-size="12" fill="#A1A1AA" text-anchor="middle" font-weight="600">netflix_titles_eda.py — Python, Matplotlib, Seaborn</text>
+  <!-- Bar Chart Columns -->
+  <!-- 2016 -->
+  <text x="75" y="380" font-family="'Inter', sans-serif" font-size="10" fill="#62616A">2016</text>
+  <rect x="70" y="260" width="22" height="100" rx="4" fill="#A98468" />
+  <rect x="94" y="320" width="22" height="40" rx="4" fill="#DCE9DF" />
 
-  <!-- Left Stats & Distribution -->
-  <rect x="30" y="68" width="350" height="395" fill="#0F0F0F" stroke="#242424" />
-  <text x="50" y="100" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#FFFFFF" letter-spacing="1">CATALOG CONTENT SPLIT</text>
-  <text x="50" y="118" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">8,807 Titles Analyzed (Movies vs TV Shows)</text>
+  <!-- 2018 -->
+  <text x="145" y="380" font-family="'Inter', sans-serif" font-size="10" fill="#62616A">2018</text>
+  <rect x="140" y="200" width="22" height="160" rx="4" fill="#A98468" />
+  <rect x="164" y="270" width="22" height="90" rx="4" fill="#DCE9DF" />
 
-  <!-- Donut Chart representation -->
-  <circle cx="140" cy="215" r="65" fill="none" stroke="#1A1A1A" stroke-width="26" />
-  <circle cx="140" cy="215" r="65" fill="none" stroke="#C81024" stroke-width="26" stroke-dasharray="280 400" stroke-dashoffset="0" />
-  <circle cx="140" cy="215" r="65" fill="none" stroke="#52070F" stroke-width="26" stroke-dasharray="130 400" stroke-dashoffset="-280" />
-  <text x="140" y="210" font-family="'Bebas Neue', sans-serif" font-size="24" fill="#FFFFFF" text-anchor="middle">8.8K</text>
-  <text x="140" y="226" font-family="'Inter', sans-serif" font-size="10" fill="#A1A1AA" text-anchor="middle">TITLES</text>
+  <!-- 2020 -->
+  <text x="215" y="380" font-family="'Inter', sans-serif" font-size="10" fill="#62616A">2020</text>
+  <rect x="210" y="170" width="22" height="190" rx="4" fill="#A98468" />
+  <rect x="234" y="220" width="22" height="140" rx="4" fill="#DCE9DF" />
 
-  <!-- Legend -->
-  <rect x="235" y="180" width="12" height="12" fill="#C81024" />
-  <text x="255" y="191" font-family="'Inter', sans-serif" font-size="12" fill="#FFFFFF" font-weight="600">Movies: 69.6%</text>
+  <!-- 2021 -->
+  <text x="285" y="380" font-family="'Inter', sans-serif" font-size="10" fill="#62616A">2021</text>
+  <rect x="280" y="180" width="22" height="180" rx="4" fill="#A98468" />
+  <rect x="304" y="195" width="22" height="165" rx="4" fill="#DCE9DF" />
 
-  <rect x="235" y="215" width="12" height="12" fill="#52070F" />
-  <text x="255" y="226" font-family="'Inter', sans-serif" font-size="12" fill="#A1A1AA">TV Shows: 30.4%</text>
+  <!-- Metric highlight -->
+  <rect x="50" y="400" width="310" height="45" rx="10" fill="#E8F1E8" stroke="#DCE9DF" />
+  <text x="65" y="428" font-family="'Inter', sans-serif" font-size="11" fill="#1B5E20" font-weight="700">TV Shows: 18% in 2015 → 48% in 2021</text>
 
-  <!-- Trend badge -->
-  <rect x="50" y="300" width="310" height="145" fill="#080808" stroke="#242424" />
-  <text x="66" y="328" font-family="'Bebas Neue', sans-serif" font-size="16" fill="#C81024" letter-spacing="1">TOP CONTENT PRODUCING COUNTRIES</text>
-  <text x="66" y="356" font-family="'Inter', sans-serif" font-size="11" fill="#FFFFFF">1. United States (3,689 titles)</text>
-  <text x="66" y="380" font-family="'Inter', sans-serif" font-size="11" fill="#E31B32" font-weight="600">2. India (1,046 titles) — +310% surge</text>
-  <text x="66" y="404" font-family="'Inter', sans-serif" font-size="11" fill="#FFFFFF">3. United Kingdom (804 titles)</text>
-  <text x="66" y="428" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">4. South Korea, Japan &amp; Spain</text>
+  <!-- Right: Top Producing Countries -->
+  <rect x="400" y="68" width="370" height="395" rx="16" fill="#FFFFFF" stroke="#EBE5DC" />
+  <text x="420" y="100" font-family="'Playfair Display', serif" font-size="16" fill="#171923" font-weight="700">TOP CONTENT PRODUCING REGIONS</text>
+  <text x="420" y="118" font-family="'Inter', sans-serif" font-size="11" fill="#62616A">Total titles cataloged by country of origin</text>
 
-  <!-- Right Chart -->
-  <rect x="400" y="68" width="370" height="395" fill="#0F0F0F" stroke="#242424" />
-  <text x="420" y="100" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#FFFFFF" letter-spacing="1">HISTORICAL RELEASE VELOCITY</text>
-  <text x="420" y="118" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Release year distribution curve (2000 - 2021)</text>
+  <!-- Horizontal Bars -->
+  <!-- USA -->
+  <text x="420" y="160" font-family="'Inter', sans-serif" font-size="11" fill="#171923">United States (3,689)</text>
+  <rect x="420" y="170" width="310" height="18" rx="6" fill="#171923" />
 
-  <line x1="430" y1="355" x2="740" y2="355" stroke="#242424" />
-  
-  <path d="M 440 350 Q 500 340 560 315 T 630 215 T 680 155 T 730 195" fill="none" stroke="url(#nfRedGrad)" stroke-width="3.5" />
-  <path d="M 440 353 Q 500 350 560 335 T 630 275 T 680 205 T 730 225" fill="none" stroke="#4D0910" stroke-width="2" stroke-dasharray="4 3" />
+  <!-- India -->
+  <text x="420" y="215" font-family="'Inter', sans-serif" font-size="11" fill="#171923">India (1,046)</text>
+  <rect x="420" y="225" width="160" height="18" rx="6" fill="#A98468" />
 
-  <circle cx="680" cy="155" r="5" fill="#FFFFFF" stroke="#C81024" stroke-width="2" />
-  <text x="680" y="140" font-family="'Inter', sans-serif" font-size="11" fill="#C81024" text-anchor="middle" font-weight="700">Peak Catalog Inflow (2018-2019)</text>
+  <!-- UK -->
+  <text x="420" y="270" font-family="'Inter', sans-serif" font-size="11" fill="#171923">United Kingdom (804)</text>
+  <rect x="420" y="280" width="120" height="18" rx="6" fill="#DCE9DF" />
 
-  <rect x="430" y="375" width="310" height="65" fill="#080808" stroke="#242424" />
-  <text x="445" y="400" font-family="'Bebas Neue', sans-serif" font-size="15" fill="#FFFFFF" letter-spacing="1">✦ TREND OBSERVATION</text>
-  <text x="445" y="422" font-family="'Inter', sans-serif" font-size="10" fill="#A1A1AA">International originals surpassed domestic productions by 2020.</text>
+  <!-- South Korea -->
+  <text x="420" y="325" font-family="'Inter', sans-serif" font-size="11" fill="#171923">South Korea (231) +310% surge</text>
+  <rect x="420" y="335" width="85" height="18" rx="6" fill="#E5EEF8" />
+
+  <!-- Average runtime card -->
+  <rect x="420" y="380" width="330" height="65" rx="12" fill="#FAF7F2" stroke="#EBE5DC" />
+  <text x="435" y="405" font-family="'Inter', sans-serif" font-size="10" fill="#62616A">AVERAGE MOVIE DURATION</text>
+  <text x="435" y="430" font-family="'Playfair Display', serif" font-size="18" fill="#171923" font-weight="700">99 Minutes <tspan font-size="11" fill="#62616A" font-weight="400">(Down from 108 min)</tspan></text>
 </svg>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
+import { personalInfo, socialLinks } from '../data/portfolioConfig';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -17,37 +18,40 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#050505] border-t border-[#242424] py-16 text-[#A1A1AA] font-mono text-xs">
+    <footer className="bg-[#FAF7F2] border-t border-[#EBE5DC] py-14 text-[#62616A] font-sans text-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Main Footer Row */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 pb-12 border-b border-[#1C1C1C]">
-          
-          {/* Brand & Philosophy */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 pb-10 border-b border-[#EBE5DC]">
+
+          {/* Brand & Tagline */}
           <div className="text-center md:text-left">
-            <h3 className="font-display text-3xl sm:text-4xl text-white tracking-wider">
-              HARSHWARDHAN <span className="text-[#C81024]">PAL</span>
-            </h3>
-            <p className="text-xs text-[#E31B32] font-mono mt-1 font-semibold uppercase tracking-widest">
-              "TURNING DATA INTO DECISIONS."
-            </p>
+            <span className="font-serif text-2xl font-bold tracking-tight text-[#171923] block">
+              {personalInfo.name.toUpperCase()}<span className="text-[#A98468]">.</span>
+            </span>
+            <span className="text-xs text-[#A98468] font-script font-bold text-base mt-0.5 block">
+              "{personalInfo.tagline}"
+            </span>
           </div>
 
           {/* Navigation Links */}
-          <div className="flex flex-wrap justify-center gap-6 uppercase text-[11px] tracking-wider text-[#A1A1AA]">
-            <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="hover-red-line hover:text-white">
+          <div className="flex flex-wrap justify-center gap-6 text-xs font-medium text-[#62616A]">
+            <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="hover:text-[#171923] transition-colors">
               Home
             </a>
-            <a href="#projects" onClick={(e) => handleNavClick(e, '#projects')} className="hover-red-line hover:text-white">
-              Selected Projects
+            <a href="#about" onClick={(e) => handleNavClick(e, '#about')} className="hover:text-[#171923] transition-colors">
+              About
             </a>
-            <a href="#education-skills" onClick={(e) => handleNavClick(e, '#education-skills')} className="hover-red-line hover:text-white">
-              Skills &amp; Education
+            <a href="#skills" onClick={(e) => handleNavClick(e, '#skills')} className="hover:text-[#171923] transition-colors">
+              Skills
             </a>
-            <a href="#workflow" onClick={(e) => handleNavClick(e, '#workflow')} className="hover-red-line hover:text-white">
-              How I Work
+            <a href="#projects" onClick={(e) => handleNavClick(e, '#projects')} className="hover:text-[#171923] transition-colors">
+              Projects
             </a>
-            <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')} className="hover-red-line hover:text-white">
+            <a href="#experience" onClick={(e) => handleNavClick(e, '#experience')} className="hover:text-[#171923] transition-colors">
+              Experience
+            </a>
+            <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')} className="hover:text-[#171923] transition-colors">
               Contact
             </a>
           </div>
@@ -56,36 +60,36 @@ export const Footer: React.FC = () => {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <a
-                href="https://github.com/harshwardhanpal"
+                href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 border border-[#242424] hover:border-[#C81024] text-[#A1A1AA] hover:text-white transition-colors bg-[#0B0B0B]"
-                title="GitHub"
-              >
-                <Github className="w-4 h-4" />
-              </a>
-              <a
-                href="https://linkedin.com/in/harshwardhan-pal"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 border border-[#242424] hover:border-[#C81024] text-[#A1A1AA] hover:text-white transition-colors bg-[#0B0B0B]"
+                className="w-9 h-9 rounded-full border border-[#EBE5DC] hover:border-[#A98468] bg-white flex items-center justify-center text-[#171923] hover:text-[#A98468] transition-all shadow-card"
                 title="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
-                href="mailto:harshwardhan.pal.analytics@gmail.com"
-                className="p-2.5 border border-[#242424] hover:border-[#C81024] text-[#A1A1AA] hover:text-white transition-colors bg-[#0B0B0B]"
+                href={socialLinks.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full border border-[#EBE5DC] hover:border-[#A98468] bg-white flex items-center justify-center text-[#171923] hover:text-[#A98468] transition-all shadow-card"
+                title="GitHub"
+              >
+                <Github className="w-4 h-4" />
+              </a>
+              <a
+                href={socialLinks.email}
+                className="w-9 h-9 rounded-full border border-[#EBE5DC] hover:border-[#A98468] bg-white flex items-center justify-center text-[#171923] hover:text-[#A98468] transition-all shadow-card"
                 title="Email"
               >
                 <Mail className="w-4 h-4" />
               </a>
             </div>
 
-            {/* Back to top interaction */}
+            {/* Circular Back to Top Button */}
             <button
               onClick={scrollToTop}
-              className="p-2.5 border border-[#242424] hover:border-[#C81024] bg-[#C81024]/10 hover:bg-[#C81024] text-white transition-all group"
+              className="w-9 h-9 rounded-full bg-[#171923] text-white hover:bg-[#2D3748] transition-all flex items-center justify-center shadow-card cursor-pointer group"
               title="Back to Top"
             >
               <ArrowUp className="w-4 h-4 transition-transform group-hover:-translate-y-0.5" />
@@ -95,12 +99,12 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Sub-footer */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#71717A]">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#62616A]">
           <span>
-            &copy; {currentYear} Harshwardhan Pal. All rights reserved.
+            &copy; {currentYear} {personalInfo.name}. All rights reserved.
           </span>
-          <span className="uppercase tracking-widest text-[#A1A1AA]">
-            Exclusively Positioned as Data Analyst
+          <span className="text-[#A98468] font-script text-sm font-semibold">
+            Data Analyst Portfolio • Built with React &amp; Tailwind CSS
           </span>
         </div>
 

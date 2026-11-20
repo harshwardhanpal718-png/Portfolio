@@ -4,9 +4,15 @@ export type ProjectCategory =
   | 'Entertainment Analytics' 
   | 'Customer Analytics' 
   | 'Data Analytics' 
-  | 'Exploratory Data Analysis';
+  | 'Exploratory Data Analysis'
+  | 'DATA ANALYTICS'
+  | 'EXPLORATORY DATA ANALYSIS'
+  | 'BUSINESS INTELLIGENCE'
+  | 'WORKFORCE INTELLIGENCE'
+  | 'PREDICTIVE MODELING'
+  | string;
 
-export type ProjectStatus = 'Completed & Interactive Demo' | 'Case Study' | 'In Progress' | 'Planned';
+export type ProjectStatus = 'Completed & Interactive Demo' | 'Case Study' | 'Completed Case Study' | 'In Progress' | 'Planned' | string;
 
 export interface ProjectMetric {
   label: string;

@@ -1,88 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
-  <rect width="800" height="500" fill="#080808" />
-  <rect x="1" y="1" width="798" height="498" fill="none" stroke="#242424" stroke-width="2" />
-
-  <!-- Ambient glow -->
-  <circle cx="180" cy="380" r="150" fill="#C81024" opacity="0.08" filter="blur(50px)" />
-  <circle cx="620" cy="180" r="160" fill="#C81024" opacity="0.06" filter="blur(50px)" />
+  <rect width="800" height="500" rx="20" fill="#FAF7F2" />
+  <rect x="1" y="1" width="798" height="498" rx="19" fill="none" stroke="#EBE5DC" stroke-width="2" />
 
   <!-- Window Header Bar -->
-  <rect x="0" y="0" width="800" height="46" fill="#0D0D0D" />
-  <line x1="0" y1="46" x2="800" y2="46" stroke="#242424" />
-  <circle cx="28" cy="23" r="5" fill="#C81024" />
-  <circle cx="44" cy="23" r="5" fill="#404040" />
-  <circle cx="60" cy="23" r="5" fill="#242424" />
-  <text x="400" y="28" font-family="'JetBrains Mono', monospace" font-size="12" fill="#A1A1AA" text-anchor="middle" font-weight="600">customer_segmentation_rfm.ipynb — Python &amp; Pandas</text>
+  <rect x="0" y="0" width="800" height="46" rx="20" fill="#F5F0E9" />
+  <line x1="0" y1="46" x2="800" y2="46" stroke="#EBE5DC" />
+  <circle cx="28" cy="23" r="5" fill="#E7D6D3" />
+  <circle cx="44" cy="23" r="5" fill="#DCE9DF" />
+  <circle cx="60" cy="23" r="5" fill="#E5EEF8" />
+  <text x="400" y="28" font-family="'Inter', sans-serif" font-size="12" fill="#62616A" text-anchor="middle" font-weight="600">customer_segmentation_rfm.ipynb — Python, SQL &amp; Power BI</text>
 
   <!-- Left Code & Segment breakdown -->
-  <rect x="30" y="68" width="340" height="395" fill="#0F0F0F" stroke="#242424" />
-  <text x="50" y="100" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#FFFFFF" letter-spacing="1">RFM CUSTOMER CLUSTERS</text>
-  <text x="50" y="118" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">K-Means Segment Distribution (N = 120,400)</text>
+  <rect x="30" y="68" width="340" height="395" rx="16" fill="#FFFFFF" stroke="#EBE5DC" />
+  <text x="50" y="100" font-family="'Playfair Display', serif" font-size="16" fill="#171923" font-weight="700">RFM CUSTOMER CLUSTERS</text>
+  <text x="50" y="118" font-family="'Inter', sans-serif" font-size="11" fill="#62616A">K-Means Segment Distribution (N = 50,000+)</text>
 
-  <!-- Cluster 1: Champions -->
-  <rect x="50" y="136" width="300" height="66" fill="#1C0407" stroke="#C81024" stroke-width="1.5" />
-  <text x="66" y="160" font-family="'Inter', sans-serif" font-size="12" fill="#FFFFFF" font-weight="700">Tier 1: VIP Champions</text>
-  <text x="66" y="182" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Recency: &lt;14d | Freq: 8.4x | Avg: $420</text>
-  <text x="325" y="160" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#C81024" text-anchor="end">12% / 41% Margin</text>
+  <!-- Cluster 1: VIP Champions -->
+  <rect x="50" y="136" width="300" height="66" rx="10" fill="#F9EBDD" stroke="#EBE5DC" stroke-width="1.5" />
+  <text x="66" y="160" font-family="'Inter', sans-serif" font-size="12" fill="#171923" font-weight="700">Tier 1: VIP Champions</text>
+  <text x="66" y="182" font-family="'Inter', sans-serif" font-size="11" fill="#62616A">Recency: &lt;14d | Freq: 8.4x | Avg: $420</text>
+  <text x="325" y="160" font-family="'Playfair Display', serif" font-size="14" fill="#A98468" font-weight="700" text-anchor="end">14% / 46% Margin</text>
 
   <!-- Cluster 2: Loyal Regulars -->
-  <rect x="50" y="214" width="300" height="66" fill="#140305" stroke="#242424" />
-  <text x="66" y="238" font-family="'Inter', sans-serif" font-size="12" fill="#D4D4D8" font-weight="700">Tier 2: Loyal Regulars</text>
-  <text x="66" y="260" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Recency: &lt;45d | Freq: 4.1x | Avg: $165</text>
-  <text x="325" y="238" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#FFFFFF" text-anchor="end">26% / 28% Margin</text>
+  <rect x="50" y="214" width="300" height="66" rx="10" fill="#E8F1E8" stroke="#DCE9DF" />
+  <text x="66" y="238" font-family="'Inter', sans-serif" font-size="12" fill="#171923" font-weight="700">Tier 2: Loyal Regulars</text>
+  <text x="66" y="260" font-family="'Inter', sans-serif" font-size="11" fill="#62616A">Recency: &lt;45d | Freq: 4.1x | Avg: $165</text>
+  <text x="325" y="238" font-family="'Playfair Display', serif" font-size="14" fill="#1B5E20" font-weight="700" text-anchor="end">28% / 32% Margin</text>
 
   <!-- Cluster 3: Churn Risk -->
-  <rect x="50" y="292" width="300" height="66" fill="#0A0A0A" stroke="#1A1A1A" />
-  <text x="66" y="316" font-family="'Inter', sans-serif" font-size="12" fill="#71717A" font-weight="700">Tier 3: Churn Risk</text>
-  <text x="66" y="338" font-family="'Inter', sans-serif" font-size="11" fill="#52525B">Recency: &gt;90d | Freq: 1.2x | Avg: $78</text>
-  <text x="325" y="316" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#71717A" text-anchor="end">38% / 14% Margin</text>
+  <rect x="50" y="292" width="300" height="66" rx="10" fill="#FAF7F2" stroke="#EBE5DC" />
+  <text x="66" y="316" font-family="'Inter', sans-serif" font-size="12" fill="#62616A" font-weight="700">Tier 3: Churn Risk</text>
+  <text x="66" y="338" font-family="'Inter', sans-serif" font-size="11" fill="#62616A" opacity="0.8">Recency: &gt;90d | Freq: 1.2x | Avg: $78</text>
+  <text x="325" y="316" font-family="'Playfair Display', serif" font-size="14" fill="#62616A" font-weight="700" text-anchor="end">35% / 12% Margin</text>
 
   <!-- Python snippet preview -->
-  <rect x="50" y="370" width="300" height="76" fill="#050505" stroke="#242424" />
-  <text x="60" y="392" font-family="'JetBrains Mono', monospace" font-size="10" fill="#E31B32">df['RFM_Score'] = r_score*100 + f_score*10 + m_score</text>
-  <text x="60" y="410" font-family="'JetBrains Mono', monospace" font-size="10" fill="#A1A1AA">kmeans = KMeans(n_clusters=4, random_state=42)</text>
-  <text x="60" y="428" font-family="'JetBrains Mono', monospace" font-size="10" fill="#71717A">df['Cluster'] = kmeans.fit_predict(scaled_features)</text>
+  <rect x="50" y="370" width="300" height="76" rx="10" fill="#F5F0E9" stroke="#EBE5DC" />
+  <text x="60" y="392" font-family="'JetBrains Mono', monospace" font-size="10" fill="#A98468">df['RFM_Score'] = r_score*100 + f_score*10 + m_score</text>
+  <text x="60" y="410" font-family="'JetBrains Mono', monospace" font-size="10" fill="#171923">kmeans = KMeans(n_clusters=4, random_state=42)</text>
+  <text x="60" y="428" font-family="'JetBrains Mono', monospace" font-size="10" fill="#62616A">df['Segment'] = kmeans.fit_predict(scaled_features)</text>
 
   <!-- Right Scatter Plot -->
-  <rect x="390" y="68" width="380" height="395" fill="#0F0F0F" stroke="#242424" />
-  <text x="412" y="100" font-family="'Bebas Neue', sans-serif" font-size="18" fill="#FFFFFF" letter-spacing="1">RECENCY VS MONETARY DISPERSION</text>
-  <text x="412" y="118" font-family="'Inter', sans-serif" font-size="11" fill="#A1A1AA">Normalized customer lifetime value across clusters</text>
+  <rect x="390" y="68" width="380" height="395" rx="16" fill="#FFFFFF" stroke="#EBE5DC" />
+  <text x="412" y="100" font-family="'Playfair Display', serif" font-size="16" fill="#171923" font-weight="700">RECENCY VS MONETARY DISPERSION</text>
+  <text x="412" y="118" font-family="'Inter', sans-serif" font-size="11" fill="#62616A">Normalized customer lifetime value across clusters</text>
 
-  <line x1="420" y1="355" x2="740" y2="355" stroke="#242424" />
-  <line x1="420" y1="150" x2="420" y2="355" stroke="#242424" />
+  <line x1="420" y1="355" x2="740" y2="355" stroke="#EBE5DC" />
+  <line x1="420" y1="150" x2="420" y2="355" stroke="#EBE5DC" />
 
-  <!-- Scatter points Tier 1 (Crimson #C81024) -->
-  <circle cx="680" cy="180" r="6" fill="#C81024" />
-  <circle cx="695" cy="195" r="5" fill="#E31B32" />
-  <circle cx="660" cy="205" r="6" fill="#C81024" />
-  <circle cx="715" cy="170" r="5.5" fill="#C81024" />
-  <circle cx="640" cy="190" r="5" fill="#E31B32" />
-  <circle cx="675" cy="220" r="7" fill="#C81024" />
+  <!-- Scatter points -->
+  <circle cx="680" cy="180" r="6" fill="#A98468" />
+  <circle cx="695" cy="195" r="5" fill="#A98468" />
+  <circle cx="660" cy="205" r="6" fill="#A98468" />
+  <circle cx="715" cy="170" r="5.5" fill="#A98468" />
+  <circle cx="640" cy="190" r="5" fill="#171923" />
+  <circle cx="675" cy="220" r="7" fill="#A98468" />
 
-  <!-- Scatter points Tier 2 (White) -->
-  <circle cx="530" cy="240" r="5.5" fill="#FFFFFF" />
-  <circle cx="560" cy="260" r="5" fill="#D4D4D8" />
-  <circle cx="510" cy="275" r="5" fill="#FFFFFF" />
-  <circle cx="580" cy="245" r="5" fill="#D4D4D8" />
-  <circle cx="545" cy="290" r="4.5" fill="#FFFFFF" />
-  <circle cx="520" cy="225" r="5.5" fill="#FFFFFF" />
+  <circle cx="560" cy="260" r="5" fill="#DCE9DF" />
+  <circle cx="540" cy="280" r="5.5" fill="#DCE9DF" />
+  <circle cx="585" cy="250" r="4.5" fill="#A98468" opacity="0.8" />
+  <circle cx="520" cy="295" r="5" fill="#DCE9DF" />
 
-  <!-- Scatter points Tier 3 (Dark Grey) -->
-  <circle cx="450" cy="320" r="4" fill="#52525B" />
-  <circle cx="470" cy="335" r="3.5" fill="#52525B" />
-  <circle cx="440" cy="345" r="4" fill="#52525B" />
-  <circle cx="490" cy="315" r="4" fill="#52525B" />
+  <circle cx="450" cy="330" r="4" fill="#62616A" opacity="0.5" />
+  <circle cx="470" cy="320" r="4" fill="#62616A" opacity="0.5" />
 
   <!-- Legend -->
-  <rect x="420" y="375" width="320" height="65" fill="#080808" stroke="#242424" />
-  <circle cx="440" cy="398" r="5" fill="#C81024" />
-  <text x="452" y="402" font-family="'Inter', sans-serif" font-size="10" fill="#FFFFFF" font-weight="600">Tier 1 Champions</text>
+  <rect x="420" y="380" width="320" height="60" rx="10" fill="#FAF7F2" stroke="#EBE5DC" />
+  <circle cx="440" cy="410" r="5" fill="#A98468" />
+  <text x="455" y="414" font-family="'Inter', sans-serif" font-size="11" fill="#171923">VIP Champions</text>
 
-  <circle cx="550" cy="398" r="5" fill="#FFFFFF" />
-  <text x="562" y="402" font-family="'Inter', sans-serif" font-size="10" fill="#FFFFFF" font-weight="600">Tier 2 Loyalists</text>
+  <circle cx="550" cy="410" r="5" fill="#DCE9DF" />
+  <text x="565" y="414" font-family="'Inter', sans-serif" font-size="11" fill="#171923">Loyal Regulars</text>
 
-  <circle cx="650" cy="398" r="5" fill="#52525B" />
-  <text x="662" y="402" font-family="'Inter', sans-serif" font-size="10" fill="#A1A1AA">Tier 3 At-Risk</text>
-
-  <text x="580" y="426" font-family="'JetBrains Mono', monospace" font-size="10" fill="#C81024" text-anchor="middle" font-weight="700">✦ Silhouette Score: 0.68 | Calinski-Harabasz: 4,120</text>
+  <circle cx="665" cy="410" r="5" fill="#62616A" opacity="0.5" />
+  <text x="680" y="414" font-family="'Inter', sans-serif" font-size="11" fill="#62616A">Churn Risk</text>
 </svg>

@@ -1,12 +1,48 @@
-import React, { useState } from 'react';
-import { Menu, X, Download } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Download, Menu, X } from 'lucide-react';
+import { personalInfo } from '../data/portfolioConfig';
 
 interface NavbarProps {
-  onOpenResume: () => void;
+  onOpenResume?: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+
+      const sections = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
+      const scrollPosition = window.scrollY + 200;
+
+      for (const section of sections) {
+        const el = document.getElementById(section);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Contact', href: '#contact' },
+  ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -17,132 +53,110 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
     }
   };
 
+  const handleResumeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (onOpenResume) {
+      e.preventDefault();
+      onOpenResume();
+    }
+  };
+
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#050505]/90 backdrop-blur-md border-b border-[#242424]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        
-        {/* Left: Role Title */}
-        <div className="flex items-center gap-4">
+    <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+      <div 
+        className={`w-full transition-all duration-300 ${
+          isScrolled 
+            ? 'nav-blur-cream border-b border-[#EBE5DC] shadow-soft' 
+            : 'bg-transparent'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+          
+          {/* Left: Brand Logo HARSHWARDHAN. */}
           <a
             href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 group cursor-pointer"
           >
-            <span className="font-display text-2xl tracking-wider text-white">
-              HARSHWARDHAN <span className="text-[#C81024]">PAL</span>
+            <span className="font-serif text-2xl font-bold tracking-tight text-[#171923] group-hover:text-[#A98468] transition-colors">
+              {personalInfo.shortName}<span className="text-[#A98468]">.</span>
             </span>
           </a>
-          <span className="hidden md:inline-block text-xs font-mono text-[#A1A1AA] border-l border-[#242424] pl-4">
-            DATA ANALYST
-          </span>
-        </div>
 
-        {/* Center / Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-8 text-xs font-mono tracking-wider text-[#A1A1AA]">
-          <a
-            href="#projects"
-            onClick={(e) => handleNavClick(e, '#projects')}
-            className="hover-red-line hover:text-white transition-colors uppercase"
-          >
-            Selected Projects
-          </a>
-          <a
-            href="#education-skills"
-            onClick={(e) => handleNavClick(e, '#education-skills')}
-            className="hover-red-line hover:text-white transition-colors uppercase"
-          >
-            Skills &amp; Education
-          </a>
-          <a
-            href="#workflow"
-            onClick={(e) => handleNavClick(e, '#workflow')}
-            className="hover-red-line hover:text-white transition-colors uppercase"
-          >
-            How I Work
-          </a>
-          <a
-            href="#contact"
-            onClick={(e) => handleNavClick(e, '#contact')}
-            className="hover-red-line hover:text-white transition-colors uppercase"
-          >
-            Contact
-          </a>
-        </nav>
+          {/* Center Navigation */}
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.href.substring(1);
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className={`text-sm font-medium tracking-normal transition-colors py-1 ${
+                    isActive 
+                      ? 'text-[#171923] font-semibold' 
+                      : 'text-[#62616A] hover:text-[#171923]'
+                  }`}
+                >
+                  {link.name}
+                </a>
+              );
+            })}
+          </nav>
 
-        {/* Right: Availability Status & Resume */}
-        <div className="hidden sm:flex items-center gap-5">
-          <div className="flex items-center gap-2 text-xs font-mono text-[#A1A1AA]">
-            <span className="w-2 h-2 rounded-full bg-[#C81024] animate-pulse" />
-            <span className="uppercase text-[11px] tracking-wider text-slate-300">
-              AVAILABLE FOR OPPORTUNITIES
-            </span>
+          {/* Right CTA Button: Download Resume */}
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href="/Harshwardhan_Pal_Resume.pdf"
+              download="Harshwardhan_Pal_Resume.pdf"
+              onClick={handleResumeClick}
+              className="btn-dark px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide flex items-center gap-2 shadow-soft cursor-pointer group"
+              title="Download Harshwardhan Pal's Resume"
+            >
+              <Download className="w-3.5 h-3.5 text-[#A98468]" />
+              <span>Download Resume</span>
+            </a>
           </div>
 
-          <button
-            onClick={onOpenResume}
-            className="px-4 py-2 rounded-none border border-[#C81024] text-[#FFFFFF] bg-[#C81024]/10 hover:bg-[#C81024] text-xs font-mono tracking-wider transition-all duration-300 flex items-center gap-2"
-          >
-            <Download className="w-3.5 h-3.5" />
-            <span>RESUME</span>
-          </button>
+          {/* Mobile Hamburger Button */}
+          <div className="flex md:hidden items-center">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 rounded-xl text-[#171923] hover:bg-[#F5F0E9] transition-colors"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+
         </div>
-
-        {/* Mobile Hamburger Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 text-white border border-[#242424] bg-[#0B0B0B]"
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
-
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0B0B0B] border-b border-[#242424] px-6 py-6 flex flex-col gap-4 text-sm font-mono tracking-wider">
-          <div className="flex items-center gap-2 text-xs text-[#A1A1AA] pb-3 border-b border-[#242424]">
-            <span className="w-2 h-2 rounded-full bg-[#C81024]" />
-            <span>AVAILABLE FOR OPPORTUNITIES</span>
-          </div>
-          <a
-            href="#projects"
-            onClick={(e) => handleNavClick(e, '#projects')}
-            className="text-white py-1"
-          >
-            01 — SELECTED PROJECTS
-          </a>
-          <a
-            href="#education-skills"
-            onClick={(e) => handleNavClick(e, '#education-skills')}
-            className="text-white py-1"
-          >
-            02 — EDUCATION &amp; SKILLS
-          </a>
-          <a
-            href="#workflow"
-            onClick={(e) => handleNavClick(e, '#workflow')}
-            className="text-white py-1"
-          >
-            03 — HOW I WORK WITH DATA
-          </a>
-          <a
-            href="#contact"
-            onClick={(e) => handleNavClick(e, '#contact')}
-            className="text-white py-1"
-          >
-            04 — CONTACT
-          </a>
+        <div className="md:hidden bg-[#FAF7F2] border-b border-[#EBE5DC] px-6 py-6 space-y-4 shadow-soft-lg animate-fadeIn">
+          <nav className="flex flex-col space-y-3">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="text-base font-medium text-[#171923] py-2 border-b border-[#EBE5DC]/60 flex items-center justify-between"
+              >
+                <span>{link.name}</span>
+                <span className="text-xs text-[#A98468]">→</span>
+              </a>
+            ))}
+          </nav>
           <div className="pt-2">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenResume();
-              }}
-              className="w-full py-3 bg-[#C81024] text-white text-xs font-mono font-bold tracking-wider"
+            <a
+              href="/Harshwardhan_Pal_Resume.pdf"
+              download="Harshwardhan_Pal_Resume.pdf"
+              onClick={handleResumeClick}
+              className="btn-dark w-full py-3 rounded-full text-xs font-semibold tracking-wide flex items-center justify-center gap-2"
             >
-              DOWNLOAD RESUME
-            </button>
+              <Download className="w-3.5 h-3.5 text-[#A98468]" />
+              <span>Download Resume</span>
+            </a>
           </div>
         </div>
       )}

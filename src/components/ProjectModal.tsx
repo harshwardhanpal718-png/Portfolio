@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 import { Project } from '../types';
-import { 
-  X, 
-  Github, 
-  ExternalLink, 
-  Database, 
-  Filter, 
-  TrendingUp, 
-  Lightbulb, 
-  Layers, 
-  CheckCircle2, 
-  AlertCircle 
+import {
+  X,
+  Github,
+  ExternalLink,
+  Database,
+  Filter,
+  TrendingUp,
+  Lightbulb,
+  Layers,
+  CheckCircle2,
+  AlertCircle
 } from 'lucide-react';
 
 interface ProjectModalProps {
@@ -36,37 +36,37 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
   if (!project) return null;
 
   return (
-    <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto"
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-xs overflow-y-auto"
       onClick={onClose}
     >
-      <div 
-        className="relative w-full max-w-3xl bg-[#0B0B0B] border border-[#242424] shadow-2xl overflow-hidden my-8"
+      <div
+        className="relative w-full max-w-3xl bg-[#FAF7F2] rounded-[2rem] border border-[#EBE5DC] shadow-soft-lg overflow-hidden my-8"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Header */}
-        <div className="p-6 sm:p-8 border-b border-[#242424] flex items-start justify-between gap-4 bg-[#050505]">
+        <div className="p-6 sm:p-8 border-b border-[#EBE5DC] flex items-start justify-between gap-4 bg-white">
           <div>
-            <div className="flex flex-wrap items-center gap-2 mb-2">
-              <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 bg-[#C81024] text-white">
+            <div className="flex flex-wrap items-center gap-2 mb-2.5">
+              <span className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#E8F1E8] text-emerald-900 border border-[#DCE9DF]">
                 {project.category}
               </span>
-              <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 border border-[#242424] text-[#A1A1AA]">
+              <span className="text-[10px] uppercase tracking-wider px-3 py-1 rounded-full border border-[#EBE5DC] text-[#62616A] bg-[#FAF7F2]">
                 {project.status}
               </span>
             </div>
 
-            <h2 className="font-display text-3xl sm:text-4xl text-white tracking-wide">
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#171923]">
               {project.title}
             </h2>
-            <p className="text-xs text-[#A1A1AA] mt-1 font-sans">
+            <p className="text-xs sm:text-sm text-[#62616A] mt-1 font-sans">
               {project.subtitle}
             </p>
           </div>
 
           <button
             onClick={onClose}
-            className="p-2 border border-[#242424] hover:border-[#C81024] text-[#A1A1AA] hover:text-white transition-colors shrink-0 bg-[#0B0B0B]"
+            className="p-2 rounded-full border border-[#EBE5DC] hover:border-[#171923] text-[#62616A] hover:text-[#171923] transition-colors shrink-0 bg-[#FAF7F2]"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -75,122 +75,119 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
         {/* Modal Body */}
         <div className="p-6 sm:p-8 space-y-6 max-h-[70vh] overflow-y-auto font-sans">
-          
+
           {/* Key Metrics */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {project.metricsSummary.map((metric, mIdx) => (
-              <div key={mIdx} className="p-4 bg-[#050505] border border-[#242424] text-center">
-                <span className="text-[10px] font-mono text-[#A1A1AA] block mb-1 uppercase tracking-wider">
+              <div key={mIdx} className="p-4 rounded-2xl bg-white border border-[#EBE5DC] text-center shadow-card">
+                <span className="text-[10px] font-medium text-[#62616A] block mb-1 uppercase tracking-wider">
                   {metric.label}
                 </span>
-                <span className="font-display text-2xl text-[#C81024] font-bold">
+                <span className="text-xl sm:text-2xl font-serif font-bold text-[#171923]">
                   {metric.value}
                 </span>
               </div>
             ))}
           </div>
 
-          {/* Business Problem & Dataset */}
+          {/* Business Problem & Dataset Profile */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="p-5 bg-[#050505] border border-[#242424] space-y-2">
-              <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#C81024] uppercase tracking-wider">
-                <AlertCircle className="w-3.5 h-3.5" />
-                <span>BUSINESS PROBLEM</span>
+            <div className="p-5 rounded-2xl bg-white border border-[#EBE5DC] space-y-2 shadow-card">
+              <div className="flex items-center gap-2 text-xs font-bold text-[#A98468] uppercase tracking-wider">
+                <AlertCircle className="w-4 h-4" />
+                <span>BUSINESS CONTEXT</span>
               </div>
-              <p className="text-xs text-[#A1A1AA] leading-relaxed">
+              <p className="text-xs text-[#62616A] leading-relaxed">
                 {project.businessProblem}
               </p>
             </div>
 
-            <div className="p-5 bg-[#050505] border border-[#242424] space-y-2">
-              <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#FFFFFF] uppercase tracking-wider">
-                <Database className="w-3.5 h-3.5 text-[#C81024]" />
-                <span>DATASET DETAILS</span>
+            <div className="p-5 rounded-2xl bg-white border border-[#EBE5DC] space-y-2 shadow-card">
+              <div className="flex items-center gap-2 text-xs font-bold text-[#A98468] uppercase tracking-wider">
+                <Database className="w-4 h-4" />
+                <span>DATASET PROFILE</span>
               </div>
-              <p className="text-xs text-[#A1A1AA] leading-relaxed">
+              <p className="text-xs text-[#62616A] leading-relaxed">
                 {project.datasetInfo}
               </p>
             </div>
           </div>
 
-          {/* Data Cleaning Approach */}
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white uppercase tracking-wider">
-              <Filter className="w-3.5 h-3.5 text-[#C81024]" />
-              <span>Data Cleaning &amp; Preparation</span>
+          {/* Data Cleaning & Preparation */}
+          <div className="p-5 rounded-2xl bg-white border border-[#EBE5DC] space-y-3 shadow-card">
+            <div className="flex items-center gap-2 text-xs font-bold text-[#171923] uppercase tracking-wider">
+              <Filter className="w-4 h-4 text-[#A98468]" />
+              <span>DATA CLEANING &amp; PREPARATION PIPELINE</span>
             </div>
-            <div className="space-y-1.5">
-              {project.dataCleaningApproach.map((item, idx) => (
-                <div key={idx} className="p-3 bg-[#050505] border border-[#242424] flex items-start gap-2.5 text-xs text-[#A1A1AA]">
-                  <span className="text-[#C81024] font-mono font-bold text-[11px] shrink-0">
-                    0{idx + 1}.
-                  </span>
-                  <span className="leading-relaxed">{item}</span>
-                </div>
+            <ul className="space-y-2 text-xs text-[#62616A]">
+              {project.dataCleaningApproach.map((step, sIdx) => (
+                <li key={sIdx} className="flex items-start gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>{step}</span>
+                </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Analysis Methodology */}
+          <div className="p-5 rounded-2xl bg-white border border-[#EBE5DC] space-y-3 shadow-card">
+            <div className="flex items-center gap-2 text-xs font-bold text-[#171923] uppercase tracking-wider">
+              <Layers className="w-4 h-4 text-[#A98468]" />
+              <span>ANALYTICAL METHODOLOGY &amp; MODELING</span>
+            </div>
+            <ul className="space-y-2 text-xs text-[#62616A]">
+              {project.analysisMethodology.map((meth, mIdx) => (
+                <li key={mIdx} className="flex items-start gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#A98468] shrink-0 mt-1.5" />
+                  <span>{meth}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Key Findings & Recommendations */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="p-5 rounded-2xl bg-[#E8F1E8] border border-[#DCE9DF] space-y-2">
+              <div className="flex items-center gap-2 text-xs font-bold text-emerald-950 uppercase tracking-wider">
+                <TrendingUp className="w-4 h-4 text-emerald-700" />
+                <span>KEY ANALYTICAL FINDINGS</span>
+              </div>
+              <ul className="space-y-2 text-xs text-[#171923]">
+                {project.keyInsights.map((insight, iIdx) => (
+                  <li key={iIdx} className="flex items-start gap-2">
+                    <span className="text-emerald-700 font-bold shrink-0">→</span>
+                    <span>{insight}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-[#F9EBDD] border border-[#EBE5DC] space-y-2">
+              <div className="flex items-center gap-2 text-xs font-bold text-[#8E6347] uppercase tracking-wider">
+                <Lightbulb className="w-4 h-4 text-[#A98468]" />
+                <span>BUSINESS RECOMMENDATIONS</span>
+              </div>
+              <ul className="space-y-2 text-xs text-[#171923]">
+                {project.businessRecommendations.map((rec, rIdx) => (
+                  <li key={rIdx} className="flex items-start gap-2">
+                    <span className="text-[#A98468] font-bold shrink-0">✓</span>
+                    <span>{rec}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
-          {/* Methodology */}
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white uppercase tracking-wider">
-              <Layers className="w-3.5 h-3.5 text-[#C81024]" />
-              <span>Analytical Methodology</span>
-            </div>
-            <div className="space-y-1.5">
-              {project.analysisMethodology.map((item, idx) => (
-                <div key={idx} className="p-3 bg-[#050505] border border-[#242424] flex items-start gap-2.5 text-xs text-[#A1A1AA]">
-                  <span className="text-[#C81024] font-mono font-bold text-[11px] shrink-0">
-                    0{idx + 1}.
-                  </span>
-                  <span className="leading-relaxed">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Key Insights */}
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white uppercase tracking-wider">
-              <TrendingUp className="w-3.5 h-3.5 text-[#C81024]" />
-              <span>Key Analytical Insights</span>
-            </div>
-            <div className="space-y-1.5">
-              {project.keyInsights.map((insight, idx) => (
-                <div key={idx} className="p-3.5 bg-[#050505] border border-[#242424] flex items-start gap-2.5 text-xs text-white">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C81024] shrink-0 mt-0.5" />
-                  <span className="leading-relaxed text-[#D4D4D8]">{insight}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Business Recommendations */}
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 text-xs font-mono font-bold text-white uppercase tracking-wider">
-              <Lightbulb className="w-3.5 h-3.5 text-[#C81024]" />
-              <span>Actionable Recommendations</span>
-            </div>
-            <div className="space-y-1.5">
-              {project.businessRecommendations.map((rec, idx) => (
-                <div key={idx} className="p-3.5 bg-[#050505] border border-[#242424] flex items-start gap-2.5 text-xs text-white">
-                  <span className="text-[#C81024] font-bold shrink-0">→</span>
-                  <span className="leading-relaxed text-[#D4D4D8]">{rec}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Tools */}
+          {/* Technologies Used */}
           <div className="pt-2">
-            <span className="text-[10px] font-mono text-[#71717A] block mb-2 uppercase tracking-wider">
-              TECHNOLOGIES USED:
+            <span className="text-[10px] font-semibold text-[#62616A] uppercase tracking-wider block mb-2">
+              TOOLS &amp; PLATFORMS:
             </span>
             <div className="flex flex-wrap gap-2">
-              {project.tools.map((tool, idx) => (
+              {project.tools.map((tool, tIdx) => (
                 <span
-                  key={idx}
-                  className="px-3 py-1 bg-[#050505] border border-[#242424] text-xs font-mono text-white"
+                  key={tIdx}
+                  className="px-3 py-1 rounded-full bg-white border border-[#EBE5DC] text-xs font-medium text-[#171923]"
                 >
                   {tool}
                 </span>
@@ -200,35 +197,39 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
         </div>
 
-        {/* Modal Footer */}
-        <div className="p-6 border-t border-[#242424] bg-[#050505] flex items-center justify-between gap-4">
-          <span className="text-xs font-mono text-[#A1A1AA]">
-            GitHub Repository Verified
-          </span>
-
+        {/* Modal Footer Links */}
+        <div className="p-6 border-t border-[#EBE5DC] bg-white flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-2.5 border border-[#242424] hover:border-[#C81024] text-xs font-mono tracking-wider text-white flex items-center gap-2 transition-colors bg-[#0B0B0B]"
-            >
-              <Github className="w-3.5 h-3.5 text-[#C81024]" />
-              <span>VIEW REPO</span>
-            </a>
-
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-cream-border px-4 py-2 rounded-full text-xs font-semibold flex items-center gap-1.5"
+              >
+                <Github className="w-3.5 h-3.5" />
+                <span>View GitHub Repo</span>
+              </a>
+            )}
             {project.liveDemoUrl && (
               <a
                 href={project.liveDemoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2.5 bg-[#C81024] hover:bg-[#E31B32] text-xs font-mono tracking-wider text-white font-bold flex items-center gap-2 transition-colors"
+                className="btn-dark px-4 py-2 rounded-full text-xs font-semibold flex items-center gap-1.5"
               >
-                <span>LIVE DEMO</span>
+                <span>Live Dashboard</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             )}
           </div>
+
+          <button
+            onClick={onClose}
+            className="text-xs font-medium text-[#62616A] hover:text-[#171923] transition-colors"
+          >
+            Close (Esc)
+          </button>
         </div>
 
       </div>

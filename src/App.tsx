@@ -1,48 +1,61 @@
 import { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { About } from './components/About';
+import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
-import { EducationSkills } from './components/EducationSkills';
-import { DataWorkflow } from './components/DataWorkflow';
-import { QuoteSection } from './components/QuoteSection';
+import { ExperienceEducation } from './components/ExperienceEducation';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { ResumeModal } from './components/ResumeModal';
+import { sectionVisibility } from './data/portfolioConfig';
 
 export function App() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#050505] text-[#FFFFFF] font-sans selection:bg-[#C81024] selection:text-white">
-      {/* Editorial Floating Navbar */}
+    <div className="min-h-screen bg-[#FAF7F2] text-[#171923] font-sans selection:bg-[#A98468]/20 selection:text-[#171923]">
+      {/* Editorial Sticky Navbar with Download Resume on Top Right */}
       <Navbar onOpenResume={() => setIsResumeModalOpen(true)} />
 
-      {/* Main Editorial Sections */}
+      {/* Main Sections — Configured via src/data/portfolioConfig.ts */}
       <main>
-        {/* Section 1: Hero Section with Oversized Red PORTFOLIO & Portrait */}
-        <Hero />
+        {/* Section 1: Hero Section */}
+        {sectionVisibility.hero && (
+          <Hero />
+        )}
 
-        {/* Section 2: Selected Projects (3 Horizontal Showcase Cards) */}
-        <Projects />
+        {/* Section 2: About Me (With 2nd Photo Upload Support) */}
+        {sectionVisibility.about && (
+          <About />
+        )}
 
-        {/* Section 3: Education & Technical Skills (Two-Column Layout) */}
-        <EducationSkills />
+        {/* Section 3: Skills & Technologies (4 Pastel Cards) */}
+        {sectionVisibility.skills && (
+          <Skills />
+        )}
 
-        {/* Section 4: Data Analysis Workflow (HOW I WORK WITH DATA - 5 Steps) */}
-        <DataWorkflow />
+        {/* Section 4: Featured Projects */}
+        {sectionVisibility.projects && (
+          <Projects />
+        )}
 
-        {/* Section 5: Quote / Personal Philosophy (Dedicated Crimson-Red Panel) */}
-        <QuoteSection />
+        {/* Section 5: Experience & Learning Journey */}
+        {sectionVisibility.experience && (
+          <ExperienceEducation />
+        )}
 
-        {/* Section 6: Contact Section (LET'S WORK WITH DATA.) */}
-        <Contact onOpenResume={() => setIsResumeModalOpen(true)} />
+        {/* Section 6: Contact Section */}
+        {sectionVisibility.contact && (
+          <Contact onOpenResume={() => setIsResumeModalOpen(true)} />
+        )}
       </main>
 
-      {/* Footer */}
+      {/* Minimal Footer */}
       <Footer />
 
-      {/* Back to top button */}
+      {/* Floating Back to Top Button */}
       <ScrollToTop />
 
       {/* Resume Download / Preview Modal */}

@@ -1,28 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="400" height="480">
   <defs>
-    <linearGradient id="neonGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00f2fe" />
-      <stop offset="50%" stop-color="#ec38bc" />
-      <stop offset="100%" stop-color="#7300ff" />
+    <linearGradient id="warmBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F5F0E9" />
+      <stop offset="100%" stop-color="#EBE5DC" />
     </linearGradient>
   </defs>
 
-  <!-- Background -->
-  <rect width="400" height="400" rx="32" fill="#03001e" />
-  <rect x="2" y="2" width="396" height="396" rx="30" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="2" />
+  <!-- Background with rounded corners -->
+  <rect width="400" height="480" rx="32" fill="url(#warmBg)" />
+  <rect x="2" y="2" width="396" height="476" rx="30" fill="none" stroke="#EBE5DC" stroke-width="2" />
 
-  <!-- Radial Glow -->
-  <circle cx="200" cy="160" r="85" fill="rgba(115, 0, 255, 0.15)" />
+  <!-- Soft pastel aesthetic circles -->
+  <circle cx="200" cy="190" r="130" fill="#DCE9DF" opacity="0.6" />
+  <circle cx="280" cy="140" r="80" fill="#F9EBDD" opacity="0.7" />
+  <circle cx="120" cy="240" r="90" fill="#E5EEF8" opacity="0.6" />
 
-  <!-- Avatar Silhouette with Cyber Glow -->
-  <circle cx="200" cy="145" r="52" fill="rgba(255, 255, 255, 0.04)" stroke="url(#neonGlow)" stroke-width="2" />
-  <path d="M 120 285 C 120 225, 160 210, 200 210 C 240 210, 280 225, 280 285" fill="rgba(255, 255, 255, 0.04)" stroke="url(#neonGlow)" stroke-width="2" />
+  <!-- Avatar Outer Circular Frame -->
+  <circle cx="200" cy="180" r="80" fill="#FFFFFF" stroke="#EBE5DC" stroke-width="3" />
+  
+  <!-- Stylized Head Silhouette -->
+  <circle cx="200" cy="160" r="46" fill="#F5F0E9" stroke="#171923" stroke-width="2" />
+  
+  <!-- Stylized Shoulders Silhouette -->
+  <path d="M 120 330 C 120 250, 160 230, 200 230 C 240 230, 280 250, 280 330 Z" fill="#F5F0E9" stroke="#171923" stroke-width="2" />
 
-  <!-- Monogram Initials -->
-  <text x="200" y="157" font-family="'Plus Jakarta Sans', sans-serif" font-size="34" font-weight="800" fill="url(#neonGlow)" text-anchor="middle">HP</text>
+  <!-- HP Monogram on Chest -->
+  <text x="200" y="172" font-family="'Playfair Display', Georgia, serif" font-size="32" font-weight="700" fill="#171923" text-anchor="middle">HP</text>
 
-  <!-- Floating Badge -->
-  <rect x="90" y="315" width="220" height="38" rx="19" fill="rgba(3, 0, 30, 0.85)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1.5" />
-  <circle cx="112" cy="334" r="4.5" fill="#00f2fe" />
-  <text x="210" y="339" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#f3f4f6" text-anchor="middle">Harshwardhan Pal</text>
+  <!-- Name & Title Pill -->
+  <rect x="80" y="360" width="240" height="42" rx="21" fill="#FFFFFF" stroke="#EBE5DC" stroke-width="1.5" />
+  <circle cx="104" cy="381" r="5" fill="#A98468" />
+  <text x="204" y="386" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#171923" text-anchor="middle">Harshwardhan Pal</text>
+
+  <!-- Role Subtitle -->
+  <text x="200" y="426" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#A98468" text-anchor="middle" letter-spacing="1.5">DATA ANALYST</text>
+  <text x="200" y="446" font-family="'Caveat', cursive" font-size="15" fill="#62616A" text-anchor="middle">Click or drop photo here</text>
 </svg>
