@@ -69,7 +69,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div className="w-full px-6 sm:px-10 lg:px-14 xl:px-20 h-20 flex items-center justify-between">
           
           {/* Left: Brand Logo HARSHWARDHAN. */}
           <a

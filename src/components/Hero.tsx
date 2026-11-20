@@ -122,10 +122,16 @@ export const Hero: React.FC = () => {
             {/* Soft Ambient Radial Glow Behind Cutout */}
             <div className="absolute w-[340px] sm:w-[420px] h-[340px] sm:h-[420px] rounded-full bg-gradient-to-tr from-[#E8F1E8] via-[#F9EBDD] to-[#FAF7F2] blur-3xl opacity-80 -z-10 pointer-events-none" />
 
-            {/* Free-Standing Cutout PNG — Completely Out of the Box */}
-            <div className="relative z-10 w-full max-w-[360px] sm:max-w-[420px] flex justify-center">
+            {/* Free-Standing Cutout PNG — Completely Out of the Box with Smooth Dissolve Bottom */}
+            <div 
+              className="relative z-10 w-full max-w-[360px] sm:max-w-[420px] flex justify-center"
+              style={{
+                WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%)',
+                maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%)'
+              }}
+            >
               <img
-                src="/profile.png?v=3"
+                src="/profile.png?v=4"
                 alt={personalInfo.name}
                 className="w-full h-auto max-h-[520px] object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.15)] transition-transform duration-500 hover:scale-[1.02]"
               />
